@@ -21,6 +21,8 @@ spring:
     thymeleaf:
        cache: false
        mode: LEGACYHTML5
+server:
+  port: 8081
 
 
 #数据源

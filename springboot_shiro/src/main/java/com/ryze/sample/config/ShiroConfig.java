@@ -1,22 +1,30 @@
 package com.ryze.sample.config;
 
+
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
+import javax.annotation.Resource;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 
 @Configuration
 public class ShiroConfig {
+
+	@Resource
+	private EhCacheConfig ehCacheConfig;
 	@Bean
-	public ShiroFilterFactoryBean shirFilter(SecurityManager securityManager) {System.out.println("ShiroConfiguration.shirFilter()");
+	public ShiroFilterFactoryBean shirFilter(SecurityManager securityManager) {
+		System.out.println("ShiroConfiguration.shirFilter()");
 		ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 		shiroFilterFactoryBean.setSecurityManager(securityManager);
 		//拦截器.
@@ -66,8 +74,25 @@ public class ShiroConfig {
 	public SecurityManager securityManager(){
 		DefaultWebSecurityManager securityManager =  new DefaultWebSecurityManager();
 		securityManager.setRealm(myShiroRealm());
+        //securityManager.setCacheManager(ehCacheManager());// shiro缓存管理器 这种写法简单
+		securityManager.setCacheManager(ehCacheConfig.shiroCacheManager());//另一种写法
 		return securityManager;
 	}
+
+	/**
+	 * shiro缓存管理器;
+	 * 需要注入对应的其它的实体类中：
+	 * 1、安全管理器：securityManager
+	 * 可见securityManager是整个shiro的核心；
+	 * @return
+	 */
+	@Bean
+	public EhCacheManager ehCacheManager(){
+		System.out.println("ShiroConfiguration.getEhCacheManager()");
+		EhCacheManager cacheManager = new EhCacheManager();
+		cacheManager.setCacheManagerConfigFile("classpath:config/ehcache-shiro.xml");
+		return cacheManager;
+    }
 
 	/**
 	 *  开启shiro aop注解支持.
