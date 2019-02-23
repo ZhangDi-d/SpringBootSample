@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
 </head>
 <body>
-错误信息：<h4 th:text="${msg}"></h4>
-<form action="" method="post">
+
+<form action="/login" method="post">
     <p>账号：<input type="text" name="username" value="admin"/></p>
     <p>密码：<input type="text" name="password" value="123456"/></p>
+    验证码：<input type="text" name="captcha"/><img alt="验证码" th:src="@{/Captcha.jpg}" title="点击更换" id="captcha_img" />
+    (看不清<a href="javascript:void(0)" onclick="javascript:refreshCaptcha()">换一张</a>)<br/>
+    <p>验证码功能没弄好,,todo</p>
     <P><input type="checkbox" name="rememberMe" />记住我</P>
     <p><input type="submit" value="登录"/></p>
 </form>
 </body>
+
+<script type="text/javascript">
+    function kickout(){
+        var href=location.href;
+        if(href.indexOf("kickout")>0){
+            alert("您的账号在另一台设备上登录,如非本人操作，请立即修改密码！");
+        }
+    }
+    window.onload=kickout();
+
+    function refreshCaptcha(){
+        $("#captcha_img").attr("src","/Captcha.jpg?id=" + new Date() + Math.floor(Math.random()*24));
+    }
+</script>
+
 </html>

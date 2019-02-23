@@ -23,7 +23,7 @@ public class MyShiroRealm extends AuthorizingRealm {
 
     /**
      * 此方法调用  hasRole,hasPermission的时候才会进行回调.
-     *
+     * <p>
      * 权限信息.(授权):
      * 1、如果用户正常退出，缓存自动清空；
      * 2、如果用户非正常退出，缓存自动清空；
@@ -32,6 +32,7 @@ public class MyShiroRealm extends AuthorizingRealm {
      * 在权限修改后调用realm中的方法，realm已经由spring管理，所以从spring中获取realm实例，
      * 调用clearCached方法；
      * :Authorization 是授权访问控制，用于对用户进行的操作授权，证明该用户是否允许进行当前操作，如访问某个链接，某个资源文件等。
+     *
      * @param principals
      * @return
      */
@@ -45,7 +46,7 @@ public class MyShiroRealm extends AuthorizingRealm {
          */
         System.out.println("权限配置-->MyShiroRealm.doGetAuthorizationInfo()");
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
-        UserInfo userInfo  = (UserInfo)principals.getPrimaryPrincipal();
+        UserInfo userInfo = (UserInfo) principals.getPrimaryPrincipal();
 
         //实际项目中，这里可以根据实际情况做缓存，如果不做，Shiro自己也是有时间间隔机制，2分钟内不会重复执行该方法
 //     UserInfo userInfo = userInfoService.findByUsername(username)
@@ -67,9 +68,9 @@ public class MyShiroRealm extends AuthorizingRealm {
 //            info.addStringPermissions(role.getPermissionsName());
 //        }
 
-        for(SysRole role:userInfo.getRoleList()){
+        for (SysRole role : userInfo.getRoleList()) {
             authorizationInfo.addRole(role.getRole());
-            for(SysPermission p:role.getPermissions()){
+            for (SysPermission p : role.getPermissions()) {
                 authorizationInfo.addStringPermission(p.getPermission());
             }
         }
@@ -79,16 +80,16 @@ public class MyShiroRealm extends AuthorizingRealm {
     /*主要是用来进行身份认证的，也就是说验证用户输入的账号和密码是否正确。*/
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token)
-            throws AuthenticationException  {
+            throws AuthenticationException {
         System.out.println("MyShiroRealm.doGetAuthenticationInfo()");
         //获取用户的输入的账号.
-        String username = (String)token.getPrincipal();
+        String username = (String) token.getPrincipal();
         System.out.println(token.getCredentials());
         //通过username从数据库中查找 User对象，如果找到，没找到.
         //实际项目中，这里可以根据实际情况做缓存，如果不做，Shiro自己也是有时间间隔机制，2分钟内不会重复执行该方法
         UserInfo userInfo = userInfoService.findByUsername(username);
-        System.out.println("----->>userInfo="+userInfo);
-        if(userInfo == null){
+        System.out.println("----->>userInfo=" + userInfo);
+        if (userInfo == null) {
             return null;
         }
 
@@ -106,6 +107,53 @@ public class MyShiroRealm extends AuthorizingRealm {
                 getName()  //realm name
         );
         return authenticationInfo;
+    }
+
+    /**
+     * 重写方法,清除当前用户的的 授权缓存
+     *
+     * @param principals
+     */
+    @Override
+    public void clearCachedAuthorizationInfo(PrincipalCollection principals) {
+        super.clearCachedAuthorizationInfo(principals);
+    }
+
+    /**
+     * 重写方法，清除当前用户的 认证缓存
+     *
+     * @param principals
+     */
+    @Override
+    public void clearCachedAuthenticationInfo(PrincipalCollection principals) {
+        super.clearCachedAuthenticationInfo(principals);
+    }
+
+    @Override
+    public void clearCache(PrincipalCollection principals) {
+        super.clearCache(principals);
+    }
+
+    /**
+     * 自定义方法：清除所有 授权缓存
+     */
+    public void clearAllCachedAuthorizationInfo() {
+        getAuthorizationCache().clear();
+    }
+
+    /**
+     * 自定义方法：清除所有 认证缓存
+     */
+    public void clearAllCachedAuthenticationInfo() {
+        getAuthenticationCache().clear();
+    }
+
+    /**
+     * 自定义方法：清除所有的  认证缓存  和 授权缓存
+     */
+    public void clearAllCache() {
+        clearAllCachedAuthenticationInfo();
+        clearAllCachedAuthorizationInfo();
     }
 
 }

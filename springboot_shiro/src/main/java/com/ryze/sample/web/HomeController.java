@@ -1,5 +1,6 @@
 package com.ryze.sample.web;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,17 @@ public class HomeController {
     @RequestMapping("/login")
     public String login(HttpServletRequest request, Map<String, Object> map) throws Exception{
         System.out.println("HomeController.login()");
+
+        //校验验证码
+        //session中的验证码
+        String sessionCaptcha = (String) SecurityUtils.getSubject().getSession().getAttribute(CaptchaController.KEY_CAPTCHA);
+        System.out.println("sessionCaptcha:"+sessionCaptcha);
+        String captcha = "";
+        /*if (null == captcha || !captcha.equalsIgnoreCase(sessionCaptcha)) {
+
+            return "/login";
+        }*/
+
         // 登录失败从request中获取shiro处理的异常信息。
         // shiroLoginFailure:就是shiro异常类的全类名.
         String exception = (String) request.getAttribute("shiroLoginFailure");
