@@ -1,6 +1,7 @@
 package com.ryze.sample.config;
 
 
+import com.ryze.sample.filter.CustomFilter;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.codec.Base64;
@@ -31,6 +32,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
 import javax.annotation.Resource;
+import javax.servlet.Filter;
 import java.util.*;
 
 @Configuration
@@ -44,6 +46,8 @@ public class ShiroConfig {
         System.out.println("ShiroConfiguration.shirFilter()");
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
+        Map<String, Filter> filters = shiroFilterFactoryBean.getFilters();
+        filters.put("sso",new CustomFilter());
         //拦截器.
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
         // 配置不会被拦截的链接 顺序判断
@@ -53,6 +57,8 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/Captcha.jpg","anon");
         //配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了
         filterChainDefinitionMap.put("/logout", "logout");
+        //测试自定义的Filter
+        filterChainDefinitionMap.put("/sso","sso");
 
         //配置记住我或认证通过可以访问的地址
         filterChainDefinitionMap.put("/index", "user");
