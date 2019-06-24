@@ -9,6 +9,7 @@ public class DeadLockExample {
 
     public static void main(String[] args){
         new Thread(new Runnable() {
+            @Override
             public void run() {
                 synchronized (object1){
                     System.out.println(Thread.currentThread()+" get object1... ");
@@ -24,7 +25,9 @@ public class DeadLockExample {
                 }
             }
         },"thread-1").start();
+
         new Thread(new Runnable() {
+            @Override
             public void run() {
                 synchronized (object2){
                     System.out.println(Thread.currentThread()+" get object2... ");
