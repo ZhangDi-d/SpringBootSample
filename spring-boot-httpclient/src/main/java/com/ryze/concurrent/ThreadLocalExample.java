@@ -7,6 +7,12 @@ import java.util.function.Supplier;
 
 /**
  * Created by xueLai on 2019/6/24.
+ * 1.ThreadLocal 中key为弱引用,value为强引用
+ * 所以，如果 ThreadLocal 没有被外部强引用的情况下，在垃圾回收的时候会 key 会被清理掉，而 value 不会被清理掉。这样一来，ThreadLocalMap 中就会出现key为null的Entry。假如我们不做任何措施的话，value 永远无法被GC 回收，这个时候就可能会产生内存泄露。
+ * 使用完 ThreadLocal方法后 最好手动调用remove()方法.
+ *
+ * 2.强引用:只要引用存在，垃圾回收器永远不会回收
+ *
  */
 public class ThreadLocalExample implements Runnable {
 
