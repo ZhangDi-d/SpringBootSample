@@ -13,11 +13,17 @@
 Java存储模型有一个happens-before原则，就是如果动作B要看到动作A的执行结果（无论A/B是否在同一个线程里面执行），那么A/B就需要满足happens-before关系。
 JMM动作（Java Memeory Model Action），Java存储模型动作。一个动作（Action）包括：变量的读写、监视器加锁和释放锁、线程的start()和join()。
 **happens-before完整规则：**
-（1）同一个线程中的每个Action都happens-before于出现在其后的任何一个Action。
-（2）对一个监视器的解锁happens-before于每一个后续对同一个监视器的加锁。
-（3）对volatile字段的写入操作happens-before于每一个后续的同一个字段的读操作。
-（4）Thread.start()的调用会happens-before于启动线程里面的动作。
-（5）Thread中的所有动作都happens-before于其他线程检查到此线程结束或者Thread.join（）中返回或者Thread.isAlive()==false。
-（6）一个线程A调用另一个另一个线程B的interrupt（）都happens-before于线程A发现B被A中断（B抛出异常或者A检测到B的isInterrupted（）或者interrupted()）。
-（7）一个对象构造函数的结束happens-before与该对象的finalizer的开始
-（8）如果A动作happens-before于B动作，而B动作happens-before与C动作，那么A动作happens-before于C动作。
+(1).程序顺序规则：一个线程中的每个操作，happens-before于该线程中的任意后续操作。
+(2).监视器锁规则：对一个锁的解锁，happens-before于随后对这个锁的加锁。
+(3).volatile变量规则：对一个volatile域的写，happens-before于任意后续对这个volatile域的读。
+(4).传递性：如果A happens-before B，且B happens-before C，那么A happens-before C。
+(5).start()规则：如果线程A执行操作ThreadB.start()（启动线程B），那么A线程的ThreadB.start()操作happens-before于线程B中的任意操作。
+(6).join()规则：如果线程A执行操作ThreadB.join()并成功返回，那么线程B中的任意操作happens-before于线程A从ThreadB.join()操作成功返回。
+(7).程序中断规则：对线程interrupted()方法的调用先行于被中断线程的代码检测到中断时间的发生。
+(8).对象finalize规则：一个对象的初始化完成（构造函数执行结束）先行于发生它的finalize()方法的开始。
+
+
+**volatile语义:**
+（1）Java 存储模型不会对valatile指令的操作进行重排序：这个保证对volatile变量的操作时按照指令的出现顺序执行的。
+（2）volatile变量不会被缓存在寄存器中（只有拥有线程可见）或者其他对CPU不可见的地方，每次总是从主存中读取volatile变量的结果。也就是说对于volatile变量的修改，其它线程总是可见的，并且不是使用自己线程栈内部的变量。也就是在happens-before法则中，对一个valatile变量的写操作后，其后的任何读操作理解可见此写操作的结果。
+尽管volatile变量的特性不错，但是volatile并不能保证线程安全的，也就是说volatile字段的操作不是原子性的，volatile变量只能保证可见性（一个线程修改后其它线程能够理解看到此变化后的结果），要想保证原子性，目前为止只能加锁！
