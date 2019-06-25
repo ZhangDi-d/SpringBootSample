@@ -17,7 +17,7 @@ public class ReorderingExample {
 
     public static void main(String[] args) throws InterruptedException {
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 300; i++) {
             x = y = a = b = 0;
             Thread thread1 = new Thread(new Runnable() {
                 @Override

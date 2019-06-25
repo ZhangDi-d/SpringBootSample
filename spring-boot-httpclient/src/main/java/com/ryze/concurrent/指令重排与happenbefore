@@ -1,0 +1,23 @@
+**线程安全:**
+当多个线程访问一个类时，如果不用考虑这些线程在运行时环境下的调度和交替运行，并且不需要额外的同步及在调用方代码不必做其他的协调，这个类的行为仍然是正确的，那么这个类就是线程安全的。   
+显然只有资源竞争时才会导致线程不安全，因此**无状态对象永远是线程安全的**。
+
+**原子操作**的描述是： 多个线程执行一个操作时，其中任何一个线程要么完全执行完此操作，要么没有执行此操作的任何步骤，那么这个操作就是原子的。
+
+**顺序一致化模型:**
+程序执行最简单的模型是按照指令出现的顺序执行，这样就与执行指令的CPU无关，最大限度的保证了指令的可移植性。这个模型的专业术语叫做顺序化一致性模型。
+
+**指令重排序:** 指令的执行顺序就可能与代码的顺序不一致;
+
+**Happens-before法则** :
+Java存储模型有一个happens-before原则，就是如果动作B要看到动作A的执行结果（无论A/B是否在同一个线程里面执行），那么A/B就需要满足happens-before关系。
+JMM动作（Java Memeory Model Action），Java存储模型动作。一个动作（Action）包括：变量的读写、监视器加锁和释放锁、线程的start()和join()。
+**happens-before完整规则：**
+（1）同一个线程中的每个Action都happens-before于出现在其后的任何一个Action。
+（2）对一个监视器的解锁happens-before于每一个后续对同一个监视器的加锁。
+（3）对volatile字段的写入操作happens-before于每一个后续的同一个字段的读操作。
+（4）Thread.start()的调用会happens-before于启动线程里面的动作。
+（5）Thread中的所有动作都happens-before于其他线程检查到此线程结束或者Thread.join（）中返回或者Thread.isAlive()==false。
+（6）一个线程A调用另一个另一个线程B的interrupt（）都happens-before于线程A发现B被A中断（B抛出异常或者A检测到B的isInterrupted（）或者interrupted()）。
+（7）一个对象构造函数的结束happens-before与该对象的finalizer的开始
+（8）如果A动作happens-before于B动作，而B动作happens-before与C动作，那么A动作happens-before于C动作。
