@@ -1,3 +1,41 @@
 ## synchronized关键字保证同步
-独占锁是一种悲观锁，synchronized就是一种独占锁，会导致其它所有需要锁的线程挂起，等待持有锁的线程释放锁。而另一个更加有效的锁就是乐观锁。所谓乐观锁就是，每次不加锁而是假设没有冲突而去完成某项操作，如果因为冲突失败就重试，直到成功为止。
+独占锁是一种悲观锁，synchronized就是一种独占锁，会导致其它所有需要锁的线程挂起，等待持有锁的线程释放锁。
 
+## CAS 操作
+   另一个更加有效的锁就是乐观锁。所谓乐观锁就是，每次不加锁而是假设没有冲突而去完成某项操作，如果因为冲突失败就重试，直到成功为止。
+   乐观锁用到的机制就是CAS，Compare and Swap。
+   CAS有3个操作数，内存值V，旧的预期值A，要修改的新值B。当且仅当预期值A和内存值V相同时，将内存值V修改为B，否则什么都不做。
+   
+### AtomicInteger
+拿出AtomicInteger来研究在没有锁的情况下是如何做到数据正确性的。
+```java
+private volatile int value;
+```
+1.在没有锁的机制下可能需要借助volatile原语，保证线程间的数据是可见的（共享的）。这样才获取变量的值的时候才能直接读取。
+  ```java
+public final int get() {
+           return value;
+       }
+``` 
+2.然后来看看++i是怎么做到的。
+ ```java
+public final int incrementAndGet() {
+       for (;;) {
+           int current = get();
+           int next = current + 1;
+           if (compareAndSet(current, next))
+               return next;
+       }
+   }
+```  
+在这里采用了CAS操作，每次从内存中读取数据然后将此数据和+1后的结果进行CAS操作，如果成功就返回结果，否则重试直到成功为止。
+而compareAndSet利用JNI来完成CPU指令的操作。
+```java
+public final boolean compareAndSet(int expect, int update) {   
+       return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
+}
+```   
+整体的过程就是这样子的，利用CPU的CAS指令，同时借助JNI来完成Java的非阻塞算法。其它原子操作都是利用类似的特性完成的。
+而整个J.U.C都是建立在CAS之上的，因此对于synchronized阻塞算法，J.U.C在性能上有了很大的提升。参考资料的文章中介绍了如果利用CAS构建非阻塞计数器、队列等数据结构。
+CAS看起来很爽，但是会导致“ABA问题”。
+   
