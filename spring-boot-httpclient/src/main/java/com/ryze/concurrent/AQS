@@ -1,0 +1,85 @@
+在理解J.U.C原理以及锁机制之前，我们来介绍J.U.C框架最核心也是最复杂的一个基础类：java.util.concurrent.locks.AbstractQueuedSynchronizer。
+
+## AQS
+AbstractQueuedSynchronizer，简称AQS，是J.U.C最复杂的一个类，AbstractQueuedSynchronizer是CountDownLatch/FutureTask/ReentrantLock/RenntrantReadWriteLock/Semaphore的基础，因此AbstractQueuedSynchronizer是Lock/Executor实现的前提。
+基本的思想是表现为一个**同步器**，支持下面两个操作：
+
+**获取锁**：首先判断当前状态是否允许获取锁，如果是就获取锁，否则就阻塞操作或者获取失败，也就是说如果是独占锁就可能阻塞，如果是共享锁就可能失败。
+另外如果是阻塞线程，那么线程就需要进入阻塞队列。当状态位允许获取锁时就修改状态，并且如果进了队列就从队列中移除。
+```java
+while(synchronization state does not allow acquire){
+    enqueue current thread if not already queued;
+    possibly block current thread;
+}
+dequeue current thread if it was queued;
+```
+
+
+**释放锁**:这个过程就是修改状态位，如果有线程因为状态位阻塞的话就唤醒队列中的一个或者更多线程。
+```java
+update synchronization state;
+if(state may permit a blocked thread to acquire)
+    unlock one or more queued threads;
+```
+
+
+要支持上面两个操作就必须有下面的条件：
+
+- 原子性操作同步器的状态位
+- 阻塞和唤醒线程
+- 一个有序的队列
+目标明确，要解决的问题也清晰了，那么剩下的就是解决上面三个问题。
+
+#### 状态位的原子操作
+这里使用一个32位的整数来描述状态位，前面章节的原子操作的理论知识整好派上用场，在这里依然使用CAS操作来解决这个问题。事实上这里还有一个64位版本的同步器（AbstractQueuedLongSynchronizer），这里暂且不谈。
+
+#### 阻塞和唤醒线程
+在JDK 5.0以后利用JNI在LockSupport类中实现了此特性。
+```java
+LockSupport.park()
+LockSupport.park(Object)
+LockSupport.parkNanos(Object, long)
+LockSupport.parkNanos(long)
+LockSupport.parkUntil(Object, long)
+LockSupport.parkUntil(long)
+LockSupport.unpark(Thread)
+```
+
+#### 有序队列
+AQS采用的CHL模型采用下面的算法完成FIFO的入队列和出队列过程。
+对于入队列(enqueue)：采用CAS操作，每次比较尾结点是否一致，然后插入的到尾结点中。
+```java
+do {
+        pred = tail;
+}while ( !compareAndSet(pred,tail,node) );
+
+```
+
+对于出队列(dequeue):由于每一个节点也缓存了一个状态，决定是否出队列，因此当不满足条件时就需要自旋等待，一旦满足条件就将头结点设置为下一个节点。
+```java
+while (pred.status != RELEASED) ;
+head  = node;
+```
+
+实际上这里自旋等待也是使用LockSupport.park()来实现的。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
