@@ -1,6 +1,6 @@
 ## 只实现了读写分离,尚未实现主从同步 TODO
-** https://www.cnblogs.com/cjsblog/p/9712457.html
-***https://www.cnblogs.com/codehome/p/9356496.html
+** https://www.cnblogs.com/cjsblog/p/9712457.html  
+*****https://www.cnblogs.com/codehome/p/9356496.html  原理
 **** https://blog.csdn.net/u013360850/article/details/78861442
 *****https://blog.csdn.net/neosmith/article/details/61202084
 
