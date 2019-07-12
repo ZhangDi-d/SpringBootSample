@@ -4,6 +4,8 @@ import com.ryze.bean.DBContextHolder;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,21 +14,27 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class DataSourceAop {
-    @Pointcut("!@annotation(com.ryze.annotation.Master) && (execution(* com.ryze..service..*.select*(..))" +
-            "||execution(* com.ryze..service..*.get*(..))||execution(* com.ryze..service..*.find*(..)))")
-    public void readPointcut() {
+    private final static Logger Logger = LoggerFactory.getLogger(DataSourceAop.class);
 
+    /**
+     * execution (* com.ryze.service.impl..*. select*(..))
+     *  execution(* com..*.*Dao.find*(..))
+     */
+    @Pointcut("!@annotation(com.ryze.annotation.Master) && (execution (* com.ryze.service.impl..*.select*(..))" +
+            "||execution (* com.ryze.service.impl..*.get*(..))||execution (* com.ryze.service.impl..*.find*(..)))")
+    public void readPointcut() {
+        Logger.info("enter readPointcut..");
     }
 
     @Pointcut("@annotation(com.ryze.annotation.Master) " +
-            "|| execution(* com.ryze..*.service..*.insert*(..)) " +
-            "|| execution(* com.ryze..*.service..*.add*(..)) " +
-            "|| execution(* com.ryze..*.service..*.update*(..)) " +
-            "|| execution(* com.ryze..*.service..*.edit*(..)) " +
-            "|| execution(* com.ryze..*.service..*.delete*(..)) " +
-            "|| execution(* com.ryze..*.service..*.remove*(..))")
+            "|| execution(* com.ryze.service.impl..*.insert*(..)) " +
+            "|| execution(* com.ryze.service.impl..*.add*(..)) " +
+            "|| execution(* com.ryze.service.impl..*.update*(..)) " +
+            "|| execution(* com.ryze.service.impl..*.edit*(..)) " +
+            "|| execution(* com.ryze.service.impl..*.delete*(..)) " +
+            "|| execution(* com.ryze.service.impl..*.remove*(..))")
     public void writePointcut() {
-
+        Logger.info("enter writePointcut..");
     }
 
     @Before("readPointcut()")

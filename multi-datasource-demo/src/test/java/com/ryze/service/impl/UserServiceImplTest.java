@@ -2,6 +2,7 @@ package test.com.ryze.service.impl;
 
 import com.ryze.domain.User;
 import com.ryze.mapper.UserMapper;
+import com.ryze.service.UserService;
 import com.ryze.util.IdWorker;
 import org.junit.Test;
 import org.junit.Before;
@@ -14,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 
 /**
  * UserServiceImpl Tester.
@@ -33,9 +35,9 @@ public class UserServiceImplTest {
      * ->jdbc:mysql://localhost:3306/springboot1?characterEncoding=UTF-8&useUnicode=true&useSSL=true&serverTimezone=UTC
      */
     @Resource
-    private UserMapper userMapper;
+    private UserService userService;
     @Autowired
-    private  IdWorker idWorker;
+    private IdWorker idWorker;
 
     @Before
     public void before() throws Exception {
@@ -57,23 +59,7 @@ public class UserServiceImplTest {
         user.setEmail("1@qq.com");
         user.setPassWord("123456");
         user.setRegTime(new Date().toString());
-        userMapper.insert(user)  ;
-    }
-
-    /**
-     * Method: update(User user)
-     */
-    @Test
-    public void testUpdate() throws Exception {
-//TODO: Test goes here... 
-    }
-
-    /**
-     * Method: delete(Long id)
-     */
-    @Test
-    public void testDelete() throws Exception {
-//TODO: Test goes here... 
+        userService.insert(user);
     }
 
     /**
@@ -81,7 +67,26 @@ public class UserServiceImplTest {
      */
     @Test
     public void testFindAll() throws Exception {
-        userMapper.findAll();
+        List<User> users = userService.findAll();
+        for (User user : users) {
+            System.out.println("testFindAll:===>user=" + user);
+        }
+    }
+
+    /**
+     * Method: update(User user)
+     */
+    @Test
+    public void testUpdate() throws Exception {
+
+    }
+
+    /**
+     * Method: delete(Long id)
+     */
+    @Test
+    public void testDelete() throws Exception {
+
     }
 
 

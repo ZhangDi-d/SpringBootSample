@@ -60,4 +60,16 @@ public class User {
     public void setUserName(String userName) {
         this.userName = userName == null ? null : userName.trim();
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", nickName='" + nickName + '\'' +
+                ", passWord='" + passWord + '\'' +
+                ", regTime='" + regTime + '\'' +
+                ", userName='" + userName + '\'' +
+                '}';
+    }
 }

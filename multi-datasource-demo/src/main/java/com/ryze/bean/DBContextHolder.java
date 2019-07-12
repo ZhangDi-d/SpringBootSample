@@ -25,11 +25,26 @@ public class DBContextHolder {
 
     public static void master() {
         contextHolder.set(DBTypeEnum.MASTER);
-        logger.info("DBContextHolder::=============> 切换到master");
+        logger.info("DBContextHolder::=============> master");
     }
 
     public static void slave1() {
         contextHolder.set(DBTypeEnum.SLAVE1);
-        logger.info("DBContextHolder::=============> 切换到slave1");
+        logger.info("DBContextHolder::=============> slave1");
     }
+
+    /*public static void slave() {
+        //  轮询
+        int index = counter.getAndIncrement() % 2;
+        if (counter.get() > 9999) {
+            counter.set(-1);
+        }
+        if (index == 0) {
+            set(DBTypeEnum.SLAVE1);
+            System.out.println("切换到slave1");
+        }else {
+            set(DBTypeEnum.SLAVE2);
+            System.out.println("切换到slave2");
+        }
+    }*/
 }
