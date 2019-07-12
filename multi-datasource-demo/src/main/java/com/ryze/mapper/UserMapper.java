@@ -1,7 +1,14 @@
 package com.ryze.mapper;
 
 import com.ryze.domain.User;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.Select;
 
+import java.util.List;
+
+
+@Mapper
 public interface UserMapper {
     int deleteByPrimaryKey(Long id);
 
@@ -14,4 +21,7 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+    @Select("select * from user ")
+    @ResultMap("BaseResultMap")
+    List<User> findAll();
 }

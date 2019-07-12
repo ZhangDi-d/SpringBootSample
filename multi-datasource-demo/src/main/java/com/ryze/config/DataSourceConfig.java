@@ -37,15 +37,16 @@ public class DataSourceConfig {
     @Bean("masterDataSource")
     @Qualifier("masterDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.master")
-    public DruidDataSource masterDataSource() {
-        return new DruidDataSource();
+    public DataSource masterDataSource() {
+        //return new DruidDataSource();
+        return DataSourceBuilder.create().build();
     }
 
     @Bean(name = "slave1DataSource")
     @Qualifier("slave1DataSource")
     @ConfigurationProperties(prefix = "spring.datasource.slave1")
-    public DruidDataSource slave1DataSource() {
-        return new DruidDataSource();
+    public DataSource slave1DataSource() {
+        return DataSourceBuilder.create().build();
     }
 
     @Bean(name = "masterJdbcTemplate")
