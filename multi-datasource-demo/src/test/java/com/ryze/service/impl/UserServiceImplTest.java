@@ -54,9 +54,9 @@ public class UserServiceImplTest {
     public void testInsert() throws Exception {
         User user = new User();
         user.setId(Long.valueOf(idWorker.nextId()));
-        user.setUserName("zhangsan");
-        user.setNickName("zhangsan");
-        user.setEmail("1@qq.com");
+        user.setUserName("zhangsan1");
+        user.setNickName("zhangsan1");
+        user.setEmail("11@qq.com");
         user.setPassWord("123456");
         user.setRegTime(new Date().toString());
         userService.insert(user);
