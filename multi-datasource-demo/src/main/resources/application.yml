@@ -1,3 +1,4 @@
+
 spring:
   datasource:
     master:
@@ -15,3 +16,6 @@ spring:
 #      username : root # 只读账户
 #      password : 123456
 #      driver-class-name : com.mysql.jdbc.Driver
+
+generator :
+  location : D:\Idea_work\SpringBootSample\multi-datasource-demo\src\main\resources\mybatis\mysql-connector-java-5.1.26.jar
