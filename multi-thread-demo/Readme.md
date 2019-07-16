@@ -1,4 +1,5 @@
 ### 2.1 线程的状态
+
 ### 2.2 线程的基本操作
 #### 1. 终止线程:
 stop方法会立即终止线程释放线程持有的锁,这样可能会导致数据的不一致;stop方法是被废弃的方法;</br>
@@ -14,17 +15,19 @@ public static class Thread1 extends Thread{
     run(){}  
 } 
 ```
-2. 线程中断interrupt:
+#### 2. 线程中断interrupt:
 线程中断不是立即中断,而是设置标志位,告诉线程有人希望你中断,之后如何处理,取决于线程自己 如果不做处理,那么线程不会退出
 
-3. 生产者消费者模型
+#### 3. 生产者消费者模型
 wait()->进入等待态
 notify()->随机唤醒等待锁线程,
 notifyAll()->唤醒等待锁的所有线程
 
-4. suspend(挂起)和resume(恢复)也是被废弃的方法,我们可以使notify和wait实现其功能 
+#### 4. suspend(挂起)和resume(恢复)
+   也是被废弃的方法,我们可以使notify和wait实现其功能 
 
-5. 等待线程结束(join) 和谦让(yeild) 一个是自己优先(ts.join -> ts线程优先),一个是让别人优先(ts.yeild-> ts线程谦让别人).
+#### 5. 等待线程结束(join) 和谦让(yeild)
+   一个是自己优先(ts.join -> ts线程优先),一个是让别人优先(ts.yeild-> ts线程谦让别人).
 
 ### 2.3 volatile 与内存管理
   volatile保证资源在线程间的可见性,指令重排与happen-before
@@ -50,6 +53,28 @@ volatile不能保证线程安全,被synchronized限制的多个线程时顺序�
 ## 3 并发包
 ### 3.1 同步控制
 #### 3.1.1 synchronized的扩展:重入锁
+可重入锁仅仅是对于同一个线程而言的,同一个线程加锁多少次,就必须释放多少次锁,释放的次数多了的话,会报异常;
+少了的话,其他线程会无法获取该锁.
+    1. 中断响应
+    synchronized等待锁的话,会获取锁或者继续等待;而可重入锁提供了中断处理的能力. ->com.ryze.chapter3.IntLock
+    2.锁申请限时等待
+    ReentrantLock.tryLock(),如果锁未被其他线程占用,则会获取成功,返回true;如果被锁被其他资源占用,线程不会等待,会立即返回false->com.ryze.chapter3.TryLock
+    3.公平锁
+    new ReentrantLock(true)->将会创建一个公平锁;公平锁实现成本高,性能低下,因此锁默认是非公平的.   
+    ReentrantLock的重要方法:
+    lock(): 获得锁,如果锁被占用,等待;
+    lockInterruptibly():获得锁,优先响应中断;
+    tryLock():尝试获取锁,获取成功,返回true;否则返回false,并且不等待;
+    tryLock(long time,TimeUnit unit):在给定时间内获取锁; 
+    unlock():释放锁;
+    
+#### 3.1.2 Condition
+
+    
+    
+    
+    
+
 
 
 
