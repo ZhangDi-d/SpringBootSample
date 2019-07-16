@@ -35,6 +35,43 @@ notifyAll()->唤醒等待锁的所有线程
 系统只有守护线程时,整个程序就结束了 
 
 ### 2.6 线程优先级
+线程优先级高的绝大部分情况下会比线程优先级低的先结束.
+
+### 2.7 线程安全与synchronized
+volatile不能保证线程安全,被synchronized限制的多个线程时顺序执行的.
+
+### 2.8 隐蔽的错误
+  1. int a = 1072741827;int b = 1431655768; 两者均值 avg = (a+b)/2 = -894784850 ; 原因在于a+b导出int 溢出
+  2. 并发下的ArrayList是线程不安全的->可以用Vector代替,或者使用 synchronized
+    或者List<Map<String,Object>> data=Collections.synchronizedList(new ArrayList<Map<String,Object>>());
+  3. 并发下的HashMap也是线程不安全的 ->使用concurrentHashMap代替 
+  4. 错误的加锁-> 对Integer 加锁,见com.ryze.chapter2.BadLockOnInteger
+
+## 3 并发包
+### 3.1 同步控制
+#### 3.1.1 synchronized的扩展:重入锁
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
