@@ -1,5 +1,9 @@
 package com.ryze.chapter3;
 
+import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.commons.lang3.time.FastDateFormat;
+
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -29,8 +33,18 @@ public class TimeLock implements Runnable {
         TimeLock timeLock = new TimeLock();
         Thread t1 = new Thread(timeLock);
         Thread t2 = new Thread(timeLock);
+        System.out.println(safetyDateFormat());
         t1.start();
         t2.start();
 
+    }
+
+    /**
+     * 测试一下线程安全的FastDateFormat
+     * @return
+     */
+    public static String safetyDateFormat(){
+        FastDateFormat format = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss");
+        return format.format(new Date());
     }
 }
