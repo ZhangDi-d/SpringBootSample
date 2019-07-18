@@ -1,4 +1,4 @@
-package com.ryze.netty;
+package com.ryze.nettybasic;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

@@ -1,4 +1,4 @@
-package com.ryze.netty;
+package com.ryze.nettybasic;
 
 /**
  * Created by xueLai on 2019/6/3.

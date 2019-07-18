@@ -1,4 +1,4 @@
-package com.ryze.netty;
+package com.ryze.nettybasic;
 
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelInitializer;
