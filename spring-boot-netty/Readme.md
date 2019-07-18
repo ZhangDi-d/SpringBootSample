@@ -18,3 +18,50 @@ ChannelHandlerContext 的主要功能是管理它所关联的 ChannelHandler 和
 ![](https://images.gitbook.cn/d4632330-a5e9-11e8-9c44-a333cdfc1b85)
 
 ### 4.netty线程模型
+
+Netty 线程模型是典型的 Reactor 模型结构，其中常用的 Reactor 线程模型有三种，分别为：Reactor 单线程模型、Reactor 多线程模型和主从 Reactor 多线程模型。
+#### Reactor 线程模型
+##### Reactor 单线程模型
+![](https://images.gitbook.cn/da9c4ec0-a5e9-11e8-9c44-a333cdfc1b85)
+```java
+EventLoopGroup bossGroup = new NioEventLoopGroup(1);
+ServerBootstrap b = new ServerBootstrap();
+b.group(bossGroup)
+ .channel(NioServerSocketChannel.class)
+...
+
+```
+
+##### Reactor 多线程模型
+
+![](https://images.gitbook.cn/e0adce10-a5e9-11e8-9c44-a333cdfc1b85)
+
+```java
+EventLoopGroup bossGroup = new NioEventLoopGroup(1);
+EventLoopGroup workerGroup = new NioEventLoopGroup();
+ServerBootstrap b = new ServerBootstrap();
+b.group(bossGroup, workerGroup)
+ .channel(NioServerSocketChannel.class)
+ ...
+
+```
+##### 主从 Reactor 多线程模型
+![](https://images.gitbook.cn/e5e89c70-a5e9-11e8-9c44-a333cdfc1b85)
+```java
+EventLoopGroup bossGroup = new NioEventLoopGroup(4);
+EventLoopGroup workerGroup = new NioEventLoopGroup();
+ServerBootstrap b = new ServerBootstrap();
+b.group(bossGroup, workerGroup)
+ .channel(NioServerSocketChannel.class)
+ ...
+```
+
+服务器端的 ServerSocketChannel 只绑定到了 bossGroup 中的一个线程，因此在调用 Java NIO 的 Selector.select 处理客户端的连接请求时，实际上是在一个线程中的，所以对只有一个服务的应用来说，bossGroup 设置多个线程是没有什么作用的，反而还会造成资源浪费。
+
+
+### 5.EventLoopGroup 和 EventLoop
+- NioEventLoopGroup 实际上就是个线程池，一个 EventLoopGroup 包含一个或者多个 EventLoop；
+- 一个 EventLoop 在它的生命周期内只和一个 Thread 绑定；
+- 所有 EnventLoop 处理的 I/O 事件都将在它专有的 Thread 上被处理；
+- 一个 Channel 在它的生命周期内只注册于一个 EventLoop；
+- 每一个 EventLoop 负责处理一个或多个 Channel；
