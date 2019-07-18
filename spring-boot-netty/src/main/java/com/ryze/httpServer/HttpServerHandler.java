@@ -44,17 +44,13 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<HttpObject> {
 
     /*@Override
     protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) throws Exception {
-
         ctx.channel().remoteAddress();
-
         FullHttpRequest request = msg;
-
         System.out.println("请求方法名称:" + request.method().name());
 
         System.out.println("uri:" + request.uri());
         ByteBuf buf = request.content();
         System.out.print(buf.toString(CharsetUtil.UTF_8));
-
 
         ByteBuf byteBuf = Unpooled.copiedBuffer("hello world", CharsetUtil.UTF_8);
         FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, byteBuf);
