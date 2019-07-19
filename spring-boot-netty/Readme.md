@@ -65,3 +65,48 @@ b.group(bossGroup, workerGroup)
 - 所有 EnventLoop 处理的 I/O 事件都将在它专有的 Thread 上被处理；
 - 一个 Channel 在它的生命周期内只注册于一个 EventLoop；
 - 每一个 EventLoop 负责处理一个或多个 Channel；
+
+
+### 6.粘包与拆包示例演示与解决方案
+TCP 是一个面向字节流的协议，所谓流就是没有界限的一串数据，你无法知道什么时候开始，什么时候结束。TCP 底层并不了解上层业务数据的具体含义，它会根据 TCP 缓冲区的实际情况进行包的划分，所以在业务上认为的一个完整的包可能会被 TCP 拆分成多个包进行发送，也有可能把多个小的包封装成一个大的数据包发送，这就是所谓的 TCP 粘包拆包问题。
+
+#### 粘包问题的解决策略
+由于 TCP 底层并不了解上层业务数据的具体含义，所以在底层是无法保证数据包不被拆分和重组的，这个问题只能通过应用层来解决。根据业界的主流协议的解决方案，归纳如下：
+
+- 消息定长，例如每个报文的大小固定长度为 200 字节，如果不足，空位补空格；
+- 在包尾增加回车换行符进行分割，例如 FTP 协议；
+- 将消息分为消息头和消息体，消息头中包含表示消息总长度（或消息体长度）的字段，通常设计思路为消息头的第一个字段使用 int32 来表示消息的总长度；
+- 使用自定义协议。
+
+Netty 已经帮我们做好了，完全的开箱即用:
+LineBasedFrameDecoder：基于换行符的解码器
+DelimiterBasedFrameDecoder：基于分隔符的解码器
+FixedLengthFrameDecoder：固定长度的解码器
+LengthFieldBasedFrameDecoder：基于长度域解码器
+```java
+pipeline.addLast(new LineBasedFrameDecoder(1024));
+```
+
+### 7.protobuf
+https://developers.google.cn/protocol-buffers/docs/javatutorial
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

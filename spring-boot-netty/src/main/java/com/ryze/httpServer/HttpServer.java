@@ -2,6 +2,7 @@ package com.ryze.httpServer;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
@@ -25,13 +26,16 @@ public class HttpServer {
     public static void main(String[] args) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-        
+
         try {
             //服务端启动辅助类
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new HttpServerInitializer());
+                    .childHandler(new HttpServerInitializer())
+                    // 用于临时存放已完成三次握手的请求的队列的最大长度。如果未设置或所设置的值小于1，Java将使用默认值50
+                    .option(ChannelOption.SO_BACKLOG,128)
+                    .childOption(ChannelOption.SO_KEEPALIVE,true);
             ChannelFuture future = bootstrap.bind(8080).sync();
             future.channel().closeFuture().sync();
 
