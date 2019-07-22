@@ -9,7 +9,7 @@ public class ProtobufCodecTest {
     /**
      * 编码
      *
-     * @param req 
+     * @param req
      * @return
      */
     public static byte[] encode(ChatInfo.Chat req) {
@@ -30,7 +30,7 @@ public class ProtobufCodecTest {
     public static void main(String[] args) throws Exception {
 
         ChatInfo.Chat chat = ChatInfo.Chat.newBuilder()
-                .setMsg("感谢这么优秀的你还关注我！")
+                .setMsg("感谢!")
                 .build();
 
         byte[] buffer = encode(chat);
