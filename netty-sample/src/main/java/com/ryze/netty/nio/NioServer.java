@@ -2,6 +2,7 @@ package com.ryze.netty.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 
@@ -21,10 +22,16 @@ public class NioServer {
         // 绑定端口
         socketChannel.bind(new InetSocketAddress(PORT));
         // 向给定的选择器注册此通道的接受连接事件
-        socketChannel.register(selector,);
+        socketChannel.register(selector, SelectionKey.OP_ACCEPT);
+        System.out.println("NioServer 已经启动,监听端口:" + PORT);
+        
     }
 
-    public static void main(String[] args){
-        start();
+    public static void main(String[] args) {
+        try {
+            start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
