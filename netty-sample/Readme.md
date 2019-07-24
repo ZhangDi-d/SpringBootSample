@@ -117,3 +117,18 @@ public class ThreadPoolHelper {
 }
 
 ```
+
+
+### 4. java线程池的execute()和submit()方法
+JDK5往后，任务分两类：一类是实现了Runnable接口的类，一类是实现了Callable接口的类。两者都可以被ExecutorService执行，它们的区别是：
+
+execute(Runnable x) 没有返回值。可以执行任务，但无法判断任务是否成功完成。——实现Runnable接口
+submit(Runnable x) 返回一个future。可以用这个future来判断任务是否成功完成。——实现Callable接口
+
+execute() 是在Executor接口中定义的，ThreadPoolExecutor继承了AbstractExecutorService抽象类，
+该抽象类实现了ExecutorService接口（但并没有覆盖execute方法），而ExecutorService接口继承了Executor接口。
+submit方法是ExecutorService接口里面定义的，具体的实现由AbstractExecutorService进行。
+
+如果提交的任务不需要一个结果的话直接用execute()会提升很多性能。
+如果你不需要一个结果，那么就老老实实使用execute，如果你需要的是一个空结果，那么submit(yourRunnable)与submit(yourRunnable,null)是等价的！
+

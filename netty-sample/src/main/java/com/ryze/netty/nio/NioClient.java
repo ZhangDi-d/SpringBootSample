@@ -3,7 +3,10 @@ package com.ryze.netty.nio;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import io.netty.channel.ServerChannel;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
@@ -24,9 +27,9 @@ public class NioClient {
         SocketChannel channel = SocketChannel.open();
         // 设置此通道为非阻塞模式
         channel.configureBlocking(false);
-        // 绑定端口
-        channel.bind(new InetSocketAddress("127.0.0.1", 9090));
         channel.register(selector, SelectionKey.OP_CONNECT);
+        // 绑定端口
+        channel.connect(new InetSocketAddress("127.0.0.1", 9091));
 
         while (true) {
             //阻塞方法
@@ -38,16 +41,16 @@ public class NioClient {
                 SelectionKey key = iterator.next();
                 iterator.remove();
                 if (key.isConnectable()) {
-                    SocketChannel sc = (SocketChannel)key.channel();
+                    SocketChannel sc = (SocketChannel) key.channel();
                     channel.finishConnect();
                     System.out.println("客户端连接服务器成功!");
-                    sc.register(selector,SelectionKey.OP_READ);
+                    sc.register(selector, SelectionKey.OP_READ);
                     input(sc);
                 } else if (key.isReadable()) {
-                    SocketChannel sc = (SocketChannel)key.channel();
+                    SocketChannel sc = (SocketChannel) key.channel();
                     ByteBuffer buffer = ByteBuffer.allocate(1024);
                     int read = sc.read(buffer);
-                    if(read>0){
+                    if (read > 0) {
                         System.out.println("从服务端发送的消息：" + new String(buffer.array(), 0, read));
                     }
                 }
@@ -57,17 +60,32 @@ public class NioClient {
 
     /**
      * 从控制台输入数据，并发送出去
+     *
      * @param sc
      */
     private static void input(SocketChannel sc) {
 
         ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("demo-pool-%d").build();
-        ExecutorService pool = new ThreadPoolExecutor(5, 200,0L, TimeUnit.MILLISECONDS,
+        ExecutorService pool = new ThreadPoolExecutor(5, 200, 0L, TimeUnit.MILLISECONDS,
                 new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
         pool.execute(new Runnable() {
             @Override
             public void run() {
+                ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+                while (true) {
+                    try {
+                        byteBuffer.clear();
+                        InputStream in = System.in;
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+                        String str = reader.readLine();
+                        byteBuffer.put(str.getBytes());
+                        byteBuffer.flip();
+                        sc.write(byteBuffer);
 
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
 

@@ -12,7 +12,7 @@ import java.util.Set;
  * Created by xueLai on 2019/7/23.
  */
 public class NioServer {
-    private final static int PORT = 9090;
+    private final static int PORT = 9091;
 
     private static void start() throws IOException {
         // 创建一个选择器来处理Channel
