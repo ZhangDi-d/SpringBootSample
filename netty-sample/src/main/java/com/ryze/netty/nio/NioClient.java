@@ -1,7 +1,6 @@
 package com.ryze.netty.nio;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import io.netty.channel.ServerChannel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
