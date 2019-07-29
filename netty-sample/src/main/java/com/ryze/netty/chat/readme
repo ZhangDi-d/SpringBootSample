@@ -1,0 +1,23 @@
+服务端：
+- ChatServer.java 启动服务器；
+- ChatServerChannelInitializer.java 向 Pipeline 中添加 Handler、Protobuf 编解码，登录请求处理器、验证处理器、单聊处理器；
+- LoginRequestHandler.java 登录请求处理器，用于验证用户身份是否合法，保存用户和 Channel 映射；
+- AuthHandler.java 登录验证处理器，验证用户是否登录，用户下线通知；
+- SingleChatHandler.java 单聊处理器，接收客户端发送的消息，并转发给目标客户端；
+- UserRepository.java 模拟用户信息（用户 id、用户名都是唯一的），用于验证用户身份。
+
+公共类：
+- ChatInfo.java 通过使用 Protobuf 语法定义的 Chat.proto 生成代码；
+- SessionUtil.java 保存用户和 Channel 映射关系；
+- StringUtil.java 字符串处理工具类；
+- Constant.java 定义常量。
+
+客户端：
+- ChatClinet.java 客户端连接服务端，登录，发送消息；
+- ChatClientChannelInitializer.java 向 Pipeline 中添加 Handler、Protobuf 编解码，登录响应处理器、单聊处理器；
+- LoginResponseHandler.java 登录响应处理器，接收服务端响应的登录结果；
+- SingleChatHandler.java 单聊处理器，接收其他客户单发送（依靠服务端转发）过来的消息；
+- Command.java 命令接口，定义了执行命令的方法；
+- AbstractCommand.java 实现 Command 接口，定义解析用户输入字符串的方法；
+- LoginCommand.java 登录命令，用于客户端发送登录请求；
+- SingleChatCommand.java 单聊命令，用户客户端发起单聊。

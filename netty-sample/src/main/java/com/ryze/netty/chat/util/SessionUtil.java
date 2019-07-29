@@ -8,6 +8,9 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * @author xuelai
+ */
 public final class SessionUtil {
 
     private SessionUtil(){}
