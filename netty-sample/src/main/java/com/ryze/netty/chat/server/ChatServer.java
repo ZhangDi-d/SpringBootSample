@@ -37,7 +37,8 @@ public class ChatServer {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-
+            boss.shutdownGracefully();
+            worker.shutdownGracefully();
         }
     }
 

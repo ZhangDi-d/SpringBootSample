@@ -1,6 +1,9 @@
 package com.ryze.netty.chat.server;
 
 import com.ryze.netty.chat.ChatInfo;
+import com.ryze.netty.chat.server.handler.AuthHandler;
+import com.ryze.netty.chat.server.handler.LoginRequestHandler;
+import com.ryze.netty.chat.server.handler.SingleChatHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -21,6 +24,12 @@ public class ChatServerChannelInitializer extends ChannelInitializer<SocketChann
         pipeline.addLast(new ProtobufVarint32LengthFieldPrepender());
         pipeline.addLast(new ProtobufEncoder());
 
+        //登录请求
+        pipeline.addLast(new LoginRequestHandler());
+        //验证
+        pipeline.addLast(new AuthHandler());
+        //一对一聊天
+        pipeline.addLast(new SingleChatHandler());
 
 
     }
