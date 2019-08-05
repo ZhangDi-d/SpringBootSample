@@ -30,7 +30,7 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Chat.MessageType msg_type = 2;</code>
      */
-    com.ryze.netty.chat.ChatInfo.Chat.MessageType getMsgType();
+    Chat.MessageType getMsgType();
 
     /**
      * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
@@ -39,11 +39,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
      */
-    com.ryze.netty.chat.ChatInfo.LoginRequest getLoginRequest();
+    LoginRequest getLoginRequest();
     /**
      * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
      */
-    com.ryze.netty.chat.ChatInfo.LoginRequestOrBuilder getLoginRequestOrBuilder();
+    LoginRequestOrBuilder getLoginRequestOrBuilder();
 
     /**
      * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
@@ -52,11 +52,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
      */
-    com.ryze.netty.chat.ChatInfo.LoginResponse getLoginResponse();
+    LoginResponse getLoginResponse();
     /**
      * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
      */
-    com.ryze.netty.chat.ChatInfo.LoginResponseOrBuilder getLoginResponseOrBuilder();
+    LoginResponseOrBuilder getLoginResponseOrBuilder();
 
     /**
      * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
@@ -65,11 +65,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    com.ryze.netty.chat.ChatInfo.CreateGroupRequest getCreateGroupRequest();
+    CreateGroupRequest getCreateGroupRequest();
     /**
      * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    com.ryze.netty.chat.ChatInfo.CreateGroupRequestOrBuilder getCreateGroupRequestOrBuilder();
+    CreateGroupRequestOrBuilder getCreateGroupRequestOrBuilder();
 
     /**
      * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
@@ -78,11 +78,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
      */
-    com.ryze.netty.chat.ChatInfo.CreateGroupResponse getCreateGroupResponse();
+    CreateGroupResponse getCreateGroupResponse();
     /**
      * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
      */
-    com.ryze.netty.chat.ChatInfo.CreateGroupResponseOrBuilder getCreateGroupResponseOrBuilder();
+    CreateGroupResponseOrBuilder getCreateGroupResponseOrBuilder();
 
     /**
      * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
@@ -91,11 +91,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
      */
-    com.ryze.netty.chat.ChatInfo.SingleChat getSingleChat();
+    SingleChat getSingleChat();
     /**
      * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
      */
-    com.ryze.netty.chat.ChatInfo.SingleChatOrBuilder getSingleChatOrBuilder();
+    SingleChatOrBuilder getSingleChatOrBuilder();
 
     /**
      * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
@@ -104,13 +104,13 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
      */
-    com.ryze.netty.chat.ChatInfo.GroupChat getGroupChat();
+    GroupChat getGroupChat();
     /**
      * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
      */
-    com.ryze.netty.chat.ChatInfo.GroupChatOrBuilder getGroupChatOrBuilder();
+    GroupChatOrBuilder getGroupChatOrBuilder();
 
-    public com.ryze.netty.chat.ChatInfo.Chat.DataCase getDataCase();
+    public Chat.DataCase getDataCase();
   }
   /**
    * Protobuf type {@code com.ryze.netty.chat.Chat}
@@ -129,14 +129,14 @@ public final class ChatInfo {
       msgType_ = 0;
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new Chat();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -147,7 +147,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -171,84 +171,84 @@ public final class ChatInfo {
               break;
             }
             case 26: {
-              com.ryze.netty.chat.ChatInfo.LoginRequest.Builder subBuilder = null;
+              LoginRequest.Builder subBuilder = null;
               if (dataCase_ == 3) {
-                subBuilder = ((com.ryze.netty.chat.ChatInfo.LoginRequest) data_).toBuilder();
+                subBuilder = ((LoginRequest) data_).toBuilder();
               }
               data_ =
-                  input.readMessage(com.ryze.netty.chat.ChatInfo.LoginRequest.parser(), extensionRegistry);
+                  input.readMessage(LoginRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.ryze.netty.chat.ChatInfo.LoginRequest) data_);
+                subBuilder.mergeFrom((LoginRequest) data_);
                 data_ = subBuilder.buildPartial();
               }
               dataCase_ = 3;
               break;
             }
             case 34: {
-              com.ryze.netty.chat.ChatInfo.LoginResponse.Builder subBuilder = null;
+              LoginResponse.Builder subBuilder = null;
               if (dataCase_ == 4) {
-                subBuilder = ((com.ryze.netty.chat.ChatInfo.LoginResponse) data_).toBuilder();
+                subBuilder = ((LoginResponse) data_).toBuilder();
               }
               data_ =
-                  input.readMessage(com.ryze.netty.chat.ChatInfo.LoginResponse.parser(), extensionRegistry);
+                  input.readMessage(LoginResponse.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.ryze.netty.chat.ChatInfo.LoginResponse) data_);
+                subBuilder.mergeFrom((LoginResponse) data_);
                 data_ = subBuilder.buildPartial();
               }
               dataCase_ = 4;
               break;
             }
             case 42: {
-              com.ryze.netty.chat.ChatInfo.CreateGroupRequest.Builder subBuilder = null;
+              CreateGroupRequest.Builder subBuilder = null;
               if (dataCase_ == 5) {
-                subBuilder = ((com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_).toBuilder();
+                subBuilder = ((CreateGroupRequest) data_).toBuilder();
               }
               data_ =
-                  input.readMessage(com.ryze.netty.chat.ChatInfo.CreateGroupRequest.parser(), extensionRegistry);
+                  input.readMessage(CreateGroupRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_);
+                subBuilder.mergeFrom((CreateGroupRequest) data_);
                 data_ = subBuilder.buildPartial();
               }
               dataCase_ = 5;
               break;
             }
             case 50: {
-              com.ryze.netty.chat.ChatInfo.CreateGroupResponse.Builder subBuilder = null;
+              CreateGroupResponse.Builder subBuilder = null;
               if (dataCase_ == 6) {
-                subBuilder = ((com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_).toBuilder();
+                subBuilder = ((CreateGroupResponse) data_).toBuilder();
               }
               data_ =
-                  input.readMessage(com.ryze.netty.chat.ChatInfo.CreateGroupResponse.parser(), extensionRegistry);
+                  input.readMessage(CreateGroupResponse.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_);
+                subBuilder.mergeFrom((CreateGroupResponse) data_);
                 data_ = subBuilder.buildPartial();
               }
               dataCase_ = 6;
               break;
             }
             case 58: {
-              com.ryze.netty.chat.ChatInfo.SingleChat.Builder subBuilder = null;
+              SingleChat.Builder subBuilder = null;
               if (dataCase_ == 7) {
-                subBuilder = ((com.ryze.netty.chat.ChatInfo.SingleChat) data_).toBuilder();
+                subBuilder = ((SingleChat) data_).toBuilder();
               }
               data_ =
-                  input.readMessage(com.ryze.netty.chat.ChatInfo.SingleChat.parser(), extensionRegistry);
+                  input.readMessage(SingleChat.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.ryze.netty.chat.ChatInfo.SingleChat) data_);
+                subBuilder.mergeFrom((SingleChat) data_);
                 data_ = subBuilder.buildPartial();
               }
               dataCase_ = 7;
               break;
             }
             case 66: {
-              com.ryze.netty.chat.ChatInfo.GroupChat.Builder subBuilder = null;
+              GroupChat.Builder subBuilder = null;
               if (dataCase_ == 8) {
-                subBuilder = ((com.ryze.netty.chat.ChatInfo.GroupChat) data_).toBuilder();
+                subBuilder = ((GroupChat) data_).toBuilder();
               }
               data_ =
-                  input.readMessage(com.ryze.netty.chat.ChatInfo.GroupChat.parser(), extensionRegistry);
+                  input.readMessage(GroupChat.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.ryze.netty.chat.ChatInfo.GroupChat) data_);
+                subBuilder.mergeFrom((GroupChat) data_);
                 data_ = subBuilder.buildPartial();
               }
               dataCase_ = 8;
@@ -275,15 +275,15 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Chat_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_Chat_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Chat_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_Chat_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.Chat.class, com.ryze.netty.chat.ChatInfo.Chat.Builder.class);
+              Chat.class, Builder.class);
     }
 
     /**
@@ -362,7 +362,7 @@ public final class ChatInfo {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
@@ -371,7 +371,7 @@ public final class ChatInfo {
       /**
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static MessageType valueOf(int value) {
         return forNumber(value);
       }
@@ -412,7 +412,7 @@ public final class ChatInfo {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.Chat.getDescriptor().getEnumTypes().get(0);
+        return Chat.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final MessageType[] VALUES = values();
@@ -420,7 +420,7 @@ public final class ChatInfo {
       public static MessageType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -439,7 +439,7 @@ public final class ChatInfo {
     }
 
     private int dataCase_ = 0;
-    private java.lang.Object data_;
+    private Object data_;
     public enum DataCase
         implements com.google.protobuf.Internal.EnumLite {
       LOGIN_REQUEST(3),
@@ -456,7 +456,7 @@ public final class ChatInfo {
       /**
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static DataCase valueOf(int value) {
         return forNumber(value);
       }
@@ -504,10 +504,10 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Chat.MessageType msg_type = 2;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.Chat.MessageType getMsgType() {
+    public MessageType getMsgType() {
       @SuppressWarnings("deprecation")
-      com.ryze.netty.chat.ChatInfo.Chat.MessageType result = com.ryze.netty.chat.ChatInfo.Chat.MessageType.valueOf(msgType_);
-      return result == null ? com.ryze.netty.chat.ChatInfo.Chat.MessageType.UNRECOGNIZED : result;
+      MessageType result = MessageType.valueOf(msgType_);
+      return result == null ? MessageType.UNRECOGNIZED : result;
     }
 
     public static final int LOGIN_REQUEST_FIELD_NUMBER = 3;
@@ -520,20 +520,20 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.LoginRequest getLoginRequest() {
+    public LoginRequest getLoginRequest() {
       if (dataCase_ == 3) {
-         return (com.ryze.netty.chat.ChatInfo.LoginRequest) data_;
+         return (LoginRequest) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
+      return LoginRequest.getDefaultInstance();
     }
     /**
      * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.LoginRequestOrBuilder getLoginRequestOrBuilder() {
+    public LoginRequestOrBuilder getLoginRequestOrBuilder() {
       if (dataCase_ == 3) {
-         return (com.ryze.netty.chat.ChatInfo.LoginRequest) data_;
+         return (LoginRequest) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
+      return LoginRequest.getDefaultInstance();
     }
 
     public static final int LOGIN_RESPONSE_FIELD_NUMBER = 4;
@@ -546,20 +546,20 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.LoginResponse getLoginResponse() {
+    public LoginResponse getLoginResponse() {
       if (dataCase_ == 4) {
-         return (com.ryze.netty.chat.ChatInfo.LoginResponse) data_;
+         return (LoginResponse) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
+      return LoginResponse.getDefaultInstance();
     }
     /**
      * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.LoginResponseOrBuilder getLoginResponseOrBuilder() {
+    public LoginResponseOrBuilder getLoginResponseOrBuilder() {
       if (dataCase_ == 4) {
-         return (com.ryze.netty.chat.ChatInfo.LoginResponse) data_;
+         return (LoginResponse) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
+      return LoginResponse.getDefaultInstance();
     }
 
     public static final int CREATE_GROUP_REQUEST_FIELD_NUMBER = 5;
@@ -572,20 +572,20 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.CreateGroupRequest getCreateGroupRequest() {
+    public CreateGroupRequest getCreateGroupRequest() {
       if (dataCase_ == 5) {
-         return (com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_;
+         return (CreateGroupRequest) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
+      return CreateGroupRequest.getDefaultInstance();
     }
     /**
      * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.CreateGroupRequestOrBuilder getCreateGroupRequestOrBuilder() {
+    public CreateGroupRequestOrBuilder getCreateGroupRequestOrBuilder() {
       if (dataCase_ == 5) {
-         return (com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_;
+         return (CreateGroupRequest) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
+      return CreateGroupRequest.getDefaultInstance();
     }
 
     public static final int CREATE_GROUP_RESPONSE_FIELD_NUMBER = 6;
@@ -598,20 +598,20 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.CreateGroupResponse getCreateGroupResponse() {
+    public CreateGroupResponse getCreateGroupResponse() {
       if (dataCase_ == 6) {
-         return (com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_;
+         return (CreateGroupResponse) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+      return CreateGroupResponse.getDefaultInstance();
     }
     /**
      * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.CreateGroupResponseOrBuilder getCreateGroupResponseOrBuilder() {
+    public CreateGroupResponseOrBuilder getCreateGroupResponseOrBuilder() {
       if (dataCase_ == 6) {
-         return (com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_;
+         return (CreateGroupResponse) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+      return CreateGroupResponse.getDefaultInstance();
     }
 
     public static final int SINGLE_CHAT_FIELD_NUMBER = 7;
@@ -624,20 +624,20 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.SingleChat getSingleChat() {
+    public SingleChat getSingleChat() {
       if (dataCase_ == 7) {
-         return (com.ryze.netty.chat.ChatInfo.SingleChat) data_;
+         return (SingleChat) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+      return SingleChat.getDefaultInstance();
     }
     /**
      * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.SingleChatOrBuilder getSingleChatOrBuilder() {
+    public SingleChatOrBuilder getSingleChatOrBuilder() {
       if (dataCase_ == 7) {
-         return (com.ryze.netty.chat.ChatInfo.SingleChat) data_;
+         return (SingleChat) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+      return SingleChat.getDefaultInstance();
     }
 
     public static final int GROUP_CHAT_FIELD_NUMBER = 8;
@@ -650,24 +650,24 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.GroupChat getGroupChat() {
+    public GroupChat getGroupChat() {
       if (dataCase_ == 8) {
-         return (com.ryze.netty.chat.ChatInfo.GroupChat) data_;
+         return (GroupChat) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+      return GroupChat.getDefaultInstance();
     }
     /**
      * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.GroupChatOrBuilder getGroupChatOrBuilder() {
+    public GroupChatOrBuilder getGroupChatOrBuilder() {
       if (dataCase_ == 8) {
-         return (com.ryze.netty.chat.ChatInfo.GroupChat) data_;
+         return (GroupChat) data_;
       }
-      return com.ryze.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+      return GroupChat.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -677,37 +677,37 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!version_.isEmpty()) {
         output.writeBytes(1, version_);
       }
-      if (msgType_ != com.ryze.netty.chat.ChatInfo.Chat.MessageType.LOGIN_REQUEST.getNumber()) {
+      if (msgType_ != MessageType.LOGIN_REQUEST.getNumber()) {
         output.writeEnum(2, msgType_);
       }
       if (dataCase_ == 3) {
-        output.writeMessage(3, (com.ryze.netty.chat.ChatInfo.LoginRequest) data_);
+        output.writeMessage(3, (LoginRequest) data_);
       }
       if (dataCase_ == 4) {
-        output.writeMessage(4, (com.ryze.netty.chat.ChatInfo.LoginResponse) data_);
+        output.writeMessage(4, (LoginResponse) data_);
       }
       if (dataCase_ == 5) {
-        output.writeMessage(5, (com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_);
+        output.writeMessage(5, (CreateGroupRequest) data_);
       }
       if (dataCase_ == 6) {
-        output.writeMessage(6, (com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_);
+        output.writeMessage(6, (CreateGroupResponse) data_);
       }
       if (dataCase_ == 7) {
-        output.writeMessage(7, (com.ryze.netty.chat.ChatInfo.SingleChat) data_);
+        output.writeMessage(7, (SingleChat) data_);
       }
       if (dataCase_ == 8) {
-        output.writeMessage(8, (com.ryze.netty.chat.ChatInfo.GroupChat) data_);
+        output.writeMessage(8, (GroupChat) data_);
       }
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -717,48 +717,48 @@ public final class ChatInfo {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, version_);
       }
-      if (msgType_ != com.ryze.netty.chat.ChatInfo.Chat.MessageType.LOGIN_REQUEST.getNumber()) {
+      if (msgType_ != MessageType.LOGIN_REQUEST.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, msgType_);
       }
       if (dataCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.ryze.netty.chat.ChatInfo.LoginRequest) data_);
+          .computeMessageSize(3, (LoginRequest) data_);
       }
       if (dataCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.ryze.netty.chat.ChatInfo.LoginResponse) data_);
+          .computeMessageSize(4, (LoginResponse) data_);
       }
       if (dataCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_);
+          .computeMessageSize(5, (CreateGroupRequest) data_);
       }
       if (dataCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_);
+          .computeMessageSize(6, (CreateGroupResponse) data_);
       }
       if (dataCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, (com.ryze.netty.chat.ChatInfo.SingleChat) data_);
+          .computeMessageSize(7, (SingleChat) data_);
       }
       if (dataCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (com.ryze.netty.chat.ChatInfo.GroupChat) data_);
+          .computeMessageSize(8, (GroupChat) data_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.Chat)) {
+      if (!(obj instanceof Chat)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.Chat other = (com.ryze.netty.chat.ChatInfo.Chat) obj;
+      Chat other = (Chat) obj;
 
       if (!getVersion()
           .equals(other.getVersion())) return false;
@@ -796,7 +796,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -840,69 +840,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(
+    public static Chat parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(
+    public static Chat parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(
+    public static Chat parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(
+    public static Chat parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(byte[] data)
+    public static Chat parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(
+    public static Chat parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(java.io.InputStream input)
+    public static Chat parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(
+    public static Chat parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseDelimitedFrom(java.io.InputStream input)
+    public static Chat parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseDelimitedFrom(
+    public static Chat parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(
+    public static Chat parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.Chat parseFrom(
+    public static Chat parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -910,23 +910,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.Chat prototype) {
+    public static Builder newBuilder(Chat prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -936,18 +936,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.Chat)
-        com.ryze.netty.chat.ChatInfo.ChatOrBuilder {
+        ChatOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Chat_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_Chat_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Chat_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_Chat_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.Chat.class, com.ryze.netty.chat.ChatInfo.Chat.Builder.class);
+                Chat.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.Chat.newBuilder()
@@ -956,7 +956,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -965,7 +965,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         version_ = com.google.protobuf.ByteString.EMPTY;
@@ -977,29 +977,29 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Chat_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_Chat_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.Chat getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.Chat.getDefaultInstance();
+      @Override
+      public Chat getDefaultInstanceForType() {
+        return Chat.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.Chat build() {
-        com.ryze.netty.chat.ChatInfo.Chat result = buildPartial();
+      @Override
+      public Chat build() {
+        Chat result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.Chat buildPartial() {
-        com.ryze.netty.chat.ChatInfo.Chat result = new com.ryze.netty.chat.ChatInfo.Chat(this);
+      @Override
+      public Chat buildPartial() {
+        Chat result = new Chat(this);
         result.version_ = version_;
         result.msgType_ = msgType_;
         if (dataCase_ == 3) {
@@ -1049,50 +1049,50 @@ public final class ChatInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.Chat) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.Chat)other);
+        if (other instanceof Chat) {
+          return mergeFrom((Chat)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.Chat other) {
-        if (other == com.ryze.netty.chat.ChatInfo.Chat.getDefaultInstance()) return this;
+      public Builder mergeFrom(Chat other) {
+        if (other == Chat.getDefaultInstance()) return this;
         if (other.getVersion() != com.google.protobuf.ByteString.EMPTY) {
           setVersion(other.getVersion());
         }
@@ -1133,21 +1133,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.Chat parsedMessage = null;
+        Chat parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.Chat) e.getUnfinishedMessage();
+          parsedMessage = (Chat) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1157,7 +1157,7 @@ public final class ChatInfo {
         return this;
       }
       private int dataCase_ = 0;
-      private java.lang.Object data_;
+      private Object data_;
       public DataCase
           getDataCase() {
         return DataCase.forNumber(
@@ -1219,15 +1219,15 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Chat.MessageType msg_type = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.Chat.MessageType getMsgType() {
+      public MessageType getMsgType() {
         @SuppressWarnings("deprecation")
-        com.ryze.netty.chat.ChatInfo.Chat.MessageType result = com.ryze.netty.chat.ChatInfo.Chat.MessageType.valueOf(msgType_);
-        return result == null ? com.ryze.netty.chat.ChatInfo.Chat.MessageType.UNRECOGNIZED : result;
+        MessageType result = MessageType.valueOf(msgType_);
+        return result == null ? MessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.ryze.netty.chat.Chat.MessageType msg_type = 2;</code>
        */
-      public Builder setMsgType(com.ryze.netty.chat.ChatInfo.Chat.MessageType value) {
+      public Builder setMsgType(MessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1247,7 +1247,7 @@ public final class ChatInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.LoginRequest, com.ryze.netty.chat.ChatInfo.LoginRequest.Builder, com.ryze.netty.chat.ChatInfo.LoginRequestOrBuilder> loginRequestBuilder_;
+          LoginRequest, LoginRequest.Builder, LoginRequestOrBuilder> loginRequestBuilder_;
       /**
        * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
        */
@@ -1257,23 +1257,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.LoginRequest getLoginRequest() {
+      public LoginRequest getLoginRequest() {
         if (loginRequestBuilder_ == null) {
           if (dataCase_ == 3) {
-            return (com.ryze.netty.chat.ChatInfo.LoginRequest) data_;
+            return (LoginRequest) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
+          return LoginRequest.getDefaultInstance();
         } else {
           if (dataCase_ == 3) {
             return loginRequestBuilder_.getMessage();
           }
-          return com.ryze.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
+          return LoginRequest.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public Builder setLoginRequest(com.ryze.netty.chat.ChatInfo.LoginRequest value) {
+      public Builder setLoginRequest(LoginRequest value) {
         if (loginRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1290,7 +1290,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
        */
       public Builder setLoginRequest(
-          com.ryze.netty.chat.ChatInfo.LoginRequest.Builder builderForValue) {
+          LoginRequest.Builder builderForValue) {
         if (loginRequestBuilder_ == null) {
           data_ = builderForValue.build();
           onChanged();
@@ -1303,11 +1303,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public Builder mergeLoginRequest(com.ryze.netty.chat.ChatInfo.LoginRequest value) {
+      public Builder mergeLoginRequest(LoginRequest value) {
         if (loginRequestBuilder_ == null) {
           if (dataCase_ == 3 &&
-              data_ != com.ryze.netty.chat.ChatInfo.LoginRequest.getDefaultInstance()) {
-            data_ = com.ryze.netty.chat.ChatInfo.LoginRequest.newBuilder((com.ryze.netty.chat.ChatInfo.LoginRequest) data_)
+              data_ != LoginRequest.getDefaultInstance()) {
+            data_ = LoginRequest.newBuilder((LoginRequest) data_)
                 .mergeFrom(value).buildPartial();
           } else {
             data_ = value;
@@ -1344,35 +1344,35 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.LoginRequest.Builder getLoginRequestBuilder() {
+      public LoginRequest.Builder getLoginRequestBuilder() {
         return getLoginRequestFieldBuilder().getBuilder();
       }
       /**
        * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.LoginRequestOrBuilder getLoginRequestOrBuilder() {
+      public LoginRequestOrBuilder getLoginRequestOrBuilder() {
         if ((dataCase_ == 3) && (loginRequestBuilder_ != null)) {
           return loginRequestBuilder_.getMessageOrBuilder();
         } else {
           if (dataCase_ == 3) {
-            return (com.ryze.netty.chat.ChatInfo.LoginRequest) data_;
+            return (LoginRequest) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
+          return LoginRequest.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.LoginRequest login_request = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.LoginRequest, com.ryze.netty.chat.ChatInfo.LoginRequest.Builder, com.ryze.netty.chat.ChatInfo.LoginRequestOrBuilder> 
+          LoginRequest, LoginRequest.Builder, LoginRequestOrBuilder>
           getLoginRequestFieldBuilder() {
         if (loginRequestBuilder_ == null) {
           if (!(dataCase_ == 3)) {
-            data_ = com.ryze.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
+            data_ = LoginRequest.getDefaultInstance();
           }
           loginRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.LoginRequest, com.ryze.netty.chat.ChatInfo.LoginRequest.Builder, com.ryze.netty.chat.ChatInfo.LoginRequestOrBuilder>(
-                  (com.ryze.netty.chat.ChatInfo.LoginRequest) data_,
+              LoginRequest, LoginRequest.Builder, LoginRequestOrBuilder>(
+                  (LoginRequest) data_,
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -1383,7 +1383,7 @@ public final class ChatInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.LoginResponse, com.ryze.netty.chat.ChatInfo.LoginResponse.Builder, com.ryze.netty.chat.ChatInfo.LoginResponseOrBuilder> loginResponseBuilder_;
+          LoginResponse, LoginResponse.Builder, LoginResponseOrBuilder> loginResponseBuilder_;
       /**
        * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
        */
@@ -1393,23 +1393,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.LoginResponse getLoginResponse() {
+      public LoginResponse getLoginResponse() {
         if (loginResponseBuilder_ == null) {
           if (dataCase_ == 4) {
-            return (com.ryze.netty.chat.ChatInfo.LoginResponse) data_;
+            return (LoginResponse) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
+          return LoginResponse.getDefaultInstance();
         } else {
           if (dataCase_ == 4) {
             return loginResponseBuilder_.getMessage();
           }
-          return com.ryze.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
+          return LoginResponse.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public Builder setLoginResponse(com.ryze.netty.chat.ChatInfo.LoginResponse value) {
+      public Builder setLoginResponse(LoginResponse value) {
         if (loginResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1426,7 +1426,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
        */
       public Builder setLoginResponse(
-          com.ryze.netty.chat.ChatInfo.LoginResponse.Builder builderForValue) {
+          LoginResponse.Builder builderForValue) {
         if (loginResponseBuilder_ == null) {
           data_ = builderForValue.build();
           onChanged();
@@ -1439,11 +1439,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public Builder mergeLoginResponse(com.ryze.netty.chat.ChatInfo.LoginResponse value) {
+      public Builder mergeLoginResponse(LoginResponse value) {
         if (loginResponseBuilder_ == null) {
           if (dataCase_ == 4 &&
-              data_ != com.ryze.netty.chat.ChatInfo.LoginResponse.getDefaultInstance()) {
-            data_ = com.ryze.netty.chat.ChatInfo.LoginResponse.newBuilder((com.ryze.netty.chat.ChatInfo.LoginResponse) data_)
+              data_ != LoginResponse.getDefaultInstance()) {
+            data_ = LoginResponse.newBuilder((LoginResponse) data_)
                 .mergeFrom(value).buildPartial();
           } else {
             data_ = value;
@@ -1480,35 +1480,35 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.LoginResponse.Builder getLoginResponseBuilder() {
+      public LoginResponse.Builder getLoginResponseBuilder() {
         return getLoginResponseFieldBuilder().getBuilder();
       }
       /**
        * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.LoginResponseOrBuilder getLoginResponseOrBuilder() {
+      public LoginResponseOrBuilder getLoginResponseOrBuilder() {
         if ((dataCase_ == 4) && (loginResponseBuilder_ != null)) {
           return loginResponseBuilder_.getMessageOrBuilder();
         } else {
           if (dataCase_ == 4) {
-            return (com.ryze.netty.chat.ChatInfo.LoginResponse) data_;
+            return (LoginResponse) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
+          return LoginResponse.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.LoginResponse login_response = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.LoginResponse, com.ryze.netty.chat.ChatInfo.LoginResponse.Builder, com.ryze.netty.chat.ChatInfo.LoginResponseOrBuilder> 
+          LoginResponse, LoginResponse.Builder, LoginResponseOrBuilder>
           getLoginResponseFieldBuilder() {
         if (loginResponseBuilder_ == null) {
           if (!(dataCase_ == 4)) {
-            data_ = com.ryze.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
+            data_ = LoginResponse.getDefaultInstance();
           }
           loginResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.LoginResponse, com.ryze.netty.chat.ChatInfo.LoginResponse.Builder, com.ryze.netty.chat.ChatInfo.LoginResponseOrBuilder>(
-                  (com.ryze.netty.chat.ChatInfo.LoginResponse) data_,
+              LoginResponse, LoginResponse.Builder, LoginResponseOrBuilder>(
+                  (LoginResponse) data_,
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -1519,7 +1519,7 @@ public final class ChatInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.CreateGroupRequest, com.ryze.netty.chat.ChatInfo.CreateGroupRequest.Builder, com.ryze.netty.chat.ChatInfo.CreateGroupRequestOrBuilder> createGroupRequestBuilder_;
+          CreateGroupRequest, CreateGroupRequest.Builder, CreateGroupRequestOrBuilder> createGroupRequestBuilder_;
       /**
        * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
@@ -1529,23 +1529,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.CreateGroupRequest getCreateGroupRequest() {
+      public CreateGroupRequest getCreateGroupRequest() {
         if (createGroupRequestBuilder_ == null) {
           if (dataCase_ == 5) {
-            return (com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_;
+            return (CreateGroupRequest) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
+          return CreateGroupRequest.getDefaultInstance();
         } else {
           if (dataCase_ == 5) {
             return createGroupRequestBuilder_.getMessage();
           }
-          return com.ryze.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
+          return CreateGroupRequest.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public Builder setCreateGroupRequest(com.ryze.netty.chat.ChatInfo.CreateGroupRequest value) {
+      public Builder setCreateGroupRequest(CreateGroupRequest value) {
         if (createGroupRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1562,7 +1562,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
       public Builder setCreateGroupRequest(
-          com.ryze.netty.chat.ChatInfo.CreateGroupRequest.Builder builderForValue) {
+          CreateGroupRequest.Builder builderForValue) {
         if (createGroupRequestBuilder_ == null) {
           data_ = builderForValue.build();
           onChanged();
@@ -1575,11 +1575,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public Builder mergeCreateGroupRequest(com.ryze.netty.chat.ChatInfo.CreateGroupRequest value) {
+      public Builder mergeCreateGroupRequest(CreateGroupRequest value) {
         if (createGroupRequestBuilder_ == null) {
           if (dataCase_ == 5 &&
-              data_ != com.ryze.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance()) {
-            data_ = com.ryze.netty.chat.ChatInfo.CreateGroupRequest.newBuilder((com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_)
+              data_ != CreateGroupRequest.getDefaultInstance()) {
+            data_ = CreateGroupRequest.newBuilder((CreateGroupRequest) data_)
                 .mergeFrom(value).buildPartial();
           } else {
             data_ = value;
@@ -1616,35 +1616,35 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.CreateGroupRequest.Builder getCreateGroupRequestBuilder() {
+      public CreateGroupRequest.Builder getCreateGroupRequestBuilder() {
         return getCreateGroupRequestFieldBuilder().getBuilder();
       }
       /**
        * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.CreateGroupRequestOrBuilder getCreateGroupRequestOrBuilder() {
+      public CreateGroupRequestOrBuilder getCreateGroupRequestOrBuilder() {
         if ((dataCase_ == 5) && (createGroupRequestBuilder_ != null)) {
           return createGroupRequestBuilder_.getMessageOrBuilder();
         } else {
           if (dataCase_ == 5) {
-            return (com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_;
+            return (CreateGroupRequest) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
+          return CreateGroupRequest.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.CreateGroupRequest create_group_request = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.CreateGroupRequest, com.ryze.netty.chat.ChatInfo.CreateGroupRequest.Builder, com.ryze.netty.chat.ChatInfo.CreateGroupRequestOrBuilder> 
+          CreateGroupRequest, CreateGroupRequest.Builder, CreateGroupRequestOrBuilder>
           getCreateGroupRequestFieldBuilder() {
         if (createGroupRequestBuilder_ == null) {
           if (!(dataCase_ == 5)) {
-            data_ = com.ryze.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
+            data_ = CreateGroupRequest.getDefaultInstance();
           }
           createGroupRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.CreateGroupRequest, com.ryze.netty.chat.ChatInfo.CreateGroupRequest.Builder, com.ryze.netty.chat.ChatInfo.CreateGroupRequestOrBuilder>(
-                  (com.ryze.netty.chat.ChatInfo.CreateGroupRequest) data_,
+              CreateGroupRequest, CreateGroupRequest.Builder, CreateGroupRequestOrBuilder>(
+                  (CreateGroupRequest) data_,
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -1655,7 +1655,7 @@ public final class ChatInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.CreateGroupResponse, com.ryze.netty.chat.ChatInfo.CreateGroupResponse.Builder, com.ryze.netty.chat.ChatInfo.CreateGroupResponseOrBuilder> createGroupResponseBuilder_;
+          CreateGroupResponse, CreateGroupResponse.Builder, CreateGroupResponseOrBuilder> createGroupResponseBuilder_;
       /**
        * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
        */
@@ -1665,23 +1665,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.CreateGroupResponse getCreateGroupResponse() {
+      public CreateGroupResponse getCreateGroupResponse() {
         if (createGroupResponseBuilder_ == null) {
           if (dataCase_ == 6) {
-            return (com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_;
+            return (CreateGroupResponse) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+          return CreateGroupResponse.getDefaultInstance();
         } else {
           if (dataCase_ == 6) {
             return createGroupResponseBuilder_.getMessage();
           }
-          return com.ryze.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+          return CreateGroupResponse.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
        */
-      public Builder setCreateGroupResponse(com.ryze.netty.chat.ChatInfo.CreateGroupResponse value) {
+      public Builder setCreateGroupResponse(CreateGroupResponse value) {
         if (createGroupResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1698,7 +1698,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
        */
       public Builder setCreateGroupResponse(
-          com.ryze.netty.chat.ChatInfo.CreateGroupResponse.Builder builderForValue) {
+          CreateGroupResponse.Builder builderForValue) {
         if (createGroupResponseBuilder_ == null) {
           data_ = builderForValue.build();
           onChanged();
@@ -1711,11 +1711,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
        */
-      public Builder mergeCreateGroupResponse(com.ryze.netty.chat.ChatInfo.CreateGroupResponse value) {
+      public Builder mergeCreateGroupResponse(CreateGroupResponse value) {
         if (createGroupResponseBuilder_ == null) {
           if (dataCase_ == 6 &&
-              data_ != com.ryze.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance()) {
-            data_ = com.ryze.netty.chat.ChatInfo.CreateGroupResponse.newBuilder((com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_)
+              data_ != CreateGroupResponse.getDefaultInstance()) {
+            data_ = CreateGroupResponse.newBuilder((CreateGroupResponse) data_)
                 .mergeFrom(value).buildPartial();
           } else {
             data_ = value;
@@ -1752,35 +1752,35 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.CreateGroupResponse.Builder getCreateGroupResponseBuilder() {
+      public CreateGroupResponse.Builder getCreateGroupResponseBuilder() {
         return getCreateGroupResponseFieldBuilder().getBuilder();
       }
       /**
        * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.CreateGroupResponseOrBuilder getCreateGroupResponseOrBuilder() {
+      public CreateGroupResponseOrBuilder getCreateGroupResponseOrBuilder() {
         if ((dataCase_ == 6) && (createGroupResponseBuilder_ != null)) {
           return createGroupResponseBuilder_.getMessageOrBuilder();
         } else {
           if (dataCase_ == 6) {
-            return (com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_;
+            return (CreateGroupResponse) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+          return CreateGroupResponse.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.CreateGroupResponse create_group_response = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.CreateGroupResponse, com.ryze.netty.chat.ChatInfo.CreateGroupResponse.Builder, com.ryze.netty.chat.ChatInfo.CreateGroupResponseOrBuilder> 
+          CreateGroupResponse, CreateGroupResponse.Builder, CreateGroupResponseOrBuilder>
           getCreateGroupResponseFieldBuilder() {
         if (createGroupResponseBuilder_ == null) {
           if (!(dataCase_ == 6)) {
-            data_ = com.ryze.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+            data_ = CreateGroupResponse.getDefaultInstance();
           }
           createGroupResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.CreateGroupResponse, com.ryze.netty.chat.ChatInfo.CreateGroupResponse.Builder, com.ryze.netty.chat.ChatInfo.CreateGroupResponseOrBuilder>(
-                  (com.ryze.netty.chat.ChatInfo.CreateGroupResponse) data_,
+              CreateGroupResponse, CreateGroupResponse.Builder, CreateGroupResponseOrBuilder>(
+                  (CreateGroupResponse) data_,
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -1791,7 +1791,7 @@ public final class ChatInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.SingleChat, com.ryze.netty.chat.ChatInfo.SingleChat.Builder, com.ryze.netty.chat.ChatInfo.SingleChatOrBuilder> singleChatBuilder_;
+          SingleChat, SingleChat.Builder, SingleChatOrBuilder> singleChatBuilder_;
       /**
        * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
        */
@@ -1801,23 +1801,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.SingleChat getSingleChat() {
+      public SingleChat getSingleChat() {
         if (singleChatBuilder_ == null) {
           if (dataCase_ == 7) {
-            return (com.ryze.netty.chat.ChatInfo.SingleChat) data_;
+            return (SingleChat) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+          return SingleChat.getDefaultInstance();
         } else {
           if (dataCase_ == 7) {
             return singleChatBuilder_.getMessage();
           }
-          return com.ryze.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+          return SingleChat.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
        */
-      public Builder setSingleChat(com.ryze.netty.chat.ChatInfo.SingleChat value) {
+      public Builder setSingleChat(SingleChat value) {
         if (singleChatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1834,7 +1834,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
        */
       public Builder setSingleChat(
-          com.ryze.netty.chat.ChatInfo.SingleChat.Builder builderForValue) {
+          SingleChat.Builder builderForValue) {
         if (singleChatBuilder_ == null) {
           data_ = builderForValue.build();
           onChanged();
@@ -1847,11 +1847,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
        */
-      public Builder mergeSingleChat(com.ryze.netty.chat.ChatInfo.SingleChat value) {
+      public Builder mergeSingleChat(SingleChat value) {
         if (singleChatBuilder_ == null) {
           if (dataCase_ == 7 &&
-              data_ != com.ryze.netty.chat.ChatInfo.SingleChat.getDefaultInstance()) {
-            data_ = com.ryze.netty.chat.ChatInfo.SingleChat.newBuilder((com.ryze.netty.chat.ChatInfo.SingleChat) data_)
+              data_ != SingleChat.getDefaultInstance()) {
+            data_ = SingleChat.newBuilder((SingleChat) data_)
                 .mergeFrom(value).buildPartial();
           } else {
             data_ = value;
@@ -1888,35 +1888,35 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.SingleChat.Builder getSingleChatBuilder() {
+      public SingleChat.Builder getSingleChatBuilder() {
         return getSingleChatFieldBuilder().getBuilder();
       }
       /**
        * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.SingleChatOrBuilder getSingleChatOrBuilder() {
+      public SingleChatOrBuilder getSingleChatOrBuilder() {
         if ((dataCase_ == 7) && (singleChatBuilder_ != null)) {
           return singleChatBuilder_.getMessageOrBuilder();
         } else {
           if (dataCase_ == 7) {
-            return (com.ryze.netty.chat.ChatInfo.SingleChat) data_;
+            return (SingleChat) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+          return SingleChat.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.SingleChat single_chat = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.SingleChat, com.ryze.netty.chat.ChatInfo.SingleChat.Builder, com.ryze.netty.chat.ChatInfo.SingleChatOrBuilder> 
+          SingleChat, SingleChat.Builder, SingleChatOrBuilder>
           getSingleChatFieldBuilder() {
         if (singleChatBuilder_ == null) {
           if (!(dataCase_ == 7)) {
-            data_ = com.ryze.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+            data_ = SingleChat.getDefaultInstance();
           }
           singleChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.SingleChat, com.ryze.netty.chat.ChatInfo.SingleChat.Builder, com.ryze.netty.chat.ChatInfo.SingleChatOrBuilder>(
-                  (com.ryze.netty.chat.ChatInfo.SingleChat) data_,
+              SingleChat, SingleChat.Builder, SingleChatOrBuilder>(
+                  (SingleChat) data_,
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -1927,7 +1927,7 @@ public final class ChatInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.GroupChat, com.ryze.netty.chat.ChatInfo.GroupChat.Builder, com.ryze.netty.chat.ChatInfo.GroupChatOrBuilder> groupChatBuilder_;
+          GroupChat, GroupChat.Builder, GroupChatOrBuilder> groupChatBuilder_;
       /**
        * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
        */
@@ -1937,23 +1937,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.GroupChat getGroupChat() {
+      public GroupChat getGroupChat() {
         if (groupChatBuilder_ == null) {
           if (dataCase_ == 8) {
-            return (com.ryze.netty.chat.ChatInfo.GroupChat) data_;
+            return (GroupChat) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+          return GroupChat.getDefaultInstance();
         } else {
           if (dataCase_ == 8) {
             return groupChatBuilder_.getMessage();
           }
-          return com.ryze.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+          return GroupChat.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
        */
-      public Builder setGroupChat(com.ryze.netty.chat.ChatInfo.GroupChat value) {
+      public Builder setGroupChat(GroupChat value) {
         if (groupChatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1970,7 +1970,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
        */
       public Builder setGroupChat(
-          com.ryze.netty.chat.ChatInfo.GroupChat.Builder builderForValue) {
+          GroupChat.Builder builderForValue) {
         if (groupChatBuilder_ == null) {
           data_ = builderForValue.build();
           onChanged();
@@ -1983,11 +1983,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
        */
-      public Builder mergeGroupChat(com.ryze.netty.chat.ChatInfo.GroupChat value) {
+      public Builder mergeGroupChat(GroupChat value) {
         if (groupChatBuilder_ == null) {
           if (dataCase_ == 8 &&
-              data_ != com.ryze.netty.chat.ChatInfo.GroupChat.getDefaultInstance()) {
-            data_ = com.ryze.netty.chat.ChatInfo.GroupChat.newBuilder((com.ryze.netty.chat.ChatInfo.GroupChat) data_)
+              data_ != GroupChat.getDefaultInstance()) {
+            data_ = GroupChat.newBuilder((GroupChat) data_)
                 .mergeFrom(value).buildPartial();
           } else {
             data_ = value;
@@ -2024,35 +2024,35 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.GroupChat.Builder getGroupChatBuilder() {
+      public GroupChat.Builder getGroupChatBuilder() {
         return getGroupChatFieldBuilder().getBuilder();
       }
       /**
        * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.GroupChatOrBuilder getGroupChatOrBuilder() {
+      public GroupChatOrBuilder getGroupChatOrBuilder() {
         if ((dataCase_ == 8) && (groupChatBuilder_ != null)) {
           return groupChatBuilder_.getMessageOrBuilder();
         } else {
           if (dataCase_ == 8) {
-            return (com.ryze.netty.chat.ChatInfo.GroupChat) data_;
+            return (GroupChat) data_;
           }
-          return com.ryze.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+          return GroupChat.getDefaultInstance();
         }
       }
       /**
        * <code>.com.ryze.netty.chat.GroupChat group_chat = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.GroupChat, com.ryze.netty.chat.ChatInfo.GroupChat.Builder, com.ryze.netty.chat.ChatInfo.GroupChatOrBuilder> 
+          GroupChat, GroupChat.Builder, GroupChatOrBuilder>
           getGroupChatFieldBuilder() {
         if (groupChatBuilder_ == null) {
           if (!(dataCase_ == 8)) {
-            data_ = com.ryze.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+            data_ = GroupChat.getDefaultInstance();
           }
           groupChatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.GroupChat, com.ryze.netty.chat.ChatInfo.GroupChat.Builder, com.ryze.netty.chat.ChatInfo.GroupChatOrBuilder>(
-                  (com.ryze.netty.chat.ChatInfo.GroupChat) data_,
+              GroupChat, GroupChat.Builder, GroupChatOrBuilder>(
+                  (GroupChat) data_,
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -2061,13 +2061,13 @@ public final class ChatInfo {
         onChanged();;
         return groupChatBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2078,18 +2078,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.Chat)
-    private static final com.ryze.netty.chat.ChatInfo.Chat DEFAULT_INSTANCE;
+    private static final Chat DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.Chat();
+      DEFAULT_INSTANCE = new Chat();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.Chat getDefaultInstance() {
+    public static Chat getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Chat>
         PARSER = new com.google.protobuf.AbstractParser<Chat>() {
-      @java.lang.Override
+      @Override
       public Chat parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2102,13 +2102,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Chat> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.Chat getDefaultInstanceForType() {
+    @Override
+    public Chat getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2121,7 +2121,7 @@ public final class ChatInfo {
     /**
      * <code>string user_id = 1;</code>
      */
-    java.lang.String getUserId();
+    String getUserId();
     /**
      * <code>string user_id = 1;</code>
      */
@@ -2131,7 +2131,7 @@ public final class ChatInfo {
     /**
      * <code>string username = 2;</code>
      */
-    java.lang.String getUsername();
+    String getUsername();
     /**
      * <code>string username = 2;</code>
      */
@@ -2141,7 +2141,7 @@ public final class ChatInfo {
     /**
      * <code>string password = 3;</code>
      */
-    java.lang.String getPassword();
+    String getPassword();
     /**
      * <code>string password = 3;</code>
      */
@@ -2170,14 +2170,14 @@ public final class ChatInfo {
       password_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new User();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2188,7 +2188,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2201,19 +2201,19 @@ public final class ChatInfo {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               userId_ = s;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               username_ = s;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               password_ = s;
               break;
@@ -2239,30 +2239,30 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_User_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_User_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_User_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_User_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.User.class, com.ryze.netty.chat.ChatInfo.User.Builder.class);
+              User.class, Builder.class);
     }
 
     public static final int USER_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object userId_;
+    private volatile Object userId_;
     /**
      * <code>string user_id = 1;</code>
      */
-    public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getUserId() {
+      Object ref = userId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         userId_ = s;
         return s;
       }
@@ -2272,11 +2272,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = userId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         userId_ = b;
         return b;
       } else {
@@ -2285,18 +2285,18 @@ public final class ChatInfo {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object username_;
+    private volatile Object username_;
     /**
      * <code>string username = 2;</code>
      */
-    public java.lang.String getUsername() {
-      java.lang.Object ref = username_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getUsername() {
+      Object ref = username_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         username_ = s;
         return s;
       }
@@ -2306,11 +2306,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getUsernameBytes() {
-      java.lang.Object ref = username_;
-      if (ref instanceof java.lang.String) {
+      Object ref = username_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         username_ = b;
         return b;
       } else {
@@ -2319,18 +2319,18 @@ public final class ChatInfo {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 3;
-    private volatile java.lang.Object password_;
+    private volatile Object password_;
     /**
      * <code>string password = 3;</code>
      */
-    public java.lang.String getPassword() {
-      java.lang.Object ref = password_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getPassword() {
+      Object ref = password_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         password_ = s;
         return s;
       }
@@ -2340,11 +2340,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      java.lang.Object ref = password_;
-      if (ref instanceof java.lang.String) {
+      Object ref = password_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         password_ = b;
         return b;
       } else {
@@ -2353,7 +2353,7 @@ public final class ChatInfo {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2363,7 +2363,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUserIdBytes().isEmpty()) {
@@ -2378,7 +2378,7 @@ public final class ChatInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2398,15 +2398,15 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.User)) {
+      if (!(obj instanceof User)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.User other = (com.ryze.netty.chat.ChatInfo.User) obj;
+      User other = (User) obj;
 
       if (!getUserId()
           .equals(other.getUserId())) return false;
@@ -2418,7 +2418,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2436,69 +2436,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(
+    public static User parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(
+    public static User parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(
+    public static User parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(
+    public static User parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(byte[] data)
+    public static User parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(
+    public static User parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(java.io.InputStream input)
+    public static User parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(
+    public static User parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseDelimitedFrom(java.io.InputStream input)
+    public static User parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseDelimitedFrom(
+    public static User parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(
+    public static User parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.User parseFrom(
+    public static User parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2506,23 +2506,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.User prototype) {
+    public static Builder newBuilder(User prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2536,18 +2536,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.User)
-        com.ryze.netty.chat.ChatInfo.UserOrBuilder {
+        UserOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_User_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_User_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_User_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_User_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.User.class, com.ryze.netty.chat.ChatInfo.User.Builder.class);
+                User.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.User.newBuilder()
@@ -2556,7 +2556,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2565,7 +2565,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         userId_ = "";
@@ -2577,29 +2577,29 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_User_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_User_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.User getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.User.getDefaultInstance();
+      @Override
+      public User getDefaultInstanceForType() {
+        return User.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.User build() {
-        com.ryze.netty.chat.ChatInfo.User result = buildPartial();
+      @Override
+      public User build() {
+        User result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.User buildPartial() {
-        com.ryze.netty.chat.ChatInfo.User result = new com.ryze.netty.chat.ChatInfo.User(this);
+      @Override
+      public User buildPartial() {
+        User result = new User(this);
         result.userId_ = userId_;
         result.username_ = username_;
         result.password_ = password_;
@@ -2607,50 +2607,50 @@ public final class ChatInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.User) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.User)other);
+        if (other instanceof User) {
+          return mergeFrom((User)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.User other) {
-        if (other == com.ryze.netty.chat.ChatInfo.User.getDefaultInstance()) return this;
+      public Builder mergeFrom(User other) {
+        if (other == User.getDefaultInstance()) return this;
         if (!other.getUserId().isEmpty()) {
           userId_ = other.userId_;
           onChanged();
@@ -2668,21 +2668,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.User parsedMessage = null;
+        User parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.User) e.getUnfinishedMessage();
+          parsedMessage = (User) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2692,20 +2692,20 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object userId_ = "";
+      private Object userId_ = "";
       /**
        * <code>string user_id = 1;</code>
        */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getUserId() {
+        Object ref = userId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           userId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2713,11 +2713,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getUserIdBytes() {
-        java.lang.Object ref = userId_;
+        Object ref = userId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           userId_ = b;
           return b;
         } else {
@@ -2728,7 +2728,7 @@ public final class ChatInfo {
        * <code>string user_id = 1;</code>
        */
       public Builder setUserId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2761,20 +2761,20 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object username_ = "";
+      private Object username_ = "";
       /**
        * <code>string username = 2;</code>
        */
-      public java.lang.String getUsername() {
-        java.lang.Object ref = username_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getUsername() {
+        Object ref = username_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           username_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2782,11 +2782,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getUsernameBytes() {
-        java.lang.Object ref = username_;
+        Object ref = username_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           username_ = b;
           return b;
         } else {
@@ -2797,7 +2797,7 @@ public final class ChatInfo {
        * <code>string username = 2;</code>
        */
       public Builder setUsername(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2830,20 +2830,20 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object password_ = "";
+      private Object password_ = "";
       /**
        * <code>string password = 3;</code>
        */
-      public java.lang.String getPassword() {
-        java.lang.Object ref = password_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getPassword() {
+        Object ref = password_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           password_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2851,11 +2851,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        java.lang.Object ref = password_;
+        Object ref = password_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           password_ = b;
           return b;
         } else {
@@ -2866,7 +2866,7 @@ public final class ChatInfo {
        * <code>string password = 3;</code>
        */
       public Builder setPassword(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2898,13 +2898,13 @@ public final class ChatInfo {
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2915,18 +2915,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.User)
-    private static final com.ryze.netty.chat.ChatInfo.User DEFAULT_INSTANCE;
+    private static final User DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.User();
+      DEFAULT_INSTANCE = new User();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.User getDefaultInstance() {
+    public static User getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<User>
         PARSER = new com.google.protobuf.AbstractParser<User>() {
-      @java.lang.Override
+      @Override
       public User parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2939,13 +2939,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<User> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.User getDefaultInstanceForType() {
+    @Override
+    public User getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2958,7 +2958,7 @@ public final class ChatInfo {
     /**
      * <code>string group_id = 1;</code>
      */
-    java.lang.String getGroupId();
+    String getGroupId();
     /**
      * <code>string group_id = 1;</code>
      */
@@ -2968,7 +2968,7 @@ public final class ChatInfo {
     /**
      * <code>string group_name = 2;</code>
      */
-    java.lang.String getGroupName();
+    String getGroupName();
     /**
      * <code>string group_name = 2;</code>
      */
@@ -2996,14 +2996,14 @@ public final class ChatInfo {
       groupName_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new Group();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3014,7 +3014,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3027,13 +3027,13 @@ public final class ChatInfo {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               groupId_ = s;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               groupName_ = s;
               break;
@@ -3059,30 +3059,30 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Group_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_Group_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Group_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_Group_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.Group.class, com.ryze.netty.chat.ChatInfo.Group.Builder.class);
+              Group.class, Builder.class);
     }
 
     public static final int GROUP_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object groupId_;
+    private volatile Object groupId_;
     /**
      * <code>string group_id = 1;</code>
      */
-    public java.lang.String getGroupId() {
-      java.lang.Object ref = groupId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getGroupId() {
+      Object ref = groupId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         groupId_ = s;
         return s;
       }
@@ -3092,11 +3092,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getGroupIdBytes() {
-      java.lang.Object ref = groupId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = groupId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         groupId_ = b;
         return b;
       } else {
@@ -3105,18 +3105,18 @@ public final class ChatInfo {
     }
 
     public static final int GROUP_NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object groupName_;
+    private volatile Object groupName_;
     /**
      * <code>string group_name = 2;</code>
      */
-    public java.lang.String getGroupName() {
-      java.lang.Object ref = groupName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getGroupName() {
+      Object ref = groupName_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         groupName_ = s;
         return s;
       }
@@ -3126,11 +3126,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getGroupNameBytes() {
-      java.lang.Object ref = groupName_;
-      if (ref instanceof java.lang.String) {
+      Object ref = groupName_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         groupName_ = b;
         return b;
       } else {
@@ -3139,7 +3139,7 @@ public final class ChatInfo {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3149,7 +3149,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getGroupIdBytes().isEmpty()) {
@@ -3161,7 +3161,7 @@ public final class ChatInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3178,15 +3178,15 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.Group)) {
+      if (!(obj instanceof Group)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.Group other = (com.ryze.netty.chat.ChatInfo.Group) obj;
+      Group other = (Group) obj;
 
       if (!getGroupId()
           .equals(other.getGroupId())) return false;
@@ -3196,7 +3196,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3212,69 +3212,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(
+    public static Group parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(
+    public static Group parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(
+    public static Group parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(
+    public static Group parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(byte[] data)
+    public static Group parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(
+    public static Group parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(java.io.InputStream input)
+    public static Group parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(
+    public static Group parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseDelimitedFrom(java.io.InputStream input)
+    public static Group parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseDelimitedFrom(
+    public static Group parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(
+    public static Group parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.Group parseFrom(
+    public static Group parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3282,23 +3282,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.Group prototype) {
+    public static Builder newBuilder(Group prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3312,18 +3312,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.Group)
-        com.ryze.netty.chat.ChatInfo.GroupOrBuilder {
+        GroupOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Group_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_Group_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Group_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_Group_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.Group.class, com.ryze.netty.chat.ChatInfo.Group.Builder.class);
+                Group.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.Group.newBuilder()
@@ -3332,7 +3332,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3341,7 +3341,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         groupId_ = "";
@@ -3351,79 +3351,79 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_Group_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_Group_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.Group getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance();
+      @Override
+      public Group getDefaultInstanceForType() {
+        return Group.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.Group build() {
-        com.ryze.netty.chat.ChatInfo.Group result = buildPartial();
+      @Override
+      public Group build() {
+        Group result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.Group buildPartial() {
-        com.ryze.netty.chat.ChatInfo.Group result = new com.ryze.netty.chat.ChatInfo.Group(this);
+      @Override
+      public Group buildPartial() {
+        Group result = new Group(this);
         result.groupId_ = groupId_;
         result.groupName_ = groupName_;
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.Group) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.Group)other);
+        if (other instanceof Group) {
+          return mergeFrom((Group)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.Group other) {
-        if (other == com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance()) return this;
+      public Builder mergeFrom(Group other) {
+        if (other == Group.getDefaultInstance()) return this;
         if (!other.getGroupId().isEmpty()) {
           groupId_ = other.groupId_;
           onChanged();
@@ -3437,21 +3437,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.Group parsedMessage = null;
+        Group parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.Group) e.getUnfinishedMessage();
+          parsedMessage = (Group) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3461,20 +3461,20 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object groupId_ = "";
+      private Object groupId_ = "";
       /**
        * <code>string group_id = 1;</code>
        */
-      public java.lang.String getGroupId() {
-        java.lang.Object ref = groupId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getGroupId() {
+        Object ref = groupId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           groupId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -3482,11 +3482,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getGroupIdBytes() {
-        java.lang.Object ref = groupId_;
+        Object ref = groupId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           groupId_ = b;
           return b;
         } else {
@@ -3497,7 +3497,7 @@ public final class ChatInfo {
        * <code>string group_id = 1;</code>
        */
       public Builder setGroupId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3530,20 +3530,20 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object groupName_ = "";
+      private Object groupName_ = "";
       /**
        * <code>string group_name = 2;</code>
        */
-      public java.lang.String getGroupName() {
-        java.lang.Object ref = groupName_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getGroupName() {
+        Object ref = groupName_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           groupName_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -3551,11 +3551,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getGroupNameBytes() {
-        java.lang.Object ref = groupName_;
+        Object ref = groupName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           groupName_ = b;
           return b;
         } else {
@@ -3566,7 +3566,7 @@ public final class ChatInfo {
        * <code>string group_name = 2;</code>
        */
       public Builder setGroupName(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3598,13 +3598,13 @@ public final class ChatInfo {
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3615,18 +3615,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.Group)
-    private static final com.ryze.netty.chat.ChatInfo.Group DEFAULT_INSTANCE;
+    private static final Group DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.Group();
+      DEFAULT_INSTANCE = new Group();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.Group getDefaultInstance() {
+    public static Group getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Group>
         PARSER = new com.google.protobuf.AbstractParser<Group>() {
-      @java.lang.Override
+      @Override
       public Group parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3639,13 +3639,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Group> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.Group getDefaultInstanceForType() {
+    @Override
+    public Group getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3662,11 +3662,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User login_user = 1;</code>
      */
-    com.ryze.netty.chat.ChatInfo.User getLoginUser();
+    User getLoginUser();
     /**
      * <code>.com.ryze.netty.chat.User login_user = 1;</code>
      */
-    com.ryze.netty.chat.ChatInfo.UserOrBuilder getLoginUserOrBuilder();
+    UserOrBuilder getLoginUserOrBuilder();
   }
   /**
    * <pre>
@@ -3687,14 +3687,14 @@ public final class ChatInfo {
     private LoginRequest() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new LoginRequest();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3705,7 +3705,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3718,11 +3718,11 @@ public final class ChatInfo {
               done = true;
               break;
             case 10: {
-              com.ryze.netty.chat.ChatInfo.User.Builder subBuilder = null;
+              User.Builder subBuilder = null;
               if (loginUser_ != null) {
                 subBuilder = loginUser_.toBuilder();
               }
-              loginUser_ = input.readMessage(com.ryze.netty.chat.ChatInfo.User.parser(), extensionRegistry);
+              loginUser_ = input.readMessage(User.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(loginUser_);
                 loginUser_ = subBuilder.buildPartial();
@@ -3751,19 +3751,19 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.LoginRequest.class, com.ryze.netty.chat.ChatInfo.LoginRequest.Builder.class);
+              LoginRequest.class, Builder.class);
     }
 
     public static final int LOGIN_USER_FIELD_NUMBER = 1;
-    private com.ryze.netty.chat.ChatInfo.User loginUser_;
+    private User loginUser_;
     /**
      * <code>.com.ryze.netty.chat.User login_user = 1;</code>
      */
@@ -3773,18 +3773,18 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User login_user = 1;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.User getLoginUser() {
-      return loginUser_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : loginUser_;
+    public User getLoginUser() {
+      return loginUser_ == null ? User.getDefaultInstance() : loginUser_;
     }
     /**
      * <code>.com.ryze.netty.chat.User login_user = 1;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.UserOrBuilder getLoginUserOrBuilder() {
+    public UserOrBuilder getLoginUserOrBuilder() {
       return getLoginUser();
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3794,7 +3794,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (loginUser_ != null) {
@@ -3803,7 +3803,7 @@ public final class ChatInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3818,15 +3818,15 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.LoginRequest)) {
+      if (!(obj instanceof LoginRequest)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.LoginRequest other = (com.ryze.netty.chat.ChatInfo.LoginRequest) obj;
+      LoginRequest other = (LoginRequest) obj;
 
       if (hasLoginUser() != other.hasLoginUser()) return false;
       if (hasLoginUser()) {
@@ -3837,7 +3837,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3853,69 +3853,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(
+    public static LoginRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(
+    public static LoginRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(
+    public static LoginRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(
+    public static LoginRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(byte[] data)
+    public static LoginRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(
+    public static LoginRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(java.io.InputStream input)
+    public static LoginRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(
+    public static LoginRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseDelimitedFrom(java.io.InputStream input)
+    public static LoginRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseDelimitedFrom(
+    public static LoginRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(
+    public static LoginRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest parseFrom(
+    public static LoginRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3923,23 +3923,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.LoginRequest prototype) {
+    public static Builder newBuilder(LoginRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3953,18 +3953,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.LoginRequest)
-        com.ryze.netty.chat.ChatInfo.LoginRequestOrBuilder {
+        LoginRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.LoginRequest.class, com.ryze.netty.chat.ChatInfo.LoginRequest.Builder.class);
+                LoginRequest.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.LoginRequest.newBuilder()
@@ -3973,7 +3973,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3982,7 +3982,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         if (loginUserBuilder_ == null) {
@@ -3994,29 +3994,29 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_LoginRequest_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.LoginRequest getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.LoginRequest.getDefaultInstance();
+      @Override
+      public LoginRequest getDefaultInstanceForType() {
+        return LoginRequest.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.LoginRequest build() {
-        com.ryze.netty.chat.ChatInfo.LoginRequest result = buildPartial();
+      @Override
+      public LoginRequest build() {
+        LoginRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.LoginRequest buildPartial() {
-        com.ryze.netty.chat.ChatInfo.LoginRequest result = new com.ryze.netty.chat.ChatInfo.LoginRequest(this);
+      @Override
+      public LoginRequest buildPartial() {
+        LoginRequest result = new LoginRequest(this);
         if (loginUserBuilder_ == null) {
           result.loginUser_ = loginUser_;
         } else {
@@ -4026,50 +4026,50 @@ public final class ChatInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.LoginRequest) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.LoginRequest)other);
+        if (other instanceof LoginRequest) {
+          return mergeFrom((LoginRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.LoginRequest other) {
-        if (other == com.ryze.netty.chat.ChatInfo.LoginRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(LoginRequest other) {
+        if (other == LoginRequest.getDefaultInstance()) return this;
         if (other.hasLoginUser()) {
           mergeLoginUser(other.getLoginUser());
         }
@@ -4078,21 +4078,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.LoginRequest parsedMessage = null;
+        LoginRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.LoginRequest) e.getUnfinishedMessage();
+          parsedMessage = (LoginRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4102,9 +4102,9 @@ public final class ChatInfo {
         return this;
       }
 
-      private com.ryze.netty.chat.ChatInfo.User loginUser_;
+      private User loginUser_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> loginUserBuilder_;
+          User, User.Builder, UserOrBuilder> loginUserBuilder_;
       /**
        * <code>.com.ryze.netty.chat.User login_user = 1;</code>
        */
@@ -4114,9 +4114,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User login_user = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User getLoginUser() {
+      public User getLoginUser() {
         if (loginUserBuilder_ == null) {
-          return loginUser_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : loginUser_;
+          return loginUser_ == null ? User.getDefaultInstance() : loginUser_;
         } else {
           return loginUserBuilder_.getMessage();
         }
@@ -4124,7 +4124,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User login_user = 1;</code>
        */
-      public Builder setLoginUser(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder setLoginUser(User value) {
         if (loginUserBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4141,7 +4141,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.User login_user = 1;</code>
        */
       public Builder setLoginUser(
-          com.ryze.netty.chat.ChatInfo.User.Builder builderForValue) {
+          User.Builder builderForValue) {
         if (loginUserBuilder_ == null) {
           loginUser_ = builderForValue.build();
           onChanged();
@@ -4154,11 +4154,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User login_user = 1;</code>
        */
-      public Builder mergeLoginUser(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder mergeLoginUser(User value) {
         if (loginUserBuilder_ == null) {
           if (loginUser_ != null) {
             loginUser_ =
-              com.ryze.netty.chat.ChatInfo.User.newBuilder(loginUser_).mergeFrom(value).buildPartial();
+              User.newBuilder(loginUser_).mergeFrom(value).buildPartial();
           } else {
             loginUser_ = value;
           }
@@ -4186,7 +4186,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User login_user = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User.Builder getLoginUserBuilder() {
+      public User.Builder getLoginUserBuilder() {
         
         onChanged();
         return getLoginUserFieldBuilder().getBuilder();
@@ -4194,23 +4194,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User login_user = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.UserOrBuilder getLoginUserOrBuilder() {
+      public UserOrBuilder getLoginUserOrBuilder() {
         if (loginUserBuilder_ != null) {
           return loginUserBuilder_.getMessageOrBuilder();
         } else {
           return loginUser_ == null ?
-              com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : loginUser_;
+              User.getDefaultInstance() : loginUser_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.User login_user = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> 
+          User, User.Builder, UserOrBuilder>
           getLoginUserFieldBuilder() {
         if (loginUserBuilder_ == null) {
           loginUserBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder>(
+              User, User.Builder, UserOrBuilder>(
                   getLoginUser(),
                   getParentForChildren(),
                   isClean());
@@ -4218,13 +4218,13 @@ public final class ChatInfo {
         }
         return loginUserBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4235,18 +4235,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.LoginRequest)
-    private static final com.ryze.netty.chat.ChatInfo.LoginRequest DEFAULT_INSTANCE;
+    private static final LoginRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.LoginRequest();
+      DEFAULT_INSTANCE = new LoginRequest();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.LoginRequest getDefaultInstance() {
+    public static LoginRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<LoginRequest>
         PARSER = new com.google.protobuf.AbstractParser<LoginRequest>() {
-      @java.lang.Override
+      @Override
       public LoginRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4259,13 +4259,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<LoginRequest> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.LoginRequest getDefaultInstanceForType() {
+    @Override
+    public LoginRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4278,7 +4278,7 @@ public final class ChatInfo {
     /**
      * <code>string token = 1;</code>
      */
-    java.lang.String getToken();
+    String getToken();
     /**
      * <code>string token = 1;</code>
      */
@@ -4293,7 +4293,7 @@ public final class ChatInfo {
     /**
      * <code>string msg = 3;</code>
      */
-    java.lang.String getMsg();
+    String getMsg();
     /**
      * <code>string msg = 3;</code>
      */
@@ -4307,11 +4307,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User user_info = 4;</code>
      */
-    com.ryze.netty.chat.ChatInfo.User getUserInfo();
+    User getUserInfo();
     /**
      * <code>.com.ryze.netty.chat.User user_info = 4;</code>
      */
-    com.ryze.netty.chat.ChatInfo.UserOrBuilder getUserInfoOrBuilder();
+    UserOrBuilder getUserInfoOrBuilder();
   }
   /**
    * <pre>
@@ -4334,14 +4334,14 @@ public final class ChatInfo {
       msg_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new LoginResponse();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4352,7 +4352,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -4365,7 +4365,7 @@ public final class ChatInfo {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               token_ = s;
               break;
@@ -4376,17 +4376,17 @@ public final class ChatInfo {
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               msg_ = s;
               break;
             }
             case 34: {
-              com.ryze.netty.chat.ChatInfo.User.Builder subBuilder = null;
+              User.Builder subBuilder = null;
               if (userInfo_ != null) {
                 subBuilder = userInfo_.toBuilder();
               }
-              userInfo_ = input.readMessage(com.ryze.netty.chat.ChatInfo.User.parser(), extensionRegistry);
+              userInfo_ = input.readMessage(User.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userInfo_);
                 userInfo_ = subBuilder.buildPartial();
@@ -4415,30 +4415,30 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.LoginResponse.class, com.ryze.netty.chat.ChatInfo.LoginResponse.Builder.class);
+              LoginResponse.class, Builder.class);
     }
 
     public static final int TOKEN_FIELD_NUMBER = 1;
-    private volatile java.lang.Object token_;
+    private volatile Object token_;
     /**
      * <code>string token = 1;</code>
      */
-    public java.lang.String getToken() {
-      java.lang.Object ref = token_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getToken() {
+      Object ref = token_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         token_ = s;
         return s;
       }
@@ -4448,11 +4448,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getTokenBytes() {
-      java.lang.Object ref = token_;
-      if (ref instanceof java.lang.String) {
+      Object ref = token_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         token_ = b;
         return b;
       } else {
@@ -4470,18 +4470,18 @@ public final class ChatInfo {
     }
 
     public static final int MSG_FIELD_NUMBER = 3;
-    private volatile java.lang.Object msg_;
+    private volatile Object msg_;
     /**
      * <code>string msg = 3;</code>
      */
-    public java.lang.String getMsg() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getMsg() {
+      Object ref = msg_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         msg_ = s;
         return s;
       }
@@ -4491,11 +4491,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getMsgBytes() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
+      Object ref = msg_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         msg_ = b;
         return b;
       } else {
@@ -4504,7 +4504,7 @@ public final class ChatInfo {
     }
 
     public static final int USER_INFO_FIELD_NUMBER = 4;
-    private com.ryze.netty.chat.ChatInfo.User userInfo_;
+    private User userInfo_;
     /**
      * <code>.com.ryze.netty.chat.User user_info = 4;</code>
      */
@@ -4514,18 +4514,18 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User user_info = 4;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.User getUserInfo() {
-      return userInfo_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : userInfo_;
+    public User getUserInfo() {
+      return userInfo_ == null ? User.getDefaultInstance() : userInfo_;
     }
     /**
      * <code>.com.ryze.netty.chat.User user_info = 4;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.UserOrBuilder getUserInfoOrBuilder() {
+    public UserOrBuilder getUserInfoOrBuilder() {
       return getUserInfo();
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4535,7 +4535,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTokenBytes().isEmpty()) {
@@ -4553,7 +4553,7 @@ public final class ChatInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4578,15 +4578,15 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.LoginResponse)) {
+      if (!(obj instanceof LoginResponse)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.LoginResponse other = (com.ryze.netty.chat.ChatInfo.LoginResponse) obj;
+      LoginResponse other = (LoginResponse) obj;
 
       if (!getToken()
           .equals(other.getToken())) return false;
@@ -4603,7 +4603,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -4625,69 +4625,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(
+    public static LoginResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(
+    public static LoginResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(
+    public static LoginResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(
+    public static LoginResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(byte[] data)
+    public static LoginResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(
+    public static LoginResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(java.io.InputStream input)
+    public static LoginResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(
+    public static LoginResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseDelimitedFrom(java.io.InputStream input)
+    public static LoginResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseDelimitedFrom(
+    public static LoginResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(
+    public static LoginResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse parseFrom(
+    public static LoginResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4695,23 +4695,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.LoginResponse prototype) {
+    public static Builder newBuilder(LoginResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4725,18 +4725,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.LoginResponse)
-        com.ryze.netty.chat.ChatInfo.LoginResponseOrBuilder {
+        LoginResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.LoginResponse.class, com.ryze.netty.chat.ChatInfo.LoginResponse.Builder.class);
+                LoginResponse.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.LoginResponse.newBuilder()
@@ -4745,7 +4745,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -4754,7 +4754,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         token_ = "";
@@ -4772,29 +4772,29 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_LoginResponse_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.LoginResponse getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.LoginResponse.getDefaultInstance();
+      @Override
+      public LoginResponse getDefaultInstanceForType() {
+        return LoginResponse.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.LoginResponse build() {
-        com.ryze.netty.chat.ChatInfo.LoginResponse result = buildPartial();
+      @Override
+      public LoginResponse build() {
+        LoginResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.LoginResponse buildPartial() {
-        com.ryze.netty.chat.ChatInfo.LoginResponse result = new com.ryze.netty.chat.ChatInfo.LoginResponse(this);
+      @Override
+      public LoginResponse buildPartial() {
+        LoginResponse result = new LoginResponse(this);
         result.token_ = token_;
         result.code_ = code_;
         result.msg_ = msg_;
@@ -4807,50 +4807,50 @@ public final class ChatInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.LoginResponse) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.LoginResponse)other);
+        if (other instanceof LoginResponse) {
+          return mergeFrom((LoginResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.LoginResponse other) {
-        if (other == com.ryze.netty.chat.ChatInfo.LoginResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(LoginResponse other) {
+        if (other == LoginResponse.getDefaultInstance()) return this;
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
           onChanged();
@@ -4870,21 +4870,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.LoginResponse parsedMessage = null;
+        LoginResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.LoginResponse) e.getUnfinishedMessage();
+          parsedMessage = (LoginResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4894,20 +4894,20 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object token_ = "";
+      private Object token_ = "";
       /**
        * <code>string token = 1;</code>
        */
-      public java.lang.String getToken() {
-        java.lang.Object ref = token_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getToken() {
+        Object ref = token_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           token_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -4915,11 +4915,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getTokenBytes() {
-        java.lang.Object ref = token_;
+        Object ref = token_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           token_ = b;
           return b;
         } else {
@@ -4930,7 +4930,7 @@ public final class ChatInfo {
        * <code>string token = 1;</code>
        */
       public Builder setToken(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4989,20 +4989,20 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object msg_ = "";
+      private Object msg_ = "";
       /**
        * <code>string msg = 3;</code>
        */
-      public java.lang.String getMsg() {
-        java.lang.Object ref = msg_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMsg() {
+        Object ref = msg_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           msg_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -5010,11 +5010,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getMsgBytes() {
-        java.lang.Object ref = msg_;
+        Object ref = msg_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           msg_ = b;
           return b;
         } else {
@@ -5025,7 +5025,7 @@ public final class ChatInfo {
        * <code>string msg = 3;</code>
        */
       public Builder setMsg(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5058,9 +5058,9 @@ public final class ChatInfo {
         return this;
       }
 
-      private com.ryze.netty.chat.ChatInfo.User userInfo_;
+      private User userInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> userInfoBuilder_;
+          User, User.Builder, UserOrBuilder> userInfoBuilder_;
       /**
        * <code>.com.ryze.netty.chat.User user_info = 4;</code>
        */
@@ -5070,9 +5070,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User user_info = 4;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User getUserInfo() {
+      public User getUserInfo() {
         if (userInfoBuilder_ == null) {
-          return userInfo_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : userInfo_;
+          return userInfo_ == null ? User.getDefaultInstance() : userInfo_;
         } else {
           return userInfoBuilder_.getMessage();
         }
@@ -5080,7 +5080,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User user_info = 4;</code>
        */
-      public Builder setUserInfo(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder setUserInfo(User value) {
         if (userInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5097,7 +5097,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.User user_info = 4;</code>
        */
       public Builder setUserInfo(
-          com.ryze.netty.chat.ChatInfo.User.Builder builderForValue) {
+          User.Builder builderForValue) {
         if (userInfoBuilder_ == null) {
           userInfo_ = builderForValue.build();
           onChanged();
@@ -5110,11 +5110,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User user_info = 4;</code>
        */
-      public Builder mergeUserInfo(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder mergeUserInfo(User value) {
         if (userInfoBuilder_ == null) {
           if (userInfo_ != null) {
             userInfo_ =
-              com.ryze.netty.chat.ChatInfo.User.newBuilder(userInfo_).mergeFrom(value).buildPartial();
+              User.newBuilder(userInfo_).mergeFrom(value).buildPartial();
           } else {
             userInfo_ = value;
           }
@@ -5142,7 +5142,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User user_info = 4;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User.Builder getUserInfoBuilder() {
+      public User.Builder getUserInfoBuilder() {
         
         onChanged();
         return getUserInfoFieldBuilder().getBuilder();
@@ -5150,23 +5150,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User user_info = 4;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.UserOrBuilder getUserInfoOrBuilder() {
+      public UserOrBuilder getUserInfoOrBuilder() {
         if (userInfoBuilder_ != null) {
           return userInfoBuilder_.getMessageOrBuilder();
         } else {
           return userInfo_ == null ?
-              com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : userInfo_;
+              User.getDefaultInstance() : userInfo_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.User user_info = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> 
+          User, User.Builder, UserOrBuilder>
           getUserInfoFieldBuilder() {
         if (userInfoBuilder_ == null) {
           userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder>(
+              User, User.Builder, UserOrBuilder>(
                   getUserInfo(),
                   getParentForChildren(),
                   isClean());
@@ -5174,13 +5174,13 @@ public final class ChatInfo {
         }
         return userInfoBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5191,18 +5191,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.LoginResponse)
-    private static final com.ryze.netty.chat.ChatInfo.LoginResponse DEFAULT_INSTANCE;
+    private static final LoginResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.LoginResponse();
+      DEFAULT_INSTANCE = new LoginResponse();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.LoginResponse getDefaultInstance() {
+    public static LoginResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<LoginResponse>
         PARSER = new com.google.protobuf.AbstractParser<LoginResponse>() {
-      @java.lang.Override
+      @Override
       public LoginResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5215,13 +5215,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<LoginResponse> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.LoginResponse getDefaultInstanceForType() {
+    @Override
+    public LoginResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5238,11 +5238,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User creator = 1;</code>
      */
-    com.ryze.netty.chat.ChatInfo.User getCreator();
+    User getCreator();
     /**
      * <code>.com.ryze.netty.chat.User creator = 1;</code>
      */
-    com.ryze.netty.chat.ChatInfo.UserOrBuilder getCreatorOrBuilder();
+    UserOrBuilder getCreatorOrBuilder();
 
     /**
      * <code>.com.ryze.netty.chat.Group group = 2;</code>
@@ -5251,11 +5251,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Group group = 2;</code>
      */
-    com.ryze.netty.chat.ChatInfo.Group getGroup();
+    Group getGroup();
     /**
      * <code>.com.ryze.netty.chat.Group group = 2;</code>
      */
-    com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder();
+    GroupOrBuilder getGroupOrBuilder();
   }
   /**
    * <pre>
@@ -5276,14 +5276,14 @@ public final class ChatInfo {
     private CreateGroupRequest() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new CreateGroupRequest();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5294,7 +5294,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -5307,11 +5307,11 @@ public final class ChatInfo {
               done = true;
               break;
             case 10: {
-              com.ryze.netty.chat.ChatInfo.User.Builder subBuilder = null;
+              User.Builder subBuilder = null;
               if (creator_ != null) {
                 subBuilder = creator_.toBuilder();
               }
-              creator_ = input.readMessage(com.ryze.netty.chat.ChatInfo.User.parser(), extensionRegistry);
+              creator_ = input.readMessage(User.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(creator_);
                 creator_ = subBuilder.buildPartial();
@@ -5320,11 +5320,11 @@ public final class ChatInfo {
               break;
             }
             case 18: {
-              com.ryze.netty.chat.ChatInfo.Group.Builder subBuilder = null;
+              Group.Builder subBuilder = null;
               if (group_ != null) {
                 subBuilder = group_.toBuilder();
               }
-              group_ = input.readMessage(com.ryze.netty.chat.ChatInfo.Group.parser(), extensionRegistry);
+              group_ = input.readMessage(Group.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(group_);
                 group_ = subBuilder.buildPartial();
@@ -5353,19 +5353,19 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.CreateGroupRequest.class, com.ryze.netty.chat.ChatInfo.CreateGroupRequest.Builder.class);
+              CreateGroupRequest.class, Builder.class);
     }
 
     public static final int CREATOR_FIELD_NUMBER = 1;
-    private com.ryze.netty.chat.ChatInfo.User creator_;
+    private User creator_;
     /**
      * <code>.com.ryze.netty.chat.User creator = 1;</code>
      */
@@ -5375,18 +5375,18 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User creator = 1;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.User getCreator() {
-      return creator_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : creator_;
+    public User getCreator() {
+      return creator_ == null ? User.getDefaultInstance() : creator_;
     }
     /**
      * <code>.com.ryze.netty.chat.User creator = 1;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.UserOrBuilder getCreatorOrBuilder() {
+    public UserOrBuilder getCreatorOrBuilder() {
       return getCreator();
     }
 
     public static final int GROUP_FIELD_NUMBER = 2;
-    private com.ryze.netty.chat.ChatInfo.Group group_;
+    private Group group_;
     /**
      * <code>.com.ryze.netty.chat.Group group = 2;</code>
      */
@@ -5396,18 +5396,18 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Group group = 2;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.Group getGroup() {
-      return group_ == null ? com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+    public Group getGroup() {
+      return group_ == null ? Group.getDefaultInstance() : group_;
     }
     /**
      * <code>.com.ryze.netty.chat.Group group = 2;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+    public GroupOrBuilder getGroupOrBuilder() {
       return getGroup();
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5417,7 +5417,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (creator_ != null) {
@@ -5429,7 +5429,7 @@ public final class ChatInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5448,15 +5448,15 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.CreateGroupRequest)) {
+      if (!(obj instanceof CreateGroupRequest)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.CreateGroupRequest other = (com.ryze.netty.chat.ChatInfo.CreateGroupRequest) obj;
+      CreateGroupRequest other = (CreateGroupRequest) obj;
 
       if (hasCreator() != other.hasCreator()) return false;
       if (hasCreator()) {
@@ -5472,7 +5472,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -5492,69 +5492,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+    public static CreateGroupRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+    public static CreateGroupRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+    public static CreateGroupRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+    public static CreateGroupRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(byte[] data)
+    public static CreateGroupRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+    public static CreateGroupRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(java.io.InputStream input)
+    public static CreateGroupRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+    public static CreateGroupRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseDelimitedFrom(java.io.InputStream input)
+    public static CreateGroupRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseDelimitedFrom(
+    public static CreateGroupRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+    public static CreateGroupRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest parseFrom(
+    public static CreateGroupRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5562,23 +5562,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.CreateGroupRequest prototype) {
+    public static Builder newBuilder(CreateGroupRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5592,18 +5592,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.CreateGroupRequest)
-        com.ryze.netty.chat.ChatInfo.CreateGroupRequestOrBuilder {
+        CreateGroupRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.CreateGroupRequest.class, com.ryze.netty.chat.ChatInfo.CreateGroupRequest.Builder.class);
+                CreateGroupRequest.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.CreateGroupRequest.newBuilder()
@@ -5612,7 +5612,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -5621,7 +5621,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         if (creatorBuilder_ == null) {
@@ -5639,29 +5639,29 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupRequest_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.CreateGroupRequest getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance();
+      @Override
+      public CreateGroupRequest getDefaultInstanceForType() {
+        return CreateGroupRequest.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.CreateGroupRequest build() {
-        com.ryze.netty.chat.ChatInfo.CreateGroupRequest result = buildPartial();
+      @Override
+      public CreateGroupRequest build() {
+        CreateGroupRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.CreateGroupRequest buildPartial() {
-        com.ryze.netty.chat.ChatInfo.CreateGroupRequest result = new com.ryze.netty.chat.ChatInfo.CreateGroupRequest(this);
+      @Override
+      public CreateGroupRequest buildPartial() {
+        CreateGroupRequest result = new CreateGroupRequest(this);
         if (creatorBuilder_ == null) {
           result.creator_ = creator_;
         } else {
@@ -5676,50 +5676,50 @@ public final class ChatInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.CreateGroupRequest) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.CreateGroupRequest)other);
+        if (other instanceof CreateGroupRequest) {
+          return mergeFrom((CreateGroupRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.CreateGroupRequest other) {
-        if (other == com.ryze.netty.chat.ChatInfo.CreateGroupRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(CreateGroupRequest other) {
+        if (other == CreateGroupRequest.getDefaultInstance()) return this;
         if (other.hasCreator()) {
           mergeCreator(other.getCreator());
         }
@@ -5731,21 +5731,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.CreateGroupRequest parsedMessage = null;
+        CreateGroupRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.CreateGroupRequest) e.getUnfinishedMessage();
+          parsedMessage = (CreateGroupRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5755,9 +5755,9 @@ public final class ChatInfo {
         return this;
       }
 
-      private com.ryze.netty.chat.ChatInfo.User creator_;
+      private User creator_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> creatorBuilder_;
+          User, User.Builder, UserOrBuilder> creatorBuilder_;
       /**
        * <code>.com.ryze.netty.chat.User creator = 1;</code>
        */
@@ -5767,9 +5767,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User creator = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User getCreator() {
+      public User getCreator() {
         if (creatorBuilder_ == null) {
-          return creator_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : creator_;
+          return creator_ == null ? User.getDefaultInstance() : creator_;
         } else {
           return creatorBuilder_.getMessage();
         }
@@ -5777,7 +5777,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User creator = 1;</code>
        */
-      public Builder setCreator(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder setCreator(User value) {
         if (creatorBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5794,7 +5794,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.User creator = 1;</code>
        */
       public Builder setCreator(
-          com.ryze.netty.chat.ChatInfo.User.Builder builderForValue) {
+          User.Builder builderForValue) {
         if (creatorBuilder_ == null) {
           creator_ = builderForValue.build();
           onChanged();
@@ -5807,11 +5807,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User creator = 1;</code>
        */
-      public Builder mergeCreator(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder mergeCreator(User value) {
         if (creatorBuilder_ == null) {
           if (creator_ != null) {
             creator_ =
-              com.ryze.netty.chat.ChatInfo.User.newBuilder(creator_).mergeFrom(value).buildPartial();
+              User.newBuilder(creator_).mergeFrom(value).buildPartial();
           } else {
             creator_ = value;
           }
@@ -5839,7 +5839,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User creator = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User.Builder getCreatorBuilder() {
+      public User.Builder getCreatorBuilder() {
         
         onChanged();
         return getCreatorFieldBuilder().getBuilder();
@@ -5847,23 +5847,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User creator = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.UserOrBuilder getCreatorOrBuilder() {
+      public UserOrBuilder getCreatorOrBuilder() {
         if (creatorBuilder_ != null) {
           return creatorBuilder_.getMessageOrBuilder();
         } else {
           return creator_ == null ?
-              com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : creator_;
+              User.getDefaultInstance() : creator_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.User creator = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> 
+          User, User.Builder, UserOrBuilder>
           getCreatorFieldBuilder() {
         if (creatorBuilder_ == null) {
           creatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder>(
+              User, User.Builder, UserOrBuilder>(
                   getCreator(),
                   getParentForChildren(),
                   isClean());
@@ -5872,9 +5872,9 @@ public final class ChatInfo {
         return creatorBuilder_;
       }
 
-      private com.ryze.netty.chat.ChatInfo.Group group_;
+      private Group group_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder> groupBuilder_;
+          Group, Group.Builder, GroupOrBuilder> groupBuilder_;
       /**
        * <code>.com.ryze.netty.chat.Group group = 2;</code>
        */
@@ -5884,9 +5884,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.Group getGroup() {
+      public Group getGroup() {
         if (groupBuilder_ == null) {
-          return group_ == null ? com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+          return group_ == null ? Group.getDefaultInstance() : group_;
         } else {
           return groupBuilder_.getMessage();
         }
@@ -5894,7 +5894,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 2;</code>
        */
-      public Builder setGroup(com.ryze.netty.chat.ChatInfo.Group value) {
+      public Builder setGroup(Group value) {
         if (groupBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5911,7 +5911,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.Group group = 2;</code>
        */
       public Builder setGroup(
-          com.ryze.netty.chat.ChatInfo.Group.Builder builderForValue) {
+          Group.Builder builderForValue) {
         if (groupBuilder_ == null) {
           group_ = builderForValue.build();
           onChanged();
@@ -5924,11 +5924,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 2;</code>
        */
-      public Builder mergeGroup(com.ryze.netty.chat.ChatInfo.Group value) {
+      public Builder mergeGroup(Group value) {
         if (groupBuilder_ == null) {
           if (group_ != null) {
             group_ =
-              com.ryze.netty.chat.ChatInfo.Group.newBuilder(group_).mergeFrom(value).buildPartial();
+              Group.newBuilder(group_).mergeFrom(value).buildPartial();
           } else {
             group_ = value;
           }
@@ -5956,7 +5956,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.Group.Builder getGroupBuilder() {
+      public Group.Builder getGroupBuilder() {
         
         onChanged();
         return getGroupFieldBuilder().getBuilder();
@@ -5964,23 +5964,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+      public GroupOrBuilder getGroupOrBuilder() {
         if (groupBuilder_ != null) {
           return groupBuilder_.getMessageOrBuilder();
         } else {
           return group_ == null ?
-              com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+              Group.getDefaultInstance() : group_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.Group group = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder> 
+          Group, Group.Builder, GroupOrBuilder>
           getGroupFieldBuilder() {
         if (groupBuilder_ == null) {
           groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder>(
+              Group, Group.Builder, GroupOrBuilder>(
                   getGroup(),
                   getParentForChildren(),
                   isClean());
@@ -5988,13 +5988,13 @@ public final class ChatInfo {
         }
         return groupBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -6005,18 +6005,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.CreateGroupRequest)
-    private static final com.ryze.netty.chat.ChatInfo.CreateGroupRequest DEFAULT_INSTANCE;
+    private static final CreateGroupRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.CreateGroupRequest();
+      DEFAULT_INSTANCE = new CreateGroupRequest();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupRequest getDefaultInstance() {
+    public static CreateGroupRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<CreateGroupRequest>
         PARSER = new com.google.protobuf.AbstractParser<CreateGroupRequest>() {
-      @java.lang.Override
+      @Override
       public CreateGroupRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6029,13 +6029,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<CreateGroupRequest> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.CreateGroupRequest getDefaultInstanceForType() {
+    @Override
+    public CreateGroupRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6053,7 +6053,7 @@ public final class ChatInfo {
     /**
      * <code>string msg = 2;</code>
      */
-    java.lang.String getMsg();
+    String getMsg();
     /**
      * <code>string msg = 2;</code>
      */
@@ -6067,11 +6067,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
-    com.ryze.netty.chat.ChatInfo.Group getGroup();
+    Group getGroup();
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
-    com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder();
+    GroupOrBuilder getGroupOrBuilder();
   }
   /**
    * <pre>
@@ -6093,14 +6093,14 @@ public final class ChatInfo {
       msg_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new CreateGroupResponse();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6111,7 +6111,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -6129,17 +6129,17 @@ public final class ChatInfo {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               msg_ = s;
               break;
             }
             case 26: {
-              com.ryze.netty.chat.ChatInfo.Group.Builder subBuilder = null;
+              Group.Builder subBuilder = null;
               if (group_ != null) {
                 subBuilder = group_.toBuilder();
               }
-              group_ = input.readMessage(com.ryze.netty.chat.ChatInfo.Group.parser(), extensionRegistry);
+              group_ = input.readMessage(Group.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(group_);
                 group_ = subBuilder.buildPartial();
@@ -6168,15 +6168,15 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.CreateGroupResponse.class, com.ryze.netty.chat.ChatInfo.CreateGroupResponse.Builder.class);
+              CreateGroupResponse.class, Builder.class);
     }
 
     public static final int CODE_FIELD_NUMBER = 1;
@@ -6189,18 +6189,18 @@ public final class ChatInfo {
     }
 
     public static final int MSG_FIELD_NUMBER = 2;
-    private volatile java.lang.Object msg_;
+    private volatile Object msg_;
     /**
      * <code>string msg = 2;</code>
      */
-    public java.lang.String getMsg() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getMsg() {
+      Object ref = msg_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         msg_ = s;
         return s;
       }
@@ -6210,11 +6210,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getMsgBytes() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
+      Object ref = msg_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         msg_ = b;
         return b;
       } else {
@@ -6223,7 +6223,7 @@ public final class ChatInfo {
     }
 
     public static final int GROUP_FIELD_NUMBER = 3;
-    private com.ryze.netty.chat.ChatInfo.Group group_;
+    private Group group_;
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
@@ -6233,18 +6233,18 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.Group getGroup() {
-      return group_ == null ? com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+    public Group getGroup() {
+      return group_ == null ? Group.getDefaultInstance() : group_;
     }
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+    public GroupOrBuilder getGroupOrBuilder() {
       return getGroup();
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6254,7 +6254,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (code_ != 0) {
@@ -6269,7 +6269,7 @@ public final class ChatInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -6291,15 +6291,15 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.CreateGroupResponse)) {
+      if (!(obj instanceof CreateGroupResponse)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.CreateGroupResponse other = (com.ryze.netty.chat.ChatInfo.CreateGroupResponse) obj;
+      CreateGroupResponse other = (CreateGroupResponse) obj;
 
       if (getCode()
           != other.getCode()) return false;
@@ -6314,7 +6314,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -6334,69 +6334,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+    public static CreateGroupResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+    public static CreateGroupResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+    public static CreateGroupResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+    public static CreateGroupResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(byte[] data)
+    public static CreateGroupResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+    public static CreateGroupResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(java.io.InputStream input)
+    public static CreateGroupResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+    public static CreateGroupResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseDelimitedFrom(java.io.InputStream input)
+    public static CreateGroupResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseDelimitedFrom(
+    public static CreateGroupResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+    public static CreateGroupResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse parseFrom(
+    public static CreateGroupResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6404,23 +6404,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.CreateGroupResponse prototype) {
+    public static Builder newBuilder(CreateGroupResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -6434,18 +6434,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.CreateGroupResponse)
-        com.ryze.netty.chat.ChatInfo.CreateGroupResponseOrBuilder {
+        CreateGroupResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.CreateGroupResponse.class, com.ryze.netty.chat.ChatInfo.CreateGroupResponse.Builder.class);
+                CreateGroupResponse.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.CreateGroupResponse.newBuilder()
@@ -6454,7 +6454,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -6463,7 +6463,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         code_ = 0;
@@ -6479,29 +6479,29 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_CreateGroupResponse_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.CreateGroupResponse getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance();
+      @Override
+      public CreateGroupResponse getDefaultInstanceForType() {
+        return CreateGroupResponse.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.CreateGroupResponse build() {
-        com.ryze.netty.chat.ChatInfo.CreateGroupResponse result = buildPartial();
+      @Override
+      public CreateGroupResponse build() {
+        CreateGroupResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.CreateGroupResponse buildPartial() {
-        com.ryze.netty.chat.ChatInfo.CreateGroupResponse result = new com.ryze.netty.chat.ChatInfo.CreateGroupResponse(this);
+      @Override
+      public CreateGroupResponse buildPartial() {
+        CreateGroupResponse result = new CreateGroupResponse(this);
         result.code_ = code_;
         result.msg_ = msg_;
         if (groupBuilder_ == null) {
@@ -6513,50 +6513,50 @@ public final class ChatInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.CreateGroupResponse) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.CreateGroupResponse)other);
+        if (other instanceof CreateGroupResponse) {
+          return mergeFrom((CreateGroupResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.CreateGroupResponse other) {
-        if (other == com.ryze.netty.chat.ChatInfo.CreateGroupResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(CreateGroupResponse other) {
+        if (other == CreateGroupResponse.getDefaultInstance()) return this;
         if (other.getCode() != 0) {
           setCode(other.getCode());
         }
@@ -6572,21 +6572,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.CreateGroupResponse parsedMessage = null;
+        CreateGroupResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.CreateGroupResponse) e.getUnfinishedMessage();
+          parsedMessage = (CreateGroupResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6622,20 +6622,20 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object msg_ = "";
+      private Object msg_ = "";
       /**
        * <code>string msg = 2;</code>
        */
-      public java.lang.String getMsg() {
-        java.lang.Object ref = msg_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMsg() {
+        Object ref = msg_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           msg_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -6643,11 +6643,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getMsgBytes() {
-        java.lang.Object ref = msg_;
+        Object ref = msg_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           msg_ = b;
           return b;
         } else {
@@ -6658,7 +6658,7 @@ public final class ChatInfo {
        * <code>string msg = 2;</code>
        */
       public Builder setMsg(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -6691,9 +6691,9 @@ public final class ChatInfo {
         return this;
       }
 
-      private com.ryze.netty.chat.ChatInfo.Group group_;
+      private Group group_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder> groupBuilder_;
+          Group, Group.Builder, GroupOrBuilder> groupBuilder_;
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
@@ -6703,9 +6703,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.Group getGroup() {
+      public Group getGroup() {
         if (groupBuilder_ == null) {
-          return group_ == null ? com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+          return group_ == null ? Group.getDefaultInstance() : group_;
         } else {
           return groupBuilder_.getMessage();
         }
@@ -6713,7 +6713,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public Builder setGroup(com.ryze.netty.chat.ChatInfo.Group value) {
+      public Builder setGroup(Group value) {
         if (groupBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6730,7 +6730,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
       public Builder setGroup(
-          com.ryze.netty.chat.ChatInfo.Group.Builder builderForValue) {
+          Group.Builder builderForValue) {
         if (groupBuilder_ == null) {
           group_ = builderForValue.build();
           onChanged();
@@ -6743,11 +6743,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public Builder mergeGroup(com.ryze.netty.chat.ChatInfo.Group value) {
+      public Builder mergeGroup(Group value) {
         if (groupBuilder_ == null) {
           if (group_ != null) {
             group_ =
-              com.ryze.netty.chat.ChatInfo.Group.newBuilder(group_).mergeFrom(value).buildPartial();
+              Group.newBuilder(group_).mergeFrom(value).buildPartial();
           } else {
             group_ = value;
           }
@@ -6775,7 +6775,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.Group.Builder getGroupBuilder() {
+      public Group.Builder getGroupBuilder() {
         
         onChanged();
         return getGroupFieldBuilder().getBuilder();
@@ -6783,23 +6783,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+      public GroupOrBuilder getGroupOrBuilder() {
         if (groupBuilder_ != null) {
           return groupBuilder_.getMessageOrBuilder();
         } else {
           return group_ == null ?
-              com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+              Group.getDefaultInstance() : group_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder> 
+          Group, Group.Builder, GroupOrBuilder>
           getGroupFieldBuilder() {
         if (groupBuilder_ == null) {
           groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder>(
+              Group, Group.Builder, GroupOrBuilder>(
                   getGroup(),
                   getParentForChildren(),
                   isClean());
@@ -6807,13 +6807,13 @@ public final class ChatInfo {
         }
         return groupBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -6824,18 +6824,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.CreateGroupResponse)
-    private static final com.ryze.netty.chat.ChatInfo.CreateGroupResponse DEFAULT_INSTANCE;
+    private static final CreateGroupResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.CreateGroupResponse();
+      DEFAULT_INSTANCE = new CreateGroupResponse();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.CreateGroupResponse getDefaultInstance() {
+    public static CreateGroupResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<CreateGroupResponse>
         PARSER = new com.google.protobuf.AbstractParser<CreateGroupResponse>() {
-      @java.lang.Override
+      @Override
       public CreateGroupResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6848,13 +6848,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<CreateGroupResponse> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.CreateGroupResponse getDefaultInstanceForType() {
+    @Override
+    public CreateGroupResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6883,14 +6883,14 @@ public final class ChatInfo {
     private JoinGroupRequest() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new JoinGroupRequest();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6901,7 +6901,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -6934,19 +6934,19 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.JoinGroupRequest.class, com.ryze.netty.chat.ChatInfo.JoinGroupRequest.Builder.class);
+              JoinGroupRequest.class, Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6956,13 +6956,13 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -6973,21 +6973,21 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.JoinGroupRequest)) {
+      if (!(obj instanceof JoinGroupRequest)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.JoinGroupRequest other = (com.ryze.netty.chat.ChatInfo.JoinGroupRequest) obj;
+      JoinGroupRequest other = (JoinGroupRequest) obj;
 
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -6999,69 +6999,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(
+    public static JoinGroupRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(
+    public static JoinGroupRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(
+    public static JoinGroupRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(
+    public static JoinGroupRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(byte[] data)
+    public static JoinGroupRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(
+    public static JoinGroupRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(java.io.InputStream input)
+    public static JoinGroupRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(
+    public static JoinGroupRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseDelimitedFrom(java.io.InputStream input)
+    public static JoinGroupRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseDelimitedFrom(
+    public static JoinGroupRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(
+    public static JoinGroupRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest parseFrom(
+    public static JoinGroupRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7069,23 +7069,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.JoinGroupRequest prototype) {
+    public static Builder newBuilder(JoinGroupRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -7099,18 +7099,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.JoinGroupRequest)
-        com.ryze.netty.chat.ChatInfo.JoinGroupRequestOrBuilder {
+        JoinGroupRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.JoinGroupRequest.class, com.ryze.netty.chat.ChatInfo.JoinGroupRequest.Builder.class);
+                JoinGroupRequest.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.JoinGroupRequest.newBuilder()
@@ -7119,7 +7119,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -7128,103 +7128,103 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupRequest_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.JoinGroupRequest getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.JoinGroupRequest.getDefaultInstance();
+      @Override
+      public JoinGroupRequest getDefaultInstanceForType() {
+        return JoinGroupRequest.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.JoinGroupRequest build() {
-        com.ryze.netty.chat.ChatInfo.JoinGroupRequest result = buildPartial();
+      @Override
+      public JoinGroupRequest build() {
+        JoinGroupRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.JoinGroupRequest buildPartial() {
-        com.ryze.netty.chat.ChatInfo.JoinGroupRequest result = new com.ryze.netty.chat.ChatInfo.JoinGroupRequest(this);
+      @Override
+      public JoinGroupRequest buildPartial() {
+        JoinGroupRequest result = new JoinGroupRequest(this);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.JoinGroupRequest) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.JoinGroupRequest)other);
+        if (other instanceof JoinGroupRequest) {
+          return mergeFrom((JoinGroupRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.JoinGroupRequest other) {
-        if (other == com.ryze.netty.chat.ChatInfo.JoinGroupRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(JoinGroupRequest other) {
+        if (other == JoinGroupRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.JoinGroupRequest parsedMessage = null;
+        JoinGroupRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.JoinGroupRequest) e.getUnfinishedMessage();
+          parsedMessage = (JoinGroupRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7233,13 +7233,13 @@ public final class ChatInfo {
         }
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -7250,18 +7250,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.JoinGroupRequest)
-    private static final com.ryze.netty.chat.ChatInfo.JoinGroupRequest DEFAULT_INSTANCE;
+    private static final JoinGroupRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.JoinGroupRequest();
+      DEFAULT_INSTANCE = new JoinGroupRequest();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupRequest getDefaultInstance() {
+    public static JoinGroupRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<JoinGroupRequest>
         PARSER = new com.google.protobuf.AbstractParser<JoinGroupRequest>() {
-      @java.lang.Override
+      @Override
       public JoinGroupRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7274,13 +7274,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<JoinGroupRequest> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.JoinGroupRequest getDefaultInstanceForType() {
+    @Override
+    public JoinGroupRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7298,7 +7298,7 @@ public final class ChatInfo {
     /**
      * <code>string msg = 2;</code>
      */
-    java.lang.String getMsg();
+    String getMsg();
     /**
      * <code>string msg = 2;</code>
      */
@@ -7312,11 +7312,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
-    com.ryze.netty.chat.ChatInfo.Group getGroup();
+    Group getGroup();
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
-    com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder();
+    GroupOrBuilder getGroupOrBuilder();
   }
   /**
    * <pre>
@@ -7338,14 +7338,14 @@ public final class ChatInfo {
       msg_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new JoinGroupResponse();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -7356,7 +7356,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -7374,17 +7374,17 @@ public final class ChatInfo {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               msg_ = s;
               break;
             }
             case 26: {
-              com.ryze.netty.chat.ChatInfo.Group.Builder subBuilder = null;
+              Group.Builder subBuilder = null;
               if (group_ != null) {
                 subBuilder = group_.toBuilder();
               }
-              group_ = input.readMessage(com.ryze.netty.chat.ChatInfo.Group.parser(), extensionRegistry);
+              group_ = input.readMessage(Group.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(group_);
                 group_ = subBuilder.buildPartial();
@@ -7413,15 +7413,15 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.JoinGroupResponse.class, com.ryze.netty.chat.ChatInfo.JoinGroupResponse.Builder.class);
+              JoinGroupResponse.class, Builder.class);
     }
 
     public static final int CODE_FIELD_NUMBER = 1;
@@ -7434,18 +7434,18 @@ public final class ChatInfo {
     }
 
     public static final int MSG_FIELD_NUMBER = 2;
-    private volatile java.lang.Object msg_;
+    private volatile Object msg_;
     /**
      * <code>string msg = 2;</code>
      */
-    public java.lang.String getMsg() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getMsg() {
+      Object ref = msg_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         msg_ = s;
         return s;
       }
@@ -7455,11 +7455,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getMsgBytes() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
+      Object ref = msg_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         msg_ = b;
         return b;
       } else {
@@ -7468,7 +7468,7 @@ public final class ChatInfo {
     }
 
     public static final int GROUP_FIELD_NUMBER = 3;
-    private com.ryze.netty.chat.ChatInfo.Group group_;
+    private Group group_;
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
@@ -7478,18 +7478,18 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.Group getGroup() {
-      return group_ == null ? com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+    public Group getGroup() {
+      return group_ == null ? Group.getDefaultInstance() : group_;
     }
     /**
      * <code>.com.ryze.netty.chat.Group group = 3;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+    public GroupOrBuilder getGroupOrBuilder() {
       return getGroup();
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -7499,7 +7499,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (code_ != 0) {
@@ -7514,7 +7514,7 @@ public final class ChatInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7536,15 +7536,15 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.JoinGroupResponse)) {
+      if (!(obj instanceof JoinGroupResponse)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.JoinGroupResponse other = (com.ryze.netty.chat.ChatInfo.JoinGroupResponse) obj;
+      JoinGroupResponse other = (JoinGroupResponse) obj;
 
       if (getCode()
           != other.getCode()) return false;
@@ -7559,7 +7559,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -7579,69 +7579,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(
+    public static JoinGroupResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(
+    public static JoinGroupResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(
+    public static JoinGroupResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(
+    public static JoinGroupResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(byte[] data)
+    public static JoinGroupResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(
+    public static JoinGroupResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(java.io.InputStream input)
+    public static JoinGroupResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(
+    public static JoinGroupResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseDelimitedFrom(java.io.InputStream input)
+    public static JoinGroupResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseDelimitedFrom(
+    public static JoinGroupResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(
+    public static JoinGroupResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse parseFrom(
+    public static JoinGroupResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7649,23 +7649,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.JoinGroupResponse prototype) {
+    public static Builder newBuilder(JoinGroupResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -7679,18 +7679,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.JoinGroupResponse)
-        com.ryze.netty.chat.ChatInfo.JoinGroupResponseOrBuilder {
+        JoinGroupResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.JoinGroupResponse.class, com.ryze.netty.chat.ChatInfo.JoinGroupResponse.Builder.class);
+                JoinGroupResponse.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.JoinGroupResponse.newBuilder()
@@ -7699,7 +7699,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -7708,7 +7708,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         code_ = 0;
@@ -7724,29 +7724,29 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_JoinGroupResponse_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.JoinGroupResponse getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.JoinGroupResponse.getDefaultInstance();
+      @Override
+      public JoinGroupResponse getDefaultInstanceForType() {
+        return JoinGroupResponse.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.JoinGroupResponse build() {
-        com.ryze.netty.chat.ChatInfo.JoinGroupResponse result = buildPartial();
+      @Override
+      public JoinGroupResponse build() {
+        JoinGroupResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.JoinGroupResponse buildPartial() {
-        com.ryze.netty.chat.ChatInfo.JoinGroupResponse result = new com.ryze.netty.chat.ChatInfo.JoinGroupResponse(this);
+      @Override
+      public JoinGroupResponse buildPartial() {
+        JoinGroupResponse result = new JoinGroupResponse(this);
         result.code_ = code_;
         result.msg_ = msg_;
         if (groupBuilder_ == null) {
@@ -7758,50 +7758,50 @@ public final class ChatInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.JoinGroupResponse) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.JoinGroupResponse)other);
+        if (other instanceof JoinGroupResponse) {
+          return mergeFrom((JoinGroupResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.JoinGroupResponse other) {
-        if (other == com.ryze.netty.chat.ChatInfo.JoinGroupResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(JoinGroupResponse other) {
+        if (other == JoinGroupResponse.getDefaultInstance()) return this;
         if (other.getCode() != 0) {
           setCode(other.getCode());
         }
@@ -7817,21 +7817,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.JoinGroupResponse parsedMessage = null;
+        JoinGroupResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.JoinGroupResponse) e.getUnfinishedMessage();
+          parsedMessage = (JoinGroupResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7867,20 +7867,20 @@ public final class ChatInfo {
         return this;
       }
 
-      private java.lang.Object msg_ = "";
+      private Object msg_ = "";
       /**
        * <code>string msg = 2;</code>
        */
-      public java.lang.String getMsg() {
-        java.lang.Object ref = msg_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMsg() {
+        Object ref = msg_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           msg_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -7888,11 +7888,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getMsgBytes() {
-        java.lang.Object ref = msg_;
+        Object ref = msg_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           msg_ = b;
           return b;
         } else {
@@ -7903,7 +7903,7 @@ public final class ChatInfo {
        * <code>string msg = 2;</code>
        */
       public Builder setMsg(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -7936,9 +7936,9 @@ public final class ChatInfo {
         return this;
       }
 
-      private com.ryze.netty.chat.ChatInfo.Group group_;
+      private Group group_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder> groupBuilder_;
+          Group, Group.Builder, GroupOrBuilder> groupBuilder_;
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
@@ -7948,9 +7948,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.Group getGroup() {
+      public Group getGroup() {
         if (groupBuilder_ == null) {
-          return group_ == null ? com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+          return group_ == null ? Group.getDefaultInstance() : group_;
         } else {
           return groupBuilder_.getMessage();
         }
@@ -7958,7 +7958,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public Builder setGroup(com.ryze.netty.chat.ChatInfo.Group value) {
+      public Builder setGroup(Group value) {
         if (groupBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7975,7 +7975,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
       public Builder setGroup(
-          com.ryze.netty.chat.ChatInfo.Group.Builder builderForValue) {
+          Group.Builder builderForValue) {
         if (groupBuilder_ == null) {
           group_ = builderForValue.build();
           onChanged();
@@ -7988,11 +7988,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public Builder mergeGroup(com.ryze.netty.chat.ChatInfo.Group value) {
+      public Builder mergeGroup(Group value) {
         if (groupBuilder_ == null) {
           if (group_ != null) {
             group_ =
-              com.ryze.netty.chat.ChatInfo.Group.newBuilder(group_).mergeFrom(value).buildPartial();
+              Group.newBuilder(group_).mergeFrom(value).buildPartial();
           } else {
             group_ = value;
           }
@@ -8020,7 +8020,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.Group.Builder getGroupBuilder() {
+      public Group.Builder getGroupBuilder() {
         
         onChanged();
         return getGroupFieldBuilder().getBuilder();
@@ -8028,23 +8028,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+      public GroupOrBuilder getGroupOrBuilder() {
         if (groupBuilder_ != null) {
           return groupBuilder_.getMessageOrBuilder();
         } else {
           return group_ == null ?
-              com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+              Group.getDefaultInstance() : group_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.Group group = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder> 
+          Group, Group.Builder, GroupOrBuilder>
           getGroupFieldBuilder() {
         if (groupBuilder_ == null) {
           groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder>(
+              Group, Group.Builder, GroupOrBuilder>(
                   getGroup(),
                   getParentForChildren(),
                   isClean());
@@ -8052,13 +8052,13 @@ public final class ChatInfo {
         }
         return groupBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -8069,18 +8069,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.JoinGroupResponse)
-    private static final com.ryze.netty.chat.ChatInfo.JoinGroupResponse DEFAULT_INSTANCE;
+    private static final JoinGroupResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.JoinGroupResponse();
+      DEFAULT_INSTANCE = new JoinGroupResponse();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.JoinGroupResponse getDefaultInstance() {
+    public static JoinGroupResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<JoinGroupResponse>
         PARSER = new com.google.protobuf.AbstractParser<JoinGroupResponse>() {
-      @java.lang.Override
+      @Override
       public JoinGroupResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8093,13 +8093,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<JoinGroupResponse> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.JoinGroupResponse getDefaultInstanceForType() {
+    @Override
+    public JoinGroupResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8116,11 +8116,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User from_user = 1;</code>
      */
-    com.ryze.netty.chat.ChatInfo.User getFromUser();
+    User getFromUser();
     /**
      * <code>.com.ryze.netty.chat.User from_user = 1;</code>
      */
-    com.ryze.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder();
+    UserOrBuilder getFromUserOrBuilder();
 
     /**
      * <code>.com.ryze.netty.chat.User to_user = 2;</code>
@@ -8129,16 +8129,16 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User to_user = 2;</code>
      */
-    com.ryze.netty.chat.ChatInfo.User getToUser();
+    User getToUser();
     /**
      * <code>.com.ryze.netty.chat.User to_user = 2;</code>
      */
-    com.ryze.netty.chat.ChatInfo.UserOrBuilder getToUserOrBuilder();
+    UserOrBuilder getToUserOrBuilder();
 
     /**
      * <code>string msg_content = 3;</code>
      */
-    java.lang.String getMsgContent();
+    String getMsgContent();
     /**
      * <code>string msg_content = 3;</code>
      */
@@ -8165,14 +8165,14 @@ public final class ChatInfo {
       msgContent_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new SingleChat();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -8183,7 +8183,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -8196,11 +8196,11 @@ public final class ChatInfo {
               done = true;
               break;
             case 10: {
-              com.ryze.netty.chat.ChatInfo.User.Builder subBuilder = null;
+              User.Builder subBuilder = null;
               if (fromUser_ != null) {
                 subBuilder = fromUser_.toBuilder();
               }
-              fromUser_ = input.readMessage(com.ryze.netty.chat.ChatInfo.User.parser(), extensionRegistry);
+              fromUser_ = input.readMessage(User.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(fromUser_);
                 fromUser_ = subBuilder.buildPartial();
@@ -8209,11 +8209,11 @@ public final class ChatInfo {
               break;
             }
             case 18: {
-              com.ryze.netty.chat.ChatInfo.User.Builder subBuilder = null;
+              User.Builder subBuilder = null;
               if (toUser_ != null) {
                 subBuilder = toUser_.toBuilder();
               }
-              toUser_ = input.readMessage(com.ryze.netty.chat.ChatInfo.User.parser(), extensionRegistry);
+              toUser_ = input.readMessage(User.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(toUser_);
                 toUser_ = subBuilder.buildPartial();
@@ -8222,7 +8222,7 @@ public final class ChatInfo {
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               msgContent_ = s;
               break;
@@ -8248,19 +8248,19 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.SingleChat.class, com.ryze.netty.chat.ChatInfo.SingleChat.Builder.class);
+              SingleChat.class, Builder.class);
     }
 
     public static final int FROM_USER_FIELD_NUMBER = 1;
-    private com.ryze.netty.chat.ChatInfo.User fromUser_;
+    private User fromUser_;
     /**
      * <code>.com.ryze.netty.chat.User from_user = 1;</code>
      */
@@ -8270,18 +8270,18 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User from_user = 1;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.User getFromUser() {
-      return fromUser_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : fromUser_;
+    public User getFromUser() {
+      return fromUser_ == null ? User.getDefaultInstance() : fromUser_;
     }
     /**
      * <code>.com.ryze.netty.chat.User from_user = 1;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder() {
+    public UserOrBuilder getFromUserOrBuilder() {
       return getFromUser();
     }
 
     public static final int TO_USER_FIELD_NUMBER = 2;
-    private com.ryze.netty.chat.ChatInfo.User toUser_;
+    private User toUser_;
     /**
      * <code>.com.ryze.netty.chat.User to_user = 2;</code>
      */
@@ -8291,29 +8291,29 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User to_user = 2;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.User getToUser() {
-      return toUser_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : toUser_;
+    public User getToUser() {
+      return toUser_ == null ? User.getDefaultInstance() : toUser_;
     }
     /**
      * <code>.com.ryze.netty.chat.User to_user = 2;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.UserOrBuilder getToUserOrBuilder() {
+    public UserOrBuilder getToUserOrBuilder() {
       return getToUser();
     }
 
     public static final int MSG_CONTENT_FIELD_NUMBER = 3;
-    private volatile java.lang.Object msgContent_;
+    private volatile Object msgContent_;
     /**
      * <code>string msg_content = 3;</code>
      */
-    public java.lang.String getMsgContent() {
-      java.lang.Object ref = msgContent_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getMsgContent() {
+      Object ref = msgContent_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         msgContent_ = s;
         return s;
       }
@@ -8323,11 +8323,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getMsgContentBytes() {
-      java.lang.Object ref = msgContent_;
-      if (ref instanceof java.lang.String) {
+      Object ref = msgContent_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         msgContent_ = b;
         return b;
       } else {
@@ -8336,7 +8336,7 @@ public final class ChatInfo {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -8346,7 +8346,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (fromUser_ != null) {
@@ -8361,7 +8361,7 @@ public final class ChatInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -8383,15 +8383,15 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.SingleChat)) {
+      if (!(obj instanceof SingleChat)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.SingleChat other = (com.ryze.netty.chat.ChatInfo.SingleChat) obj;
+      SingleChat other = (SingleChat) obj;
 
       if (hasFromUser() != other.hasFromUser()) return false;
       if (hasFromUser()) {
@@ -8409,7 +8409,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -8431,69 +8431,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(
+    public static SingleChat parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(
+    public static SingleChat parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(
+    public static SingleChat parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(
+    public static SingleChat parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(byte[] data)
+    public static SingleChat parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(
+    public static SingleChat parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(java.io.InputStream input)
+    public static SingleChat parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(
+    public static SingleChat parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseDelimitedFrom(java.io.InputStream input)
+    public static SingleChat parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseDelimitedFrom(
+    public static SingleChat parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(
+    public static SingleChat parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.SingleChat parseFrom(
+    public static SingleChat parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8501,23 +8501,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.SingleChat prototype) {
+    public static Builder newBuilder(SingleChat prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -8531,18 +8531,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.SingleChat)
-        com.ryze.netty.chat.ChatInfo.SingleChatOrBuilder {
+        SingleChatOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.SingleChat.class, com.ryze.netty.chat.ChatInfo.SingleChat.Builder.class);
+                SingleChat.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.SingleChat.newBuilder()
@@ -8551,7 +8551,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -8560,7 +8560,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         if (fromUserBuilder_ == null) {
@@ -8580,29 +8580,29 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_SingleChat_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.SingleChat getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.SingleChat.getDefaultInstance();
+      @Override
+      public SingleChat getDefaultInstanceForType() {
+        return SingleChat.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.SingleChat build() {
-        com.ryze.netty.chat.ChatInfo.SingleChat result = buildPartial();
+      @Override
+      public SingleChat build() {
+        SingleChat result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.SingleChat buildPartial() {
-        com.ryze.netty.chat.ChatInfo.SingleChat result = new com.ryze.netty.chat.ChatInfo.SingleChat(this);
+      @Override
+      public SingleChat buildPartial() {
+        SingleChat result = new SingleChat(this);
         if (fromUserBuilder_ == null) {
           result.fromUser_ = fromUser_;
         } else {
@@ -8618,50 +8618,50 @@ public final class ChatInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.SingleChat) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.SingleChat)other);
+        if (other instanceof SingleChat) {
+          return mergeFrom((SingleChat)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.SingleChat other) {
-        if (other == com.ryze.netty.chat.ChatInfo.SingleChat.getDefaultInstance()) return this;
+      public Builder mergeFrom(SingleChat other) {
+        if (other == SingleChat.getDefaultInstance()) return this;
         if (other.hasFromUser()) {
           mergeFromUser(other.getFromUser());
         }
@@ -8677,21 +8677,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.SingleChat parsedMessage = null;
+        SingleChat parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.SingleChat) e.getUnfinishedMessage();
+          parsedMessage = (SingleChat) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8701,9 +8701,9 @@ public final class ChatInfo {
         return this;
       }
 
-      private com.ryze.netty.chat.ChatInfo.User fromUser_;
+      private User fromUser_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> fromUserBuilder_;
+          User, User.Builder, UserOrBuilder> fromUserBuilder_;
       /**
        * <code>.com.ryze.netty.chat.User from_user = 1;</code>
        */
@@ -8713,9 +8713,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User getFromUser() {
+      public User getFromUser() {
         if (fromUserBuilder_ == null) {
-          return fromUser_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : fromUser_;
+          return fromUser_ == null ? User.getDefaultInstance() : fromUser_;
         } else {
           return fromUserBuilder_.getMessage();
         }
@@ -8723,7 +8723,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 1;</code>
        */
-      public Builder setFromUser(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder setFromUser(User value) {
         if (fromUserBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8740,7 +8740,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.User from_user = 1;</code>
        */
       public Builder setFromUser(
-          com.ryze.netty.chat.ChatInfo.User.Builder builderForValue) {
+          User.Builder builderForValue) {
         if (fromUserBuilder_ == null) {
           fromUser_ = builderForValue.build();
           onChanged();
@@ -8753,11 +8753,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 1;</code>
        */
-      public Builder mergeFromUser(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder mergeFromUser(User value) {
         if (fromUserBuilder_ == null) {
           if (fromUser_ != null) {
             fromUser_ =
-              com.ryze.netty.chat.ChatInfo.User.newBuilder(fromUser_).mergeFrom(value).buildPartial();
+              User.newBuilder(fromUser_).mergeFrom(value).buildPartial();
           } else {
             fromUser_ = value;
           }
@@ -8785,7 +8785,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User.Builder getFromUserBuilder() {
+      public User.Builder getFromUserBuilder() {
         
         onChanged();
         return getFromUserFieldBuilder().getBuilder();
@@ -8793,23 +8793,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder() {
+      public UserOrBuilder getFromUserOrBuilder() {
         if (fromUserBuilder_ != null) {
           return fromUserBuilder_.getMessageOrBuilder();
         } else {
           return fromUser_ == null ?
-              com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : fromUser_;
+              User.getDefaultInstance() : fromUser_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.User from_user = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> 
+          User, User.Builder, UserOrBuilder>
           getFromUserFieldBuilder() {
         if (fromUserBuilder_ == null) {
           fromUserBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder>(
+              User, User.Builder, UserOrBuilder>(
                   getFromUser(),
                   getParentForChildren(),
                   isClean());
@@ -8818,9 +8818,9 @@ public final class ChatInfo {
         return fromUserBuilder_;
       }
 
-      private com.ryze.netty.chat.ChatInfo.User toUser_;
+      private User toUser_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> toUserBuilder_;
+          User, User.Builder, UserOrBuilder> toUserBuilder_;
       /**
        * <code>.com.ryze.netty.chat.User to_user = 2;</code>
        */
@@ -8830,9 +8830,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User to_user = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User getToUser() {
+      public User getToUser() {
         if (toUserBuilder_ == null) {
-          return toUser_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : toUser_;
+          return toUser_ == null ? User.getDefaultInstance() : toUser_;
         } else {
           return toUserBuilder_.getMessage();
         }
@@ -8840,7 +8840,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User to_user = 2;</code>
        */
-      public Builder setToUser(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder setToUser(User value) {
         if (toUserBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8857,7 +8857,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.User to_user = 2;</code>
        */
       public Builder setToUser(
-          com.ryze.netty.chat.ChatInfo.User.Builder builderForValue) {
+          User.Builder builderForValue) {
         if (toUserBuilder_ == null) {
           toUser_ = builderForValue.build();
           onChanged();
@@ -8870,11 +8870,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User to_user = 2;</code>
        */
-      public Builder mergeToUser(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder mergeToUser(User value) {
         if (toUserBuilder_ == null) {
           if (toUser_ != null) {
             toUser_ =
-              com.ryze.netty.chat.ChatInfo.User.newBuilder(toUser_).mergeFrom(value).buildPartial();
+              User.newBuilder(toUser_).mergeFrom(value).buildPartial();
           } else {
             toUser_ = value;
           }
@@ -8902,7 +8902,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User to_user = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User.Builder getToUserBuilder() {
+      public User.Builder getToUserBuilder() {
         
         onChanged();
         return getToUserFieldBuilder().getBuilder();
@@ -8910,23 +8910,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User to_user = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.UserOrBuilder getToUserOrBuilder() {
+      public UserOrBuilder getToUserOrBuilder() {
         if (toUserBuilder_ != null) {
           return toUserBuilder_.getMessageOrBuilder();
         } else {
           return toUser_ == null ?
-              com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : toUser_;
+              User.getDefaultInstance() : toUser_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.User to_user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> 
+          User, User.Builder, UserOrBuilder>
           getToUserFieldBuilder() {
         if (toUserBuilder_ == null) {
           toUserBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder>(
+              User, User.Builder, UserOrBuilder>(
                   getToUser(),
                   getParentForChildren(),
                   isClean());
@@ -8935,20 +8935,20 @@ public final class ChatInfo {
         return toUserBuilder_;
       }
 
-      private java.lang.Object msgContent_ = "";
+      private Object msgContent_ = "";
       /**
        * <code>string msg_content = 3;</code>
        */
-      public java.lang.String getMsgContent() {
-        java.lang.Object ref = msgContent_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMsgContent() {
+        Object ref = msgContent_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           msgContent_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -8956,11 +8956,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getMsgContentBytes() {
-        java.lang.Object ref = msgContent_;
+        Object ref = msgContent_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           msgContent_ = b;
           return b;
         } else {
@@ -8971,7 +8971,7 @@ public final class ChatInfo {
        * <code>string msg_content = 3;</code>
        */
       public Builder setMsgContent(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -9003,13 +9003,13 @@ public final class ChatInfo {
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -9020,18 +9020,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.SingleChat)
-    private static final com.ryze.netty.chat.ChatInfo.SingleChat DEFAULT_INSTANCE;
+    private static final SingleChat DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.SingleChat();
+      DEFAULT_INSTANCE = new SingleChat();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.SingleChat getDefaultInstance() {
+    public static SingleChat getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<SingleChat>
         PARSER = new com.google.protobuf.AbstractParser<SingleChat>() {
-      @java.lang.Override
+      @Override
       public SingleChat parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9044,13 +9044,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<SingleChat> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.SingleChat getDefaultInstanceForType() {
+    @Override
+    public SingleChat getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9067,11 +9067,11 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Group group = 1;</code>
      */
-    com.ryze.netty.chat.ChatInfo.Group getGroup();
+    Group getGroup();
     /**
      * <code>.com.ryze.netty.chat.Group group = 1;</code>
      */
-    com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder();
+    GroupOrBuilder getGroupOrBuilder();
 
     /**
      * <code>.com.ryze.netty.chat.User from_user = 2;</code>
@@ -9080,16 +9080,16 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User from_user = 2;</code>
      */
-    com.ryze.netty.chat.ChatInfo.User getFromUser();
+    User getFromUser();
     /**
      * <code>.com.ryze.netty.chat.User from_user = 2;</code>
      */
-    com.ryze.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder();
+    UserOrBuilder getFromUserOrBuilder();
 
     /**
      * <code>string msg_content = 3;</code>
      */
-    java.lang.String getMsgContent();
+    String getMsgContent();
     /**
      * <code>string msg_content = 3;</code>
      */
@@ -9116,14 +9116,14 @@ public final class ChatInfo {
       msgContent_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new GroupChat();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -9134,7 +9134,7 @@ public final class ChatInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -9147,11 +9147,11 @@ public final class ChatInfo {
               done = true;
               break;
             case 10: {
-              com.ryze.netty.chat.ChatInfo.Group.Builder subBuilder = null;
+              Group.Builder subBuilder = null;
               if (group_ != null) {
                 subBuilder = group_.toBuilder();
               }
-              group_ = input.readMessage(com.ryze.netty.chat.ChatInfo.Group.parser(), extensionRegistry);
+              group_ = input.readMessage(Group.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(group_);
                 group_ = subBuilder.buildPartial();
@@ -9160,11 +9160,11 @@ public final class ChatInfo {
               break;
             }
             case 18: {
-              com.ryze.netty.chat.ChatInfo.User.Builder subBuilder = null;
+              User.Builder subBuilder = null;
               if (fromUser_ != null) {
                 subBuilder = fromUser_.toBuilder();
               }
-              fromUser_ = input.readMessage(com.ryze.netty.chat.ChatInfo.User.parser(), extensionRegistry);
+              fromUser_ = input.readMessage(User.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(fromUser_);
                 fromUser_ = subBuilder.buildPartial();
@@ -9173,7 +9173,7 @@ public final class ChatInfo {
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               msgContent_ = s;
               break;
@@ -9199,19 +9199,19 @@ public final class ChatInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_descriptor;
+      return ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_fieldAccessorTable
+      return ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ryze.netty.chat.ChatInfo.GroupChat.class, com.ryze.netty.chat.ChatInfo.GroupChat.Builder.class);
+              GroupChat.class, Builder.class);
     }
 
     public static final int GROUP_FIELD_NUMBER = 1;
-    private com.ryze.netty.chat.ChatInfo.Group group_;
+    private Group group_;
     /**
      * <code>.com.ryze.netty.chat.Group group = 1;</code>
      */
@@ -9221,18 +9221,18 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.Group group = 1;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.Group getGroup() {
-      return group_ == null ? com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+    public Group getGroup() {
+      return group_ == null ? Group.getDefaultInstance() : group_;
     }
     /**
      * <code>.com.ryze.netty.chat.Group group = 1;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+    public GroupOrBuilder getGroupOrBuilder() {
       return getGroup();
     }
 
     public static final int FROM_USER_FIELD_NUMBER = 2;
-    private com.ryze.netty.chat.ChatInfo.User fromUser_;
+    private User fromUser_;
     /**
      * <code>.com.ryze.netty.chat.User from_user = 2;</code>
      */
@@ -9242,29 +9242,29 @@ public final class ChatInfo {
     /**
      * <code>.com.ryze.netty.chat.User from_user = 2;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.User getFromUser() {
-      return fromUser_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : fromUser_;
+    public User getFromUser() {
+      return fromUser_ == null ? User.getDefaultInstance() : fromUser_;
     }
     /**
      * <code>.com.ryze.netty.chat.User from_user = 2;</code>
      */
-    public com.ryze.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder() {
+    public UserOrBuilder getFromUserOrBuilder() {
       return getFromUser();
     }
 
     public static final int MSG_CONTENT_FIELD_NUMBER = 3;
-    private volatile java.lang.Object msgContent_;
+    private volatile Object msgContent_;
     /**
      * <code>string msg_content = 3;</code>
      */
-    public java.lang.String getMsgContent() {
-      java.lang.Object ref = msgContent_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getMsgContent() {
+      Object ref = msgContent_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         msgContent_ = s;
         return s;
       }
@@ -9274,11 +9274,11 @@ public final class ChatInfo {
      */
     public com.google.protobuf.ByteString
         getMsgContentBytes() {
-      java.lang.Object ref = msgContent_;
-      if (ref instanceof java.lang.String) {
+      Object ref = msgContent_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         msgContent_ = b;
         return b;
       } else {
@@ -9287,7 +9287,7 @@ public final class ChatInfo {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -9297,7 +9297,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (group_ != null) {
@@ -9312,7 +9312,7 @@ public final class ChatInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -9334,15 +9334,15 @@ public final class ChatInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.ryze.netty.chat.ChatInfo.GroupChat)) {
+      if (!(obj instanceof GroupChat)) {
         return super.equals(obj);
       }
-      com.ryze.netty.chat.ChatInfo.GroupChat other = (com.ryze.netty.chat.ChatInfo.GroupChat) obj;
+      GroupChat other = (GroupChat) obj;
 
       if (hasGroup() != other.hasGroup()) return false;
       if (hasGroup()) {
@@ -9360,7 +9360,7 @@ public final class ChatInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -9382,69 +9382,69 @@ public final class ChatInfo {
       return hash;
     }
 
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(
+    public static GroupChat parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(
+    public static GroupChat parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(
+    public static GroupChat parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(
+    public static GroupChat parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(byte[] data)
+    public static GroupChat parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(
+    public static GroupChat parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(java.io.InputStream input)
+    public static GroupChat parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(
+    public static GroupChat parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseDelimitedFrom(java.io.InputStream input)
+    public static GroupChat parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseDelimitedFrom(
+    public static GroupChat parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(
+    public static GroupChat parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.ryze.netty.chat.ChatInfo.GroupChat parseFrom(
+    public static GroupChat parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9452,23 +9452,23 @@ public final class ChatInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.ryze.netty.chat.ChatInfo.GroupChat prototype) {
+    public static Builder newBuilder(GroupChat prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -9482,18 +9482,18 @@ public final class ChatInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.ryze.netty.chat.GroupChat)
-        com.ryze.netty.chat.ChatInfo.GroupChatOrBuilder {
+        GroupChatOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_fieldAccessorTable
+        return ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.ryze.netty.chat.ChatInfo.GroupChat.class, com.ryze.netty.chat.ChatInfo.GroupChat.Builder.class);
+                GroupChat.class, Builder.class);
       }
 
       // Construct using com.ryze.netty.chat.ChatInfo.GroupChat.newBuilder()
@@ -9502,7 +9502,7 @@ public final class ChatInfo {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -9511,7 +9511,7 @@ public final class ChatInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         if (groupBuilder_ == null) {
@@ -9531,29 +9531,29 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ryze.netty.chat.ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_descriptor;
+        return ChatInfo.internal_static_com_ryze_netty_chat_GroupChat_descriptor;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.GroupChat getDefaultInstanceForType() {
-        return com.ryze.netty.chat.ChatInfo.GroupChat.getDefaultInstance();
+      @Override
+      public GroupChat getDefaultInstanceForType() {
+        return GroupChat.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.GroupChat build() {
-        com.ryze.netty.chat.ChatInfo.GroupChat result = buildPartial();
+      @Override
+      public GroupChat build() {
+        GroupChat result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.ryze.netty.chat.ChatInfo.GroupChat buildPartial() {
-        com.ryze.netty.chat.ChatInfo.GroupChat result = new com.ryze.netty.chat.ChatInfo.GroupChat(this);
+      @Override
+      public GroupChat buildPartial() {
+        GroupChat result = new GroupChat(this);
         if (groupBuilder_ == null) {
           result.group_ = group_;
         } else {
@@ -9569,50 +9569,50 @@ public final class ChatInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ryze.netty.chat.ChatInfo.GroupChat) {
-          return mergeFrom((com.ryze.netty.chat.ChatInfo.GroupChat)other);
+        if (other instanceof GroupChat) {
+          return mergeFrom((GroupChat)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.ryze.netty.chat.ChatInfo.GroupChat other) {
-        if (other == com.ryze.netty.chat.ChatInfo.GroupChat.getDefaultInstance()) return this;
+      public Builder mergeFrom(GroupChat other) {
+        if (other == GroupChat.getDefaultInstance()) return this;
         if (other.hasGroup()) {
           mergeGroup(other.getGroup());
         }
@@ -9628,21 +9628,21 @@ public final class ChatInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.ryze.netty.chat.ChatInfo.GroupChat parsedMessage = null;
+        GroupChat parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.ryze.netty.chat.ChatInfo.GroupChat) e.getUnfinishedMessage();
+          parsedMessage = (GroupChat) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9652,9 +9652,9 @@ public final class ChatInfo {
         return this;
       }
 
-      private com.ryze.netty.chat.ChatInfo.Group group_;
+      private Group group_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder> groupBuilder_;
+          Group, Group.Builder, GroupOrBuilder> groupBuilder_;
       /**
        * <code>.com.ryze.netty.chat.Group group = 1;</code>
        */
@@ -9664,9 +9664,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.Group getGroup() {
+      public Group getGroup() {
         if (groupBuilder_ == null) {
-          return group_ == null ? com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+          return group_ == null ? Group.getDefaultInstance() : group_;
         } else {
           return groupBuilder_.getMessage();
         }
@@ -9674,7 +9674,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 1;</code>
        */
-      public Builder setGroup(com.ryze.netty.chat.ChatInfo.Group value) {
+      public Builder setGroup(Group value) {
         if (groupBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9691,7 +9691,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.Group group = 1;</code>
        */
       public Builder setGroup(
-          com.ryze.netty.chat.ChatInfo.Group.Builder builderForValue) {
+          Group.Builder builderForValue) {
         if (groupBuilder_ == null) {
           group_ = builderForValue.build();
           onChanged();
@@ -9704,11 +9704,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 1;</code>
        */
-      public Builder mergeGroup(com.ryze.netty.chat.ChatInfo.Group value) {
+      public Builder mergeGroup(Group value) {
         if (groupBuilder_ == null) {
           if (group_ != null) {
             group_ =
-              com.ryze.netty.chat.ChatInfo.Group.newBuilder(group_).mergeFrom(value).buildPartial();
+              Group.newBuilder(group_).mergeFrom(value).buildPartial();
           } else {
             group_ = value;
           }
@@ -9736,7 +9736,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.Group.Builder getGroupBuilder() {
+      public Group.Builder getGroupBuilder() {
         
         onChanged();
         return getGroupFieldBuilder().getBuilder();
@@ -9744,23 +9744,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.Group group = 1;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.GroupOrBuilder getGroupOrBuilder() {
+      public GroupOrBuilder getGroupOrBuilder() {
         if (groupBuilder_ != null) {
           return groupBuilder_.getMessageOrBuilder();
         } else {
           return group_ == null ?
-              com.ryze.netty.chat.ChatInfo.Group.getDefaultInstance() : group_;
+              Group.getDefaultInstance() : group_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.Group group = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder> 
+          Group, Group.Builder, GroupOrBuilder>
           getGroupFieldBuilder() {
         if (groupBuilder_ == null) {
           groupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.Group, com.ryze.netty.chat.ChatInfo.Group.Builder, com.ryze.netty.chat.ChatInfo.GroupOrBuilder>(
+              Group, Group.Builder, GroupOrBuilder>(
                   getGroup(),
                   getParentForChildren(),
                   isClean());
@@ -9769,9 +9769,9 @@ public final class ChatInfo {
         return groupBuilder_;
       }
 
-      private com.ryze.netty.chat.ChatInfo.User fromUser_;
+      private User fromUser_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> fromUserBuilder_;
+          User, User.Builder, UserOrBuilder> fromUserBuilder_;
       /**
        * <code>.com.ryze.netty.chat.User from_user = 2;</code>
        */
@@ -9781,9 +9781,9 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User getFromUser() {
+      public User getFromUser() {
         if (fromUserBuilder_ == null) {
-          return fromUser_ == null ? com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : fromUser_;
+          return fromUser_ == null ? User.getDefaultInstance() : fromUser_;
         } else {
           return fromUserBuilder_.getMessage();
         }
@@ -9791,7 +9791,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 2;</code>
        */
-      public Builder setFromUser(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder setFromUser(User value) {
         if (fromUserBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9808,7 +9808,7 @@ public final class ChatInfo {
        * <code>.com.ryze.netty.chat.User from_user = 2;</code>
        */
       public Builder setFromUser(
-          com.ryze.netty.chat.ChatInfo.User.Builder builderForValue) {
+          User.Builder builderForValue) {
         if (fromUserBuilder_ == null) {
           fromUser_ = builderForValue.build();
           onChanged();
@@ -9821,11 +9821,11 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 2;</code>
        */
-      public Builder mergeFromUser(com.ryze.netty.chat.ChatInfo.User value) {
+      public Builder mergeFromUser(User value) {
         if (fromUserBuilder_ == null) {
           if (fromUser_ != null) {
             fromUser_ =
-              com.ryze.netty.chat.ChatInfo.User.newBuilder(fromUser_).mergeFrom(value).buildPartial();
+              User.newBuilder(fromUser_).mergeFrom(value).buildPartial();
           } else {
             fromUser_ = value;
           }
@@ -9853,7 +9853,7 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.User.Builder getFromUserBuilder() {
+      public User.Builder getFromUserBuilder() {
         
         onChanged();
         return getFromUserFieldBuilder().getBuilder();
@@ -9861,23 +9861,23 @@ public final class ChatInfo {
       /**
        * <code>.com.ryze.netty.chat.User from_user = 2;</code>
        */
-      public com.ryze.netty.chat.ChatInfo.UserOrBuilder getFromUserOrBuilder() {
+      public UserOrBuilder getFromUserOrBuilder() {
         if (fromUserBuilder_ != null) {
           return fromUserBuilder_.getMessageOrBuilder();
         } else {
           return fromUser_ == null ?
-              com.ryze.netty.chat.ChatInfo.User.getDefaultInstance() : fromUser_;
+              User.getDefaultInstance() : fromUser_;
         }
       }
       /**
        * <code>.com.ryze.netty.chat.User from_user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder> 
+          User, User.Builder, UserOrBuilder>
           getFromUserFieldBuilder() {
         if (fromUserBuilder_ == null) {
           fromUserBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.ryze.netty.chat.ChatInfo.User, com.ryze.netty.chat.ChatInfo.User.Builder, com.ryze.netty.chat.ChatInfo.UserOrBuilder>(
+              User, User.Builder, UserOrBuilder>(
                   getFromUser(),
                   getParentForChildren(),
                   isClean());
@@ -9886,20 +9886,20 @@ public final class ChatInfo {
         return fromUserBuilder_;
       }
 
-      private java.lang.Object msgContent_ = "";
+      private Object msgContent_ = "";
       /**
        * <code>string msg_content = 3;</code>
        */
-      public java.lang.String getMsgContent() {
-        java.lang.Object ref = msgContent_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMsgContent() {
+        Object ref = msgContent_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           msgContent_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -9907,11 +9907,11 @@ public final class ChatInfo {
        */
       public com.google.protobuf.ByteString
           getMsgContentBytes() {
-        java.lang.Object ref = msgContent_;
+        Object ref = msgContent_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           msgContent_ = b;
           return b;
         } else {
@@ -9922,7 +9922,7 @@ public final class ChatInfo {
        * <code>string msg_content = 3;</code>
        */
       public Builder setMsgContent(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -9954,13 +9954,13 @@ public final class ChatInfo {
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -9971,18 +9971,18 @@ public final class ChatInfo {
     }
 
     // @@protoc_insertion_point(class_scope:com.ryze.netty.chat.GroupChat)
-    private static final com.ryze.netty.chat.ChatInfo.GroupChat DEFAULT_INSTANCE;
+    private static final GroupChat DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.ryze.netty.chat.ChatInfo.GroupChat();
+      DEFAULT_INSTANCE = new GroupChat();
     }
 
-    public static com.ryze.netty.chat.ChatInfo.GroupChat getDefaultInstance() {
+    public static GroupChat getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<GroupChat>
         PARSER = new com.google.protobuf.AbstractParser<GroupChat>() {
-      @java.lang.Override
+      @Override
       public GroupChat parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9995,13 +9995,13 @@ public final class ChatInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<GroupChat> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.ryze.netty.chat.ChatInfo.GroupChat getDefaultInstanceForType() {
+    @Override
+    public GroupChat getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10070,7 +10070,7 @@ public final class ChatInfo {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\nChat.proto\022\023com.ryze.netty.chat\"\222\005\n\004Ch" +
       "at\022\017\n\007version\030\001 \001(\014\0227\n\010msg_type\030\002 \001(\0162%." +
       "com.ryze.netty.chat.Chat.MessageType\022:\n\r" +
@@ -10121,67 +10121,67 @@ public final class ChatInfo {
     internal_static_com_ryze_netty_chat_Chat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_Chat_descriptor,
-        new java.lang.String[] { "Version", "MsgType", "LoginRequest", "LoginResponse", "CreateGroupRequest", "CreateGroupResponse", "SingleChat", "GroupChat", "Data", });
+        new String[] { "Version", "MsgType", "LoginRequest", "LoginResponse", "CreateGroupRequest", "CreateGroupResponse", "SingleChat", "GroupChat", "Data", });
     internal_static_com_ryze_netty_chat_User_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_ryze_netty_chat_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_User_descriptor,
-        new java.lang.String[] { "UserId", "Username", "Password", });
+        new String[] { "UserId", "Username", "Password", });
     internal_static_com_ryze_netty_chat_Group_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_ryze_netty_chat_Group_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_Group_descriptor,
-        new java.lang.String[] { "GroupId", "GroupName", });
+        new String[] { "GroupId", "GroupName", });
     internal_static_com_ryze_netty_chat_LoginRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_ryze_netty_chat_LoginRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_LoginRequest_descriptor,
-        new java.lang.String[] { "LoginUser", });
+        new String[] { "LoginUser", });
     internal_static_com_ryze_netty_chat_LoginResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_ryze_netty_chat_LoginResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_LoginResponse_descriptor,
-        new java.lang.String[] { "Token", "Code", "Msg", "UserInfo", });
+        new String[] { "Token", "Code", "Msg", "UserInfo", });
     internal_static_com_ryze_netty_chat_CreateGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_com_ryze_netty_chat_CreateGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_CreateGroupRequest_descriptor,
-        new java.lang.String[] { "Creator", "Group", });
+        new String[] { "Creator", "Group", });
     internal_static_com_ryze_netty_chat_CreateGroupResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_ryze_netty_chat_CreateGroupResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_CreateGroupResponse_descriptor,
-        new java.lang.String[] { "Code", "Msg", "Group", });
+        new String[] { "Code", "Msg", "Group", });
     internal_static_com_ryze_netty_chat_JoinGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_com_ryze_netty_chat_JoinGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_JoinGroupRequest_descriptor,
-        new java.lang.String[] { });
+        new String[] { });
     internal_static_com_ryze_netty_chat_JoinGroupResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_com_ryze_netty_chat_JoinGroupResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_JoinGroupResponse_descriptor,
-        new java.lang.String[] { "Code", "Msg", "Group", });
+        new String[] { "Code", "Msg", "Group", });
     internal_static_com_ryze_netty_chat_SingleChat_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_com_ryze_netty_chat_SingleChat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_SingleChat_descriptor,
-        new java.lang.String[] { "FromUser", "ToUser", "MsgContent", });
+        new String[] { "FromUser", "ToUser", "MsgContent", });
     internal_static_com_ryze_netty_chat_GroupChat_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_com_ryze_netty_chat_GroupChat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_ryze_netty_chat_GroupChat_descriptor,
-        new java.lang.String[] { "Group", "FromUser", "MsgContent", });
+        new String[] { "Group", "FromUser", "MsgContent", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
