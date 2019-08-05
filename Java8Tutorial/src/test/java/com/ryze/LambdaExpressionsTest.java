@@ -67,7 +67,7 @@ public class LambdaExpressionsTest {
      */
     @Test
     public void testStrSortJava8SimpleMore() throws Exception {
-//TODO: Test goes here... 
+
     }
 
 
