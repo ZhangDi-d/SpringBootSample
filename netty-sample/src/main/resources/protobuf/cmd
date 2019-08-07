@@ -1,3 +1,3 @@
 protoc --java_out=src/main/java src/main/resources/protobuf/chat/Chat.proto
 
-protoc 版本  3.9.0->3.6.1
+protoc 版本  3.9.0(本地版本报错,换成3.6.1测试)->3.6.1
