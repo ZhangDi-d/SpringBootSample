@@ -16,4 +16,7 @@ public abstract class AbstractApplicationContext extends BeanFactory {
         this.configuration = configuration;
         this.xmlUtil = new XmlUtil();
     }
+
+    public AbstractApplicationContext() {
+    }
 }
