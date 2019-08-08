@@ -2,6 +2,7 @@ package com.ryze.http;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoop;
@@ -39,7 +40,7 @@ public class NettyHttpServer {
         return instance;
     }
 
-    public void start(){
+    public void start(ApplicationContext applicationContext){
         // boss 线程组不断从客户端接受连接，但不处理，由 worker 线程组对连接进行真正的处理,一个线程组其实也能完成，推荐使用两个
         EventLoopGroup boss  = new NioEventLoopGroup();
         EventLoopGroup worker  = new NioEventLoopGroup();
@@ -50,11 +51,15 @@ public class NettyHttpServer {
                     .channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG,128)
                     .childOption(ChannelOption.SO_KEEPALIVE,true)
-                    .handler(new );
+                    .handler(new ServerInitializer(applicationContext));
+            ChannelFuture future = bootstrap.bind(port).sync();
+            System.out.println("服务端启动,端口="+port);
+            future.channel().closeFuture().sync();
         }catch (Exception e){
-
+            e.printStackTrace();
         }finally {
-
+            boss.shutdownGracefully();
+            worker.shutdownGracefully();
         }
     }
 
