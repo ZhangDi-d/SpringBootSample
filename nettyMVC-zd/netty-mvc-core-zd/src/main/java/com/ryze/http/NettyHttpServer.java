@@ -1,5 +1,6 @@
 package com.ryze.http;
 
+import com.ryze.ioc.bean.AnnotationApplicationContext;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -40,7 +41,7 @@ public class NettyHttpServer {
         return instance;
     }
 
-    public void start(ApplicationContext applicationContext){
+    public void start(AnnotationApplicationContext applicationContext) throws InterruptedException{
         // boss 线程组不断从客户端接受连接，但不处理，由 worker 线程组对连接进行真正的处理,一个线程组其实也能完成，推荐使用两个
         EventLoopGroup boss  = new NioEventLoopGroup();
         EventLoopGroup worker  = new NioEventLoopGroup();

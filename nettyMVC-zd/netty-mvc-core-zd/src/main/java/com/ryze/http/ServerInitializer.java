@@ -1,5 +1,7 @@
 package com.ryze.http;
 
+
+import com.ryze.ioc.bean.AnnotationApplicationContext;
 import com.ryze.mvc.core.DispatcherHandler;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelInitializer;
@@ -13,9 +15,9 @@ import io.netty.handler.stream.ChunkedWriteHandler;
  * Created by xueLai on 2019/8/8.
  */
 public class ServerInitializer extends ChannelInitializer<SocketChannel> {
-    private ApplicationContext applicationContext;
+    private AnnotationApplicationContext applicationContext;
 
-    public ServerInitializer(ApplicationContext applicationContext) {
+    public ServerInitializer(AnnotationApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
 

@@ -46,6 +46,12 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.58</version>
         </dependency>
+        <dependency>
+            <groupId>com.paul</groupId>
+            <artifactId>netty-mvc-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
