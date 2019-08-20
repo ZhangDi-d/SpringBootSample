@@ -5,12 +5,12 @@ package com.ryze.convertor;
  */
 public interface ITypeConverter {
 
-	/**
-	 * @param value 需要被转换的值
-	 * @param toType 需要被转换成的类型
-	 * @param params 转值时需要提供的可选参数
-	 * @return 经转换过的类型，如果实现类没有能力进行所指定的类型转换，应返回null
-	 */
-	 Object convertValue(Object value, Class<?> toType, Object... params);
-	
+    /**
+     * @param value  需要被转换的值
+     * @param toType 需要被转换成的类型
+     * @param params 转值时需要提供的可选参数
+     * @return 经转换过的类型，如果实现类没有能力进行所指定的类型转换，应返回null
+     */
+    Object convertValue(Object value, Class<?> toType, Object... params);
+
 }
