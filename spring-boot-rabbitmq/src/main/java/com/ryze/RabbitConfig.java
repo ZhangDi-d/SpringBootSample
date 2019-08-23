@@ -1,6 +1,10 @@
 package com.ryze;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * Created by xueLai on 2019/8/23.
@@ -9,7 +13,7 @@ import java.util.Queue;
 public class RabbitConfig {
     @Bean
     public Queue Queue() {
-        return new Queue("hello");
+        return new ArrayBlockingQueue(1000);
     }
 
 }
