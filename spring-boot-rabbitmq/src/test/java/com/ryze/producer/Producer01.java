@@ -38,7 +38,7 @@ public class Producer01 {
              * param4:队列不再使用时是否自动删除此队列
              * param5:队列参数
              */
-            
+            channel.queueDeclare();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (TimeoutException e) {
