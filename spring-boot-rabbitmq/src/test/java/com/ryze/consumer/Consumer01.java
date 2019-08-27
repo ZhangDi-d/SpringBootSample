@@ -19,7 +19,7 @@ public class Consumer01 {
         ConnectionFactory factory = new ConnectionFactory();
         //设置RabbitMQ所在服务器的ip和端口
         factory.setHost("127.0.0.1");
-        factory.setPort(5762);
+        factory.setPort(5672);
         //创建与RabbitMQ服务的TCP连接
         Connection connection = factory.newConnection();
         //创建与Exchange的通道，每个连接可以创建多个通道，每个通道代表一个会话任务

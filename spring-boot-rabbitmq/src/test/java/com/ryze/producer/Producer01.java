@@ -24,7 +24,7 @@ public class Producer01 {
         try {
             ConnectionFactory factory = new ConnectionFactory();
             factory.setHost("127.0.0.1");
-            factory.setPort(5762);
+            factory.setPort(5672);
             factory.setUsername("guest");
             factory.setPassword("guest");
             ////rabbitmq默认虚拟机名称为“/”，虚拟机相当于一个独立的mq服务器
