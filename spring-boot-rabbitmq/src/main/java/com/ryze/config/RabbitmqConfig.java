@@ -13,9 +13,9 @@ import org.springframework.context.annotation.EnableMBeanExport;
 @Configuration
 public class RabbitmqConfig {
 
-    private final static String QUEUE_INFORM_EMAIL = "queue_inform_email";
-    private final static String QUEUE_INFORM_SMS = "queue_inform_sms";
-    private final static String EXCHANGE_TOPICS_INFORM = "exchange_topics_inform";
+    public final static String QUEUE_INFORM_EMAIL = "queue_inform_email";
+    public final static String QUEUE_INFORM_SMS = "queue_inform_sms";
+    public final static String EXCHANGE_TOPICS_INFORM = "exchange_topics_inform";
 
     /**
      * 交换机配置
