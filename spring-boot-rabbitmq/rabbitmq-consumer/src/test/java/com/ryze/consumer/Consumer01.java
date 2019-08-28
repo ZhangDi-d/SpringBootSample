@@ -1,5 +1,6 @@
 package com.ryze.consumer;
 
+import com.rabbitmq.client.*;
 import com.ryze.producer.Producer01;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
