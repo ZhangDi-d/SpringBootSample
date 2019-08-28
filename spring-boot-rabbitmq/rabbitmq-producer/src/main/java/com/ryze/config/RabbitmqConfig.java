@@ -1,9 +1,13 @@
 package com.ryze.config;
 
 import org.springframework.amqp.core.*;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
+import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 
 
 /**
@@ -47,5 +51,25 @@ public class RabbitmqConfig {
     @Bean
     public Binding bindingQueueInformEmail(@Qualifier(QUEUE_INFORM_EMAIL) Queue queue, @Qualifier(EXCHANGE_TOPICS_INFORM) Exchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with("inform.*.email.*").noargs();
+    }
+
+    @Bean("connectionFactory")
+    public CachingConnectionFactory getConnectionFactory(){
+        CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
+        connectionFactory.setHost("127.0.0.1");
+        connectionFactory.setPort(5672);
+        connectionFactory.setUsername("guest");
+        connectionFactory.setPassword("guest");
+        connectionFactory.setVirtualHost("/");
+        connectionFactory.setCacheMode(CachingConnectionFactory.CacheMode.CHANNEL);
+        connectionFactory.setChannelCacheSize(20);
+        return connectionFactory;
+    }
+    @Bean("rabbitTemplate")
+    public RabbitTemplate   getRabbitTemplate(@Qualifier("connectionFactory")CachingConnectionFactory connectionFactory){
+        RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
+        rabbitTemplate.setExchange(EXCHANGE_TOPICS_INFORM);
+        rabbitTemplate.setQueue(QUEUE_INFORM_EMAIL);
+        return rabbitTemplate;
     }
 }

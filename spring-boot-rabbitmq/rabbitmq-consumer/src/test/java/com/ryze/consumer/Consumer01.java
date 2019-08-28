@@ -1,7 +1,7 @@
 package com.ryze.consumer;
 
 import com.rabbitmq.client.*;
-import com.ryze.producer.Producer01;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeoutException;
  * Created by xueLai on 2019/8/27.
  */
 public class Consumer01 {
-    final static Logger logger = LoggerFactory.getLogger(Producer01.class);
+    final static Logger logger = LoggerFactory.getLogger(Consumer01.class);
     final static String QUEUE = "helloworld";
 
     public static void main(String[] args) throws IOException, TimeoutException {
