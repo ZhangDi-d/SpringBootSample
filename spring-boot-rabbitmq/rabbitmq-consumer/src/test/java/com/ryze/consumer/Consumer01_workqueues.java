@@ -55,20 +55,20 @@ public class Consumer01_workqueues {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 String s = new String(body, "utf-8");
-                logger.info("receive message=" + s);
+                logger.info("Consumer01_workqueues receive message=" + s);
             }
         };
     }
 
     private static DeliverCallback deliverCallback = (consumerTag, delivery) -> {
         String message = new String(delivery.getBody(), "UTF-8");
-        System.out.println(" [x] Received '" + message + "'");
+        logger.info("Consumer01_workqueues [x] Received '" + message + "'");
         try {
             doWork(message);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            System.out.println(" [x] Done");
+            logger.info("Consumer01_workqueues [x] Done");
         }
     };
 

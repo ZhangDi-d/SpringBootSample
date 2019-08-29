@@ -2,10 +2,10 @@ https://docs.spring.io/spring-amqp/reference/html/
 
 ## 1.工作模式
 RabbitMQ有以下几种工作模式 ：
-1、Work queues
-2、Publish/Subscribe
-3、Routing
-4、Topics
+1、Work queues 
+2、Publish/Subscribe (fanout)
+3、Routing (direct) 
+4、Topics (topics)
 5、Header
 6、RPC
 

@@ -57,7 +57,7 @@ public class Consumer01 {
                 //消息id
                 long deliveryTag = envelope.getDeliveryTag();
                 String s = new String(body, "utf-8");
-                logger.info("receive message=" + s);
+                logger.info("Consumer01 receive message=" + s);
             }
         };
     }
