@@ -1,6 +1,6 @@
 https://docs.spring.io/spring-amqp/reference/html/
 
-## 1.工作模式
+## 1.RabbitMQ工作模式
 RabbitMQ有以下几种工作模式 ：
 1、Work queues 
 2、Publish/Subscribe (fanout)
@@ -42,11 +42,15 @@ Routing模式要求队列在绑定交换机时要指定routingkey，消息会转
 
 ### Topics
 ![](https://www.rabbitmq.com/img/tutorials/python-five.png)
-通配符模式下,生产者不需要将队列绑定到交换机.(发布订阅 路由模式需要queueBind(),工作队列也不需要绑定队列到交换机)
+ **代码中,通配符模式下,生产者不需要将队列绑定到交换机.(发布订阅 路由模式需要queueBind(),工作队列也不需要绑定队列到交换机)**
 路由模式：
 1、每个消费者监听自己的队列，并且设置带统配符的routingkey。
 2、生产者将消息发给broker，由交换机根据routingkey来转发消息到指定的队列。
 
+
+### Header 
+header模式与routing不同的地方在于，header模式取消routingkey，使用header中的 key/value（键值对）匹配
+队列。
 
 ## 2.RabbitMQ 常用方法
 
@@ -128,6 +132,7 @@ durable： 是否持久化, 队列的声明默认是存放到内存中的，如�
 exclusive：是否排外的，有两个作用，一：当连接关闭时connection.close()该队列是否会自动删除；二：该队列是否是私有的private，如果不是排外的，可以使用两个消费者都访问同一个队列，没有任何问题，如果是排外的，会对当前队列加锁，其他通道channel是不能访问的，如果强制访问会报异常，一般等于true的话用于一个队列只能有一个消费者来消费的场景
 autodelete：当没有任何消费者使用时，自动删除该队列
 arguments：扩展参数。如：x-message-ttl
+
 
 ### channel.queueBind()
 ```text
