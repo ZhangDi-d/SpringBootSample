@@ -53,7 +53,7 @@ public class RabbitmqConfig {
         return BindingBuilder.bind(queue).to(exchange).with("inform.*.email.*").noargs();
     }
 
-    @Bean("connectionFactory")
+   /* @Bean("connectionFactory")
     public CachingConnectionFactory getConnectionFactory(){
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
         connectionFactory.setHost("127.0.0.1");
@@ -71,5 +71,5 @@ public class RabbitmqConfig {
         rabbitTemplate.setExchange(EXCHANGE_TOPICS_INFORM);
         rabbitTemplate.setQueue(QUEUE_INFORM_EMAIL);
         return rabbitTemplate;
-    }
+    }*/
 }

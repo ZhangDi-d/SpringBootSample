@@ -17,29 +17,10 @@ import javax.sound.midi.Receiver;
  * 无效
  */
 @Component
-public class Producer_topices implements CommandLineRunner {
+public class Producer_topices  {
     private final static Logger logger = LoggerFactory.getLogger(Producer_topices.class);
     private final RabbitTemplate rabbitTemplate;
     public Producer_topices(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
-    }
-
-//    @PostConstruct
-//    public void sendMessage() {
-//        for (int i = 0; i < 5; i++) {
-//            String message = "sms email inform to user" + i;
-//
-//            rabbitTemplate.convertAndSend(RabbitmqConfig.QUEUE_INFORM_EMAIL, "inform.sms.email", message);
-//            logger.info("Send Message is:'" + message + "'");
-//        }
-//    }
-
-    @Override
-    public void run(String... args) throws Exception {
-        for (int i = 0; i < 5; i++) {
-            String message = "sms email inform to user" + i;
-            rabbitTemplate.convertAndSend(RabbitmqConfig.QUEUE_INFORM_EMAIL, "inform.sms.email", message);
-            logger.info("Send Message is:'" + message + "'");
-        }
     }
 }

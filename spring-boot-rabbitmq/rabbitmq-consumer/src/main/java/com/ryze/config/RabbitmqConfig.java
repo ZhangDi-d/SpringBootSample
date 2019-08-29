@@ -51,8 +51,8 @@ public class RabbitmqConfig {
         return BindingBuilder.bind(queue).to(exchange).with("inform.*.email.*").noargs();
     }
 
-    @Bean("connectionFactory")
-    public CachingConnectionFactory getConnectionFactory() {
+    /*@Bean("connectionFactory")
+    public CachingConnectionFactory getConnectionFactory(){
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
         connectionFactory.setHost("127.0.0.1");
         connectionFactory.setPort(5672);
@@ -63,12 +63,11 @@ public class RabbitmqConfig {
         connectionFactory.setChannelCacheSize(20);
         return connectionFactory;
     }
-    
     @Bean("rabbitTemplate")
-    public RabbitTemplate getRabbitTemplate(@Qualifier("connectionFactory") CachingConnectionFactory connectionFactory) {
+    public RabbitTemplate   getRabbitTemplate(@Qualifier("connectionFactory")CachingConnectionFactory connectionFactory){
         RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
         rabbitTemplate.setExchange(EXCHANGE_TOPICS_INFORM);
         rabbitTemplate.setQueue(QUEUE_INFORM_EMAIL);
         return rabbitTemplate;
-    }
+    }*/
 }
