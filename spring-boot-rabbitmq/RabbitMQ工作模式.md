@@ -31,12 +31,20 @@ RabbitMQ有以下几种工作模式 ：
 2、生产者将消息发给broker，由交换机将消息转发到绑定此交换机的每个队列，每个绑定交换机的队列都将接收到消息
 
 ### Routing
-
+![](https://www.rabbitmq.com/img/tutorials/direct-exchange.png)
 路由模式：
 1、每个消费者监听自己的队列，并且设置routingkey。
 2、生产者将消息发给交换机，由交换机根据routingkey来转发消息到指定的队列。
 
+Routing模式和Publish/subscibe有啥区别？ (使用routing完全可以实现Publish/subscibe 的功能)
+Routing模式要求队列在绑定交换机时要指定routingkey，消息会转发到符合routingkey的队列
+
+
 ### Topics
+![](https://www.rabbitmq.com/img/tutorials/python-five.png)
+路由模式：
+1、每个消费者监听自己的队列，并且设置带统配符的routingkey。
+2、生产者将消息发给broker，由交换机根据routingkey来转发消息到指定的队列。
 
 
 ## 2.RabbitMQ 常用方法
