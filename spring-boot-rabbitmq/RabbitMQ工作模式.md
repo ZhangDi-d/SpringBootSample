@@ -32,6 +32,10 @@ RabbitMQ有以下几种工作模式 ：
 
 ### Routing
 
+路由模式：
+1、每个消费者监听自己的队列，并且设置routingkey。
+2、生产者将消息发给交换机，由交换机根据routingkey来转发消息到指定的队列。
+
 ### Topics
 
 
