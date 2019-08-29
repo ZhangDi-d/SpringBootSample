@@ -42,6 +42,7 @@ Routing模式要求队列在绑定交换机时要指定routingkey，消息会转
 
 ### Topics
 ![](https://www.rabbitmq.com/img/tutorials/python-five.png)
+通配符模式下,生产者不需要将队列绑定到交换机.(发布订阅 路由模式需要queueBind(),工作队列也不需要绑定队列到交换机)
 路由模式：
 1、每个消费者监听自己的队列，并且设置带统配符的routingkey。
 2、生产者将消息发给broker，由交换机根据routingkey来转发消息到指定的队列。
