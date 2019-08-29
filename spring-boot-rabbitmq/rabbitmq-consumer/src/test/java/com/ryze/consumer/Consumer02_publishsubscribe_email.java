@@ -1,9 +1,6 @@
 package com.ryze.consumer;
 
-import com.rabbitmq.client.BuiltinExchangeType;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,17 +39,42 @@ public class Consumer02_publishsubscribe_email {
             /* 声明队列
              * queueDeclare(String queue, boolean durable, boolean exclusive, boolean autoDelete, Map<String, Object> arguments)
              */
-            channel.queueDeclare(QUEUE_EMAIl, false, true, true, null);
+            channel.queueDeclare(QUEUE_EMAIl, true, false, false, null);
 
             /*将队列绑定到交换机上
              * queueBind(String queue, String exchange, String routingKey)
              */
             channel.queueBind(QUEUE_EMAIl, EXCHANGE_FANOUT, "");
-
+            /*
+             * 监听队列String queue, boolean autoAck,Consumer callback
+             * 参数明细
+             * 1、队列名称
+             * 2、是否自动回复，设置为true为表示消息接收到自动向mq回复接收到了，mq接收到回复会删除消息，设置为false则需要手动回复
+             * 3、消费消息的方法，消费者接收到消息后调用此方法
+             */
+            channel.basicConsume(QUEUE_EMAIl, true, getDefaultConsumer(channel));
 
         } catch (IOException | TimeoutException e) {
             e.printStackTrace();
         }
+    }
 
+    private static Consumer getDefaultConsumer(Channel channel) {
+        return new DefaultConsumer(channel) {
+            /**
+             *
+             * @param consumerTag 消费者的标签，在channel.basicConsume()去指定
+             * @param envelope 消息包的内容，可从中获取消息id，消息routingkey，交换机，消息和重传标志 (收到消息失败后是否需要重新发送)
+             * @param properties
+             * @param body
+             * @throws IOException
+             */
+            @Override
+            public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+
+                String s = new String(body, "utf-8");
+                logger.info("Consumer02_publishsubscribe_email receive message=" + s);
+            }
+        };
     }
 }

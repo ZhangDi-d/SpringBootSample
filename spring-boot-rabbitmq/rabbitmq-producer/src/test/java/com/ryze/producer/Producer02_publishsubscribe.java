@@ -43,21 +43,20 @@ public class Producer02_publishsubscribe {
             channel = connection.createChannel();
             //声明交换机
             channel.exchangeDeclare(EXCHANGE_FANOUT, BuiltinExchangeType.FANOUT);
-            //声明队列
-            /**
+
+            /*声明队列
              * queueDeclare(String queue, boolean durable, boolean exclusive, boolean autoDelete, Map<String, Object> arguments)
              */
-            channel.queueDeclare(QUEUE_EMAIl, false, true, true, null);
-            channel.queueDeclare(QUEUE_SMS, false, true, true, null);
-            //将队列绑定到交换机上
-            /*
+            channel.queueDeclare(QUEUE_EMAIl, true, false, false, null);
+            channel.queueDeclare(QUEUE_SMS, true, false, false, null);
+
+            /*将队列绑定到交换机上
              * queueBind(String queue, String exchange, String routingKey)
              */
             channel.queueBind(QUEUE_EMAIl, EXCHANGE_FANOUT, "");
             channel.queueBind(QUEUE_SMS, EXCHANGE_FANOUT, "");
 
-            //发布信息
-            /*
+            /*发布信息
              * basicPublish(String exchange, String routingKey, BasicProperties props, byte[] body)
              */
             for (int i = 1; i < 10; i++) {
