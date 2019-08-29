@@ -1,4 +1,3 @@
-https://docs.spring.io/spring-amqp/reference/html/
 
 ## 1.RabbitMQ工作模式
 RabbitMQ有以下几种工作模式 ：
@@ -6,10 +5,8 @@ RabbitMQ有以下几种工作模式 ：
 2、Publish/Subscribe (fanout)
 3、Routing (direct) 
 4、Topics (topics)
-5、Header
+5、Headers(headers)
 6、RPC
-
-
 
 ### work queues
 ![](https://www.rabbitmq.com/img/tutorials/python-two.png)
@@ -52,7 +49,58 @@ Routing模式要求队列在绑定交换机时要指定routingkey，消息会转
 header模式与routing不同的地方在于，header模式取消routingkey，使用header中的 key/value（键值对）匹配
 队列。
 
-## 2.RabbitMQ 常用方法
+## 2. RabbitMQ如何保证消息不丢失
+### 生产者弄丢了数据
+RabbitMQ 生产者将数据发送到 rabbitmq 的时候,可能数据在网络传输中搞丢了，这个时候 RabbitMQ 收不到消息，消息就丢了。
+RabbitMQ 提供了两种方式来解决这个问题：
+#### 事务方式：
+在生产者发送消息之前，通过 channel.txSelect 开启一个事务，接着发送消息，如果消息没有成功被 RabbitMQ 接收到，生产者会收到异常，此时就可以进行事务回滚 channel.txRollback 然后重新发送。假如 RabbitMQ 收到了这个消息，就可以提交事务 channel.txCommit。
+但是这样一来，生产者的吞吐量和性能都会降低很多，现在一般不这么干。
+
+#### confirm 机制：
+这个 confirm 模式是在生产者那里设置的，就是每次写消息的时候会分配一个唯一的 id，然后 RabbitMQ 收到之后会回传一个 ack，告诉生产者这个消息 ok 了。如果 rabbitmq 没有处理到这个消息，那么就回调一个 nack 的接口，这个时候生产者就可以重发。
+
+事务机制和 cnofirm 机制最大的不同在于事务机制是同步的，提交一个事务之后会阻塞在那儿，但是 confirm 机制是异步的，发送一个消息之后就可以发送下一个消息，然后那个消息 rabbitmq 接收了之后会异步回调你一个接口通知你这个消息接收到了。
+
+所以一般在生产者这块避免数据丢失，都是用 confirm 机制的。
+
+
+### Rabbitmq 弄丢了数据
+RabbitMQ 集群也会弄丢消息，这个问题在官方文档的教程中也提到过，就是说在消息发送到 RabbitMQ 之后，默认是没有落地磁盘的，万一 RabbitMQ 宕机了，这个时候消息就丢失了。
+
+所以为了解决这个问题，RabbitMQ 提供了一个持久化的机制，消息写入之后会持久化到磁盘，哪怕是宕机了，恢复之后也会自动恢复之前存储的数据，这样的机制可以确保消息不会丢失。
+
+设置持久化有两个步骤:
+ - 第一个是创建 queue 的时候将其设置为持久化的，这样就可以保证 rabbitmq 持久化 queue 的元数据，但是不会持久化 queue 里的数据；
+ - 第二个是发送消息的时候将消息的 deliveryMode 设置为 2，就是将消息设置为持久化的，此时 rabbitmq 就会将消息持久化到磁盘上去。
+但是这样一来可能会有人说：万一消息发送到 RabbitMQ 之后，还没来得及持久化到磁盘就挂掉了，数据也丢失了。
+
+对于这个问题，其实是配合上面的 confirm 机制一起来保证的，就是在消息持久化到磁盘之后才会给生产者发送 ack 消息。万一真的遇到了那种极端的情况，生产者是可以感知到的，此时生产者可以通过重试发送消息给别的 RabbitMQ 节点
+
+### 消费者弄丢了数据
+RabbitMQ 消费端弄丢了数据的情况是这样的：在消费消息的时候，刚拿到消息，结果进程挂了，这个时候 RabbitMQ 就会认为你已经消费成功了，这条数据就丢了。
+
+对于这个问题，要先说明一下 RabbitMQ 消费消息的机制：在消费者收到消息的时候，会发送一个 ack 给 RabbitMQ，告诉 RabbitMQ 这条消息被消费到了，这样 RabbitMQ 就会把消息删除。
+但是默认情况下这个发送 ack 的操作是自动提交的，也就是说消费者一收到这个消息就会自动返回 ack 给 RabbitMQ，所以会出现丢消息的问题。
+所以针对这个问题的解决方案就是：关闭 RabbitMQ 消费者的自动提交 ack,在消费者处理完这条消息之后再手动提交 ack。
+这样即使遇到了上面的情况，RabbitMQ 也不会把这条消息删除，会在你程序重启之后，重新下发这条消息过来。
+
+
+### 小结:
+    生产者弄丢了数据: 事务(channel.txSelect() ,channel.RollBack(),channel.Commit) ,效率低一般不这么做; confirm 机制 
+    Rabbitmq 弄丢了数据: queue 设置 持久消息; 发送消息时,将消息设置为持久化( deliveryMode=2)
+    消费者弄丢了数据: 处理完消息后手动提交,而不是自动ack
+    
+
+## 3. RabbitMQ 中 Exchange与Queue关系
+1. exchange 与 queue 是 多对多的关系，一个exchange上可以绑定多个queue；一个queue可以绑定到多个exchange上（多个exchange的类型可以不同，如一个是fanout, 一个是direct，一个是topic)。
+2. exchange中的数据分发到哪个绑定的queue中由RoutingKey决定，但是​exchange上绑定哪些queue是由程序（或spring配置）确定的。
+3. 消息发送端可以选择发到指定queue或exchange中，但是消费者连接的肯定是queue,不能直接监听exchange。
+4. rabbitmq的queue跟其它mq服务器一样，可以有多个监听者，但是一个消息只能由一个监听者消费。​
+
+
+
+## 4.RabbitMQ 常用方法
 
 ### channel.exchangeDeclare()
 ```text
@@ -143,8 +191,7 @@ exchange 交换机名称
 routingKey 路由key
 
 
-##3. RabbitMQ 中 Exchange与Queue关系
-1. exchange 与 queue 是 多对多的关系，一个exchange上可以绑定多个queue；一个queue可以绑定到多个exchange上（多个exchange的类型可以不同，如一个是fanout, 一个是direct，一个是topic)。
-2. exchange中的数据分发到哪个绑定的queue中由RoutingKey决定，但是​exchange上绑定哪些queue是由程序（或spring配置）确定的。
-3. 消息发送端可以选择发到指定queue或exchange中，但是消费者连接的肯定是queue,不能直接监听exchange。
-4. rabbitmq的queue跟其它mq服务器一样，可以有多个监听者，但是一个消息只能由一个监听者消费。​
+
+更多:
+https://docs.spring.io/spring-amqp/reference/html/
+https://www.rabbitmq.com/tutorials/tutorial-six-java.html

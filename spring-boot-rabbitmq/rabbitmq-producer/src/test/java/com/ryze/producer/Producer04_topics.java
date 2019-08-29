@@ -44,7 +44,7 @@ public class Producer04_topics {
              */
             channel.queueDeclare(QUEUE_EMAIl, true, false, false, null);
             channel.queueDeclare(QUEUE_SMS, true, false, false, null);
-
+            //channel.txSelect(); 开启事务
             //通配符 不绑定队列到交换机
 //            channel.queueBind(QUEUE_EMAIl, EXCHANGE_TOPICS, QUEUE_EMAIl);
 //            channel.queueBind(QUEUE_SMS, EXCHANGE_TOPICS, QUEUE_SMS);
