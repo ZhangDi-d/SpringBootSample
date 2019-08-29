@@ -11,6 +11,7 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * Created by xueLai on 2019/8/26.
+ * helloworld 入门程序 消费者
  */
 public class Producer01 {
 
@@ -60,9 +61,7 @@ public class Producer01 {
 
             channel.basicPublish("", QUEUE, null, message.getBytes("utf-8"));
             logger.info("send message=" + message);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (TimeoutException e) {
+        } catch (TimeoutException | IOException e) {
             e.printStackTrace();
         } finally {
             if (channel != null) {

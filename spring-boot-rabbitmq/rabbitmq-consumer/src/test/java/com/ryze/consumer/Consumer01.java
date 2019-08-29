@@ -10,10 +10,11 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * Created by xueLai on 2019/8/27.
+ * helloworld 入门程序 消费者->工作队列模式可以启动多个消费者测试
  */
 public class Consumer01 {
-    final static Logger logger = LoggerFactory.getLogger(Consumer01.class);
-    final static String QUEUE = "helloworld";
+    private final static Logger logger = LoggerFactory.getLogger(Consumer01.class);
+    private final static String QUEUE = "helloworld";
 
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
