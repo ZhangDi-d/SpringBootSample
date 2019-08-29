@@ -25,15 +25,19 @@ RabbitMQ有以下几种工作模式 ：
 
 
 ### Publish/Subscribe
+![](https://www.rabbitmq.com/img/tutorials/exchanges.png)
+发布订阅模式：
+1、每个消费者监听自己的队列。
+2、生产者将消息发给broker，由交换机将消息转发到绑定此交换机的每个队列，每个绑定交换机的队列都将接收到消息
 
 ### Routing
 
 ### Topics
 
 
-## RabbitMQ 常用方法
+## 2.RabbitMQ 常用方法
 
-### 1.channel.exchangeDeclare()
+### channel.exchangeDeclare()
 ```text
 Exchange.DeclareOk exchangeDeclare(String exchange, String type, boolean durable, boolean autoDelete,Map<String, Object> arguments) throws IOException;
 ```
@@ -119,3 +123,10 @@ AMQP.Queue.BindOk queueBind(String queue , String exchange , String routingKey )
 queue 队列名称
 exchange 交换机名称
 routingKey 路由key
+
+
+##3. RabbitMQ 中 Exchange与Queue关系
+1. exchange 与 queue 是 多对多的关系，一个exchange上可以绑定多个queue；一个queue可以绑定到多个exchange上（多个exchange的类型可以不同，如一个是fanout, 一个是direct，一个是topic)。
+2. exchange中的数据分发到哪个绑定的queue中由RoutingKey决定，但是​exchange上绑定哪些queue是由程序（或spring配置）确定的。
+3. 消息发送端可以选择发到指定queue或exchange中，但是消费者连接的肯定是queue,不能直接监听exchange。
+4. rabbitmq的queue跟其它mq服务器一样，可以有多个监听者，但是一个消息只能由一个监听者消费。​
