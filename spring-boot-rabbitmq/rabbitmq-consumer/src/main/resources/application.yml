@@ -1,5 +1,5 @@
 server:
-  port: 44000
+  port: 50813
 spring:
   application:
     name: rabbitmq-consumer

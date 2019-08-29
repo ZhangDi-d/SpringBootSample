@@ -3,6 +3,7 @@ package com.ryze.config;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -45,13 +46,23 @@ public class RabbitmqConfig {
 
     @Bean
     public Binding bindingQueueInformSms(@Qualifier(QUEUE_INFORM_SMS) Queue queue, @Qualifier(EXCHANGE_TOPICS_INFORM) Exchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with("inform.*.sms.*").noargs();
+        return BindingBuilder.bind(queue).to(exchange).with("inform.#.sms.#").noargs();
     }
 
     @Bean
     public Binding bindingQueueInformEmail(@Qualifier(QUEUE_INFORM_EMAIL) Queue queue, @Qualifier(EXCHANGE_TOPICS_INFORM) Exchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with("inform.*.email.*").noargs();
+        return BindingBuilder.bind(queue).to(exchange).with("inform.#.email.#").noargs();
     }
+
+/*    @Bean
+    public ConnectionFactory connectionFactory() {
+        return new CachingConnectionFactory("localhost");
+    }
+
+    @Bean
+    public RabbitTemplate rabbitTemplate() {
+        return new RabbitTemplate(connectionFactory());
+    }*/
 
    /* @Bean("connectionFactory")
     public CachingConnectionFactory getConnectionFactory(){

@@ -1,3 +1,5 @@
+https://docs.spring.io/spring-amqp/reference/html/
+
 ##  工作模式
 RabbitMQ有以下几种工作模式 ：
 1、Work queues

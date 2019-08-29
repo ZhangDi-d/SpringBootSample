@@ -43,12 +43,13 @@ public class RabbitmqConfig {
 
     @Bean
     public Binding bindingQueueInformSms(@Qualifier(QUEUE_INFORM_SMS) Queue queue, @Qualifier(EXCHANGE_TOPICS_INFORM) Exchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with("inform.*.sms.*").noargs();
+        return BindingBuilder.bind(queue).to(exchange).with("inform.#.sms.#").noargs();
     }
+
 
     @Bean
     public Binding bindingQueueInformEmail(@Qualifier(QUEUE_INFORM_EMAIL) Queue queue, @Qualifier(EXCHANGE_TOPICS_INFORM) Exchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with("inform.*.email.*").noargs();
+        return BindingBuilder.bind(queue).to(exchange).with("inform.#.email.#").noargs();
     }
 
     /*@Bean("connectionFactory")
