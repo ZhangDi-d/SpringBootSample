@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!--详见官方配置说明： http://mybatis.github.io/generator/configreference/xmlconfig.html -->
+<generatorConfiguration>
+	<properties resource="classpath:application.properties" />
+	<classPathEntry location="${mybatis.codegen.jdbcDriverPath}" />
+
+	<context id="MBG" targetRuntime="MyBatis3" defaultModelType="conditional">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<commentGenerator>
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="${jdbc.driver}"
+			connectionURL="${jdbc.url}" userId="${jdbc.username}" password="${jdbc.password}" />
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="${mybatis.codegen.modelPackage}"
+			targetProject="MAVEN">  <!-- 实体类 -->
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="${mybatis.codegen.sqlMapperPackage}"
+			targetProject="MAVEN">    <!-- 实体类SQL映射文件 -->
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="${mybatis.codegen.daoMapperPackage}" targetProject="MAVEN">
+			<property name="enableSubPackages" value="true" />                                            <!-- 接口 -->
+		</javaClientGenerator>
+
+		<table tableName="SS_TASK" domainObjectName="Task"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="useActualColumnNames" value="true" />
+			<generatedKey column="ID_" sqlStatement="ORACLE" identity="true" />
+			<columnOverride column="ID_" property="id" javaType="java.lang.Long" />
+			<columnOverride column="TITLE_" property="title" />
+			<ignoreColumn column="DESCRIPTION_" />
+		</table>
+	</context>
+</generatorConfiguration>  
