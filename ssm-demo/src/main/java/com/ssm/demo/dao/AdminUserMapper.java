@@ -16,4 +16,6 @@ public interface AdminUserMapper {
     int updateByPrimaryKey(AdminUser record);
 
     AdminUser getAdminUserByToken(String token);
+
+    AdminUser getUserByUsernameAndPassword(String userName, String s);
 }

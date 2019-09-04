@@ -7,12 +7,12 @@ import java.util.Map;
  * 查询参数
  */
 public class PageUtil extends LinkedHashMap<String, Object> {
-	//当前页码
+    //当前页码
     private int page;
     //每页条数
     private int limit;
 
-    public PageUtil(Map<String, Object> params){
+    public PageUtil(Map<String, Object> params) {
         this.putAll(params);
 
         //分页参数

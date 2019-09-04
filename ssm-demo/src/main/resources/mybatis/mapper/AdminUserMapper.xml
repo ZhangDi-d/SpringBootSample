@@ -112,4 +112,12 @@
 		ORDER BY  id DESC limit 1
 	</select>
 
+  <select id="">
+    select id,user_name,user_token
+		from tb_admin_user
+        where user_name = #{userName} and password_md5 = #{passwordMD5}
+        and is_deleted = 0
+		ORDER BY  id DESC limit 1
+  </select>
+
 </mapper>
