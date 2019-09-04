@@ -1,56 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<!DOCTYPE generatorConfiguration  
-  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
-  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
-<!--详见官方配置说明： http://mybatis.github.io/generator/configreference/xmlconfig.html -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-	<properties resource="classpath:application.properties" />
-	<classPathEntry location="${mybatis.codegen.jdbcDriverPath}" />
-
-	<context id="MBG" targetRuntime="MyBatis3" defaultModelType="conditional">
-		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
-
-		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
-			<property name="searchString" value="Example$" />
-			<property name="replaceString" value="Criteria" />
-		</plugin>
+	<!-- 数据库驱动包位置 -->
+	<classPathEntry location="D:\Idea_work\SpringBootSample\multi-datasource-demo\src\main\resources\mybatis\mysql-connector-java-5.1.26.jar" />
+	<!-- <classPathEntry location="C:\oracle\product\10.2.0\db_1\jdbc\lib\ojdbc14.jar" />-->
+	<context id="MysqlTables" targetRuntime="MyBatis3">
 		<commentGenerator>
-			<property name="suppressAllComments" value="false" />
-			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
-
-		<jdbcConnection driverClass="${jdbc.driver}"
-			connectionURL="${jdbc.url}" userId="${jdbc.username}" password="${jdbc.password}" />
-
+		<!-- 数据库链接URL、用户名、密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/gitchat_ssm_demo_db?characterEncoding=utf8" userId="root" password="123456">
+			<!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="msa" password="msa">-->
+		</jdbcConnection>
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
-
-		<javaModelGenerator targetPackage="${mybatis.codegen.modelPackage}"
-			targetProject="MAVEN">  <!-- 实体类 -->
+		<!-- 生成模型的包名和位置 -->
+		<javaModelGenerator targetPackage="com.ssm.demo.entity"  targetProject="D:\Config\src\main\java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
-
-		<sqlMapGenerator targetPackage="${mybatis.codegen.sqlMapperPackage}"
-			targetProject="MAVEN">    <!-- 实体类SQL映射文件 -->
+		<!-- 生成的映射文件包名和位置 -->
+		<sqlMapGenerator targetPackage="mybatis/mapper"  targetProject="D:\Config\src\main\resources">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
-
-		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="${mybatis.codegen.daoMapperPackage}" targetProject="MAVEN">
-			<property name="enableSubPackages" value="true" />                                            <!-- 接口 -->
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.ssm.demo.dao" targetProject="D:\Config\src\main\java">
+			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-
-		<table tableName="SS_TASK" domainObjectName="Task"
-			enableCountByExample="true" enableUpdateByExample="true"
-			enableDeleteByExample="true" enableSelectByExample="true"
-			selectByExampleQueryId="true">
-			<property name="useActualColumnNames" value="true" />
-			<generatedKey column="ID_" sqlStatement="ORACLE" identity="true" />
-			<columnOverride column="ID_" property="id" javaType="java.lang.Long" />
-			<columnOverride column="TITLE_" property="title" />
-			<ignoreColumn column="DESCRIPTION_" />
+		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
+		<table tableName="tb_admin_user" domainObjectName="AdminUser" enableCountByExample="false"
+			   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false" >
+			<!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
+			<property name="useActualColumnNames" value="false"/>
 		</table>
+		<table tableName="tb_class_four" domainObjectName="ClassFour" enableCountByExample="false"
+			   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false" >
+			<!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
+			<property name="useActualColumnNames" value="false"/>
+		</table>
+		<table tableName="tb_ssm_article" domainObjectName="Article" enableCountByExample="false"
+			   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false" >
+			<!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
+			<property name="useActualColumnNames" value="false"/>
+		</table>
+		<table tableName="tb_ssm_picture" domainObjectName="Picture" enableCountByExample="false"
+			   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false" >
+			<!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
+			<property name="useActualColumnNames" value="false"/>
+		</table>
+
 	</context>
-</generatorConfiguration>  
+</generatorConfiguration>
