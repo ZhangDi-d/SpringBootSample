@@ -8,7 +8,7 @@ public class AdminUser implements Serializable {
 
     private String userName;
 
-    private String passwordMd5;
+    private String password;
 
     private String userToken;
 
@@ -32,12 +32,12 @@ public class AdminUser implements Serializable {
         this.userName = userName == null ? null : userName.trim();
     }
 
-    public String getPasswordMd5() {
-        return passwordMd5;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswordMd5(String passwordMd5) {
-        this.passwordMd5 = passwordMd5 == null ? null : passwordMd5.trim();
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 
     public String getUserToken() {

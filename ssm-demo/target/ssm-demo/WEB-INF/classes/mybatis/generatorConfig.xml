@@ -1,58 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-	<!-- 数据库驱动包位置 -->
-	<classPathEntry location="D:\Idea_work\SpringBootSample\multi-datasource-demo\src\main\resources\mybatis\mysql-connector-java-5.1.26.jar" />
-	<!-- <classPathEntry location="C:\oracle\product\10.2.0\db_1\jdbc\lib\ojdbc14.jar" />-->
-	<context id="MysqlTables" targetRuntime="MyBatis3">
-		<commentGenerator>
-			<property name="suppressAllComments" value="true" />
-		</commentGenerator>
-		<!-- 数据库链接URL、用户名、密码 -->
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/gitchat_ssm_demo_db?characterEncoding=utf8" userId="root" password="123456">
-			<!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="msa" password="msa">-->
-		</jdbcConnection>
-		<javaTypeResolver>
-			<property name="forceBigDecimals" value="false" />
-		</javaTypeResolver>
-		<!-- 生成模型的包名和位置 -->
-		<javaModelGenerator targetPackage="com.ssm.demo.entity"  targetProject="D:\Config\src\main\java">
-			<property name="enableSubPackages" value="true" />
-			<property name="trimStrings" value="true" />
-		</javaModelGenerator>
-		<!-- 生成的映射文件包名和位置 -->
-		<sqlMapGenerator targetPackage="mybatis/mapper"  targetProject="D:\Config\src\main\resources">
-			<property name="enableSubPackages" value="true" />
-		</sqlMapGenerator>
-		<!-- 生成DAO的包名和位置 -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="com.ssm.demo.dao" targetProject="D:\Config\src\main\java">
-			<property name="enableSubPackages" value="true" />
-		</javaClientGenerator>
-		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
-		<table tableName="tb_admin_user" domainObjectName="AdminUser" enableCountByExample="false"
-			   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-			   selectByExampleQueryId="false" >
-			<!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
-			<property name="useActualColumnNames" value="false"/>
-		</table>
-		<table tableName="tb_class_four" domainObjectName="ClassFour" enableCountByExample="false"
-			   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-			   selectByExampleQueryId="false" >
-			<!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
-			<property name="useActualColumnNames" value="false"/>
-		</table>
-		<table tableName="tb_ssm_article" domainObjectName="Article" enableCountByExample="false"
-			   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-			   selectByExampleQueryId="false" >
-			<!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
-			<property name="useActualColumnNames" value="false"/>
-		</table>
-		<table tableName="tb_ssm_picture" domainObjectName="Picture" enableCountByExample="false"
-			   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-			   selectByExampleQueryId="false" >
-			<!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
-			<property name="useActualColumnNames" value="false"/>
-		</table>
+    <!-- 数据库驱动包位置 -->
+    <classPathEntry
+            location="D:\Idea_work\SpringBootSample\multi-datasource-demo\src\main\resources\mybatis\mysql-connector-java-5.1.26.jar"/>
+    <!-- <classPathEntry location="C:\oracle\product\10.2.0\db_1\jdbc\lib\ojdbc14.jar" />-->
+    <context id="MysqlTables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!-- 数据库链接URL、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/gitchat_ssm_demo_db?characterEncoding=utf8"
+                        userId="root" password="123456">
+            <!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="msa" password="msa">-->
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!-- 生成模型的包名和位置 -->
+        <javaModelGenerator targetPackage="com.ssm.demo.entity" targetProject="D:\Config\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- 生成的映射文件包名和位置 -->
+        <sqlMapGenerator targetPackage="mybatis/mapper" targetProject="D:\Config\src\main\resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- 生成DAO的包名和位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.ssm.demo.dao" targetProject="D:\Config\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
+        <table tableName="tb_admin_user" domainObjectName="AdminUser" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="tb_class_four" domainObjectName="ClassFour" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="tb_ssm_article" domainObjectName="Article" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="tb_ssm_picture" domainObjectName="Picture" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格-->
+            <property name="useActualColumnNames" value="false"/>
+        </table>
 
-	</context>
+    </context>
 </generatorConfiguration>

@@ -1,6 +1,7 @@
 package com.ssm.demo.dao;
 
 import com.ssm.demo.entity.AdminUser;
+import org.apache.ibatis.annotations.Param;
 
 public interface AdminUserMapper {
     int deleteByPrimaryKey(Long id);
@@ -17,5 +18,5 @@ public interface AdminUserMapper {
 
     AdminUser getAdminUserByToken(String token);
 
-    AdminUser getUserByUsernameAndPassword(String userName, String s);
+    AdminUser getUserByUsernameAndPassword(@Param("userName")String userName, @Param("passwordMD5")String passwordMD5);
 }

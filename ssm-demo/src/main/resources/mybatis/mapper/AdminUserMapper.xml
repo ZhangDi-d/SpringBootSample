@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.ssm.demo.entity.AdminUser">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
-    <result column="password_md5" jdbcType="VARCHAR" property="passwordMd5" />
+    <result column="password_md5" jdbcType="VARCHAR" property="password" />
     <result column="user_token" jdbcType="VARCHAR" property="userToken" />
     <result column="is_deleted" jdbcType="TINYINT" property="isDeleted" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -112,7 +112,7 @@
 		ORDER BY  id DESC limit 1
 	</select>
 
-  <select id="">
+  <select id="getUserByUsernameAndPassword" resultMap="AdminUserResult">
     select id,user_name,user_token
 		from tb_admin_user
         where user_name = #{userName} and password_md5 = #{passwordMD5}

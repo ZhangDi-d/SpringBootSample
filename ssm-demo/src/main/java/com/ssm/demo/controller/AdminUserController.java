@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by xueLai on 2019/9/4.
  */
-@RestController("/users")
+@RestController
+@RequestMapping("/users")
 public class AdminUserController {
     @Autowired
     AdminUserService adminUserService;
@@ -22,7 +23,7 @@ public class AdminUserController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Result login(@RequestBody AdminUser user) {
         Result result = ResultGenerator.genFailResult("登录失败");
-        if (user == null|| StringUtils.isEmpty(user.getUserName())|| StringUtils.isEmpty(user.getPasswordMd5())) {
+        if (user == null|| StringUtils.isEmpty(user.getUserName())|| StringUtils.isEmpty(user.getPassword())) {
             result = ResultGenerator.genFailResult("参数错误");
         }
         AdminUser adminUser = adminUserService.loginAndUpdateToken(user);
