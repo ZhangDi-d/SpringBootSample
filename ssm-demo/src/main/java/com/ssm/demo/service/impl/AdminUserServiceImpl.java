@@ -23,15 +23,12 @@ public class AdminUserServiceImpl implements AdminUserService {
     }
 
     @Override
-    public AdminUser loginAndUpdateToken(AdminUser user) {
+    public AdminUser updateTokenAndLogin(AdminUser user) {
         AdminUser adminUser = adminUserMapper.getUserByUsernameAndPassword(user.getUserName(), MD5Util.MD5Encode(user.getPassword(), "utf-8"));
         if (adminUser != null) {
             //登录后即执行修改token的操作
             String token = getNewToken(System.currentTimeMillis() + "", adminUser.getId());
-            AdminUser updateAdmin = new AdminUser();
-            updateAdmin.setId(user.getId());
-            updateAdmin.setUserToken(token);
-            if (adminUserMapper.updateByPrimaryKeySelective(updateAdmin) > 0) {
+            if (adminUserMapper.updateUserToken(adminUser.getId(), token) > 0) {
                 //返回数据时带上token
                 adminUser.setUserToken(token);
                 return adminUser;

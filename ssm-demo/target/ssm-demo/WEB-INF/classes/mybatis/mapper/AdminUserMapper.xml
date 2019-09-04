@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.ssm.demo.entity.AdminUser">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
-    <result column="password_md5" jdbcType="VARCHAR" property="passwordMd5" />
+    <result column="password_md5" jdbcType="VARCHAR" property="password" />
     <result column="user_token" jdbcType="VARCHAR" property="userToken" />
     <result column="is_deleted" jdbcType="TINYINT" property="isDeleted" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -26,7 +26,7 @@
     insert into tb_admin_user (id, user_name, password_md5, 
       user_token, is_deleted, create_time
       )
-    values (#{id,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR}, #{passwordMd5,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{userToken,jdbcType=VARCHAR}, #{isDeleted,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}
       )
   </insert>
@@ -39,7 +39,7 @@
       <if test="userName != null">
         user_name,
       </if>
-      <if test="passwordMd5 != null">
+      <if test="password != null">
         password_md5,
       </if>
       <if test="userToken != null">
@@ -59,8 +59,8 @@
       <if test="userName != null">
         #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="passwordMd5 != null">
-        #{passwordMd5,jdbcType=VARCHAR},
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
       </if>
       <if test="userToken != null">
         #{userToken,jdbcType=VARCHAR},
@@ -79,8 +79,8 @@
       <if test="userName != null">
         user_name = #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="passwordMd5 != null">
-        password_md5 = #{passwordMd5,jdbcType=VARCHAR},
+      <if test="password != null">
+        password_md5 = #{password,jdbcType=VARCHAR},
       </if>
       <if test="userToken != null">
         user_token = #{userToken,jdbcType=VARCHAR},
@@ -97,14 +97,14 @@
   <update id="updateByPrimaryKey" parameterType="com.ssm.demo.entity.AdminUser">
     update tb_admin_user
     set user_name = #{userName,jdbcType=VARCHAR},
-      password_md5 = #{passwordMd5,jdbcType=VARCHAR},
+      password_md5 = #{password,jdbcType=VARCHAR},
       user_token = #{userToken,jdbcType=VARCHAR},
       is_deleted = #{isDeleted,jdbcType=TINYINT},
       create_time = #{createTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
 
-  <select id="getAdminUserByToken" resultMap="AdminUserResult">
+  <select id="getAdminUserByToken" resultMap="BaseResultMap">
 		select id,user_name,user_token
 		from tb_admin_user
         where user_token = #{userToken}
@@ -112,12 +112,16 @@
 		ORDER BY  id DESC limit 1
 	</select>
 
-  <select id="getUserByUsernameAndPassword" resultMap="AdminUserResult">
+  <select id="getUserByUsernameAndPassword" resultMap="BaseResultMap">
     select id,user_name,user_token
 		from tb_admin_user
         where user_name = #{userName} and password_md5 = #{passwordMD5}
         and is_deleted = 0
 		ORDER BY  id DESC limit 1
   </select>
+
+  <update id="updateUserToken">
+        update tb_admin_user set user_token = #{newToken} where id =#{userId} and is_deleted = 0
+    </update>
 
 </mapper>

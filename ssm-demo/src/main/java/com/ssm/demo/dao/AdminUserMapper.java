@@ -19,4 +19,6 @@ public interface AdminUserMapper {
     AdminUser getAdminUserByToken(String token);
 
     AdminUser getUserByUsernameAndPassword(@Param("userName")String userName, @Param("passwordMD5")String passwordMD5);
+
+    int updateUserToken(@Param("userId") Long userId, @Param("newToken") String newToken);
 }

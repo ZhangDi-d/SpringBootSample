@@ -26,7 +26,7 @@ public class AdminUserController {
         if (user == null|| StringUtils.isEmpty(user.getUserName())|| StringUtils.isEmpty(user.getPassword())) {
             result = ResultGenerator.genFailResult("参数错误");
         }
-        AdminUser adminUser = adminUserService.loginAndUpdateToken(user);
+        AdminUser adminUser = adminUserService.updateTokenAndLogin(user);
         if (adminUser != null) {
             result = ResultGenerator.genSuccessResult(adminUser);
         }

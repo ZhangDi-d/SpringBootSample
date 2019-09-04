@@ -8,5 +8,5 @@ import com.ssm.demo.entity.AdminUser;
 public interface AdminUserService {
     AdminUser getAdminUserByToken(String token);
 
-    AdminUser loginAndUpdateToken(AdminUser user);
+    AdminUser updateTokenAndLogin(AdminUser user);
 }
