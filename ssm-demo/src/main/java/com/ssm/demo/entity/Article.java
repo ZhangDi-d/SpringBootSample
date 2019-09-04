@@ -1,8 +1,9 @@
 package com.ssm.demo.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Article implements Serializable{
+public class Article implements Serializable {
     private Integer id;
 
     private String articleTitle;

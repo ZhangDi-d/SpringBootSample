@@ -1,8 +1,9 @@
 package com.ssm.demo.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ClassFour implements Serializable{
+public class ClassFour implements Serializable {
     private Long id;
 
     private String description;
